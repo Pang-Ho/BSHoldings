@@ -95,7 +95,7 @@ import {
   UserIcon,
 } from 'lucide-react';
 
-import { Chip, ChipGroup, ChipGroupItem } from '@/components/ui/chip';
+import ChipExample from '@/components/chip-example';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -763,27 +763,6 @@ function ButtonExample() {
           <ArrowUpIcon />
         </Button>
       </div>
-    </Example>
-  );
-}
-
-function ChipExample() {
-  const [selectedValue, setSelectedValue] = React.useState<string>('');
-
-  return (
-    <Example title="Chip" className="items-center justify-center">
-      {/* // 개별 칩 */}
-      <Chip>기본 상태</Chip>
-      <Chip selected>선택된 상태</Chip>
-
-      {/* // 단일 선택 그룹 */}
-      <ChipGroup value={selectedValue} onValueChange={setSelectedValue}>
-        <ChipGroupItem value="option1">옵션 1</ChipGroupItem>
-        <ChipGroupItem value="option2">옵션 2</ChipGroupItem>
-        <ChipGroupItem value="option3">옵션 3</ChipGroupItem>
-        <ChipGroupItem value="option4">옵션 4</ChipGroupItem>
-        <ChipGroupItem value="option5">옵션 5</ChipGroupItem>
-      </ChipGroup>
     </Example>
   );
 }

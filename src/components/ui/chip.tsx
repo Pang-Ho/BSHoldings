@@ -11,15 +11,19 @@ const chipVariants = cva(
     variants: {
       variant: {
         default: [
-          'h-[34px] px-3',
           'text-[var(--button-gray-text-deep)] bg-white border border-[var(--color-button-gray-outlined-border-default)]',
           'hover:text-[var(--primary-800)] hover:bg-white hover:border-[var(--color-button-gray-outlined-border-default)]',
           'data-[selected=true]:text-white data-[selected=true]:bg-[var(--grey-850)] data-[selected=true]:border-transparent',
         ],
       },
+      size: {
+        medium: 'h-[30px] px-3',
+        large: 'h-[34px] px-3',
+      },
     },
     defaultVariants: {
       variant: 'default',
+      size: 'large',
     },
   },
 );
@@ -33,12 +37,12 @@ interface ChipProps
 
 const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(
   (
-    { className, variant, selected = false, children, onClick, ...props },
+    { className, variant, size, selected = false, children, onClick, ...props },
     ref,
   ) => {
     return (
       <button
-        className={cn(chipVariants({ variant, className }))}
+        className={cn(chipVariants({ variant, size, className }))}
         data-selected={selected}
         ref={ref}
         onClick={onClick}
@@ -62,10 +66,14 @@ interface ChipGroupProps {
   onValueChange?: (value: string) => void;
   children: React.ReactNode;
   className?: string;
+  size?: 'medium' | 'large';
 }
 
 const ChipGroup = React.forwardRef<HTMLDivElement, ChipGroupProps>(
-  ({ value, onValueChange, children, className, ...props }, ref) => {
+  (
+    { value, onValueChange, children, className, size = 'large', ...props },
+    ref,
+  ) => {
     return (
       <div
         ref={ref}
@@ -77,6 +85,7 @@ const ChipGroup = React.forwardRef<HTMLDivElement, ChipGroupProps>(
             const childProps = child.props as ChipGroupItemProps;
             return React.cloneElement(child as React.ReactElement<ChipProps>, {
               ...childProps,
+              size,
               selected: value === childProps.value,
               onClick: () => onValueChange?.(childProps.value),
             });

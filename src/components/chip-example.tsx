@@ -4,8 +4,10 @@ import { Example } from '@/components/example';
 import { Chip, ChipGroup, ChipGroupItem } from '@/components/ui/chip';
 import * as React from 'react';
 
-export function ChipExample() {
+export default function ChipExample() {
   const [selectedValue, setSelectedValue] = React.useState<string>('option1');
+  const [selectedMediumValue, setSelectedMediumValue] =
+    React.useState<string>('medium1');
 
   return (
     <Example title="Chip" className="items-center justify-center">
@@ -19,9 +21,18 @@ export function ChipExample() {
           </div>
         </div>
 
-        {/* 칩 그룹 사용 */}
+        {/* 사이즈 비교 */}
         <div className="space-y-4">
-          <h4 className="text-sm font-medium">칩 그룹 (단일 선택):</h4>
+          <h4 className="text-sm font-medium">사이즈 비교:</h4>
+          <div className="flex gap-2 items-center">
+            <Chip size="medium">Medium (30px)</Chip>
+            <Chip size="large">Large (34px)</Chip>
+          </div>
+        </div>
+
+        {/* 칩 그룹 사용 - Large */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-medium">칩 그룹 - Large (기본):</h4>
           <ChipGroup value={selectedValue} onValueChange={setSelectedValue}>
             <ChipGroupItem value="option1">옵션 1</ChipGroupItem>
             <ChipGroupItem value="option2">옵션 2</ChipGroupItem>
@@ -30,6 +41,23 @@ export function ChipExample() {
           </ChipGroup>
           <p className="text-sm text-muted-foreground">
             선택된 값: {selectedValue}
+          </p>
+        </div>
+
+        {/* 칩 그룹 사용 - Medium */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-medium">칩 그룹 - Medium:</h4>
+          <ChipGroup
+            size="medium"
+            value={selectedMediumValue}
+            onValueChange={setSelectedMediumValue}
+          >
+            <ChipGroupItem value="medium1">Medium 1</ChipGroupItem>
+            <ChipGroupItem value="medium2">Medium 2</ChipGroupItem>
+            <ChipGroupItem value="medium3">Medium 3</ChipGroupItem>
+          </ChipGroup>
+          <p className="text-sm text-muted-foreground">
+            선택된 값: {selectedMediumValue}
           </p>
         </div>
 

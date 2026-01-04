@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -47,6 +47,212 @@
   --radius-4xl: calc(var(--radius) + 16px);
 
   /* 토큰 */
+  --color-white: var(--white);
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  --color-secondary-50: var(--secondary-50);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-500);
+  --color-secondary-600: var(--secondary-600);
+  --color-secondary-700: var(--secondary-700);
+  --color-secondary-800: var(--secondary-800);
+  --color-secondary-900: var(--secondary-900);
+  --color-grey-50: var(--grey-50);
+  --color-grey-100: var(--grey-100);
+  --color-grey-200: var(--grey-200);
+  --color-grey-300: var(--grey-300);
+  --color-grey-350: var(--grey-350);
+  --color-grey-400: var(--grey-400);
+  --color-grey-500: var(--grey-500);
+  --color-grey-600: var(--grey-600);
+  --color-grey-700: var(--grey-700);
+  --color-grey-750: var(--grey-750);
+  --color-grey-800: var(--grey-800);
+  --color-grey-850: var(--grey-850);
+  --color-grey-900: var(--grey-900);
+  --color-error-50: var(--error-50);
+  --color-error-100: var(--error-100);
+  --color-error-200: var(--error-200);
+  --color-error-300: var(--error-300);
+  --color-error-400: var(--error-400);
+  --color-error-500: var(--error-500);
+  --color-error-600: var(--error-600);
+  --color-error-700: var(--error-700);
+  --color-error-800: var(--error-800);
+  --color-error-900: var(--error-900);
+  --color-warning-50: var(--warning-50);
+  --color-warning-100: var(--warning-100);
+  --color-warning-200: var(--warning-200);
+  --color-warning-300: var(--warning-300);
+  --color-warning-400: var(--warning-400);
+  --color-warning-500: var(--warning-500);
+  --color-warning-600: var(--warning-600);
+  --color-warning-700: var(--warning-700);
+  --color-warning-800: var(--warning-800);
+  --color-warning-900: var(--warning-900);
+  --color-warning2-50: var(--warning2-50);
+  --color-warning2-200: var(--warning2-200);
+  --color-warning2-300: var(--warning2-300);
+  --color-warning2-400: var(--warning2-400);
+  --color-warning2-500: var(--warning2-500);
+  --color-warning2-600: var(--warning2-600);
+  --color-warning2-700: var(--warning2-700);
+  --color-warning2-800: var(--warning2-800);
+  --color-warning2-900: var(--warning2-900);
+  --color-success-50: var(--success-50);
+  --color-success-100: var(--success-100);
+  --color-success-200: var(--success-200);
+  --color-success-300: var(--success-300);
+  --color-success-400: var(--success-400);
+  --color-success-500: var(--success-500);
+  --color-success-600: var(--success-600);
+  --color-success-700: var(--success-700);
+  --color-success-800: var(--success-800);
+  --color-success-900: var(--success-900);
+  --color-text-strong: var(--text-strong);
+  --color-button-primary-text-basic: var(--button-primary-text-basic);
+  --color-button-primary-text-deep: var(--button-primary-text-deep);
+  --color-button-primary-text-strong: var(--button-primary-text-strong);
+  --color-button-primary-icon-basic: var(--button-primary-icon-basic);
+  --color-button-primary-icon-deep: var(--button-primary-icon-deep);
+  --color-button-primary-icon-strong: var(--button-primary-icon-strong);
+  --color-button-primary-filled-bg-default: var(
+    --button-primary-filled-bg-default
+  );
+  --color-button-primary-filled-bg-hovered: var(
+    --button-primary-filled-bg-hovered
+  );
+  --color-button-primary-filled-bg-active: var(
+    --button-primary-filled-bg-active
+  );
+  --color-button-primary-filled-border-default: var(
+    --button-primary-filled-border-default
+  );
+  --color-button-primary-filled-border-hovered: var(
+    --button-primary-filled-border-hovered
+  );
+  --color-button-primary-filled-border-active: var(
+    --button-primary-filled-border-active
+  );
+  --color-button-primary-outlined-bg-default: var(
+    --button-primary-outlined-bg-default
+  );
+  --color-button-primary-outlined-bg-hovered: var(
+    --button-primary-outlined-bg-hovered
+  );
+  --color-button-primary-outlined-bg-active: var(
+    --button-primary-outlined-bg-active
+  );
+  --color-button-primary-outlined-border-default: var(
+    --button-primary-outlined-border-default
+  );
+  --color-button-primary-outlined-border-hovered: var(
+    --button-primary-outlined-border-hovered
+  );
+  --color-button-primary-outlined-border-active: var(
+    --button-primary-outlined-border-active
+  );
+  --color-button-primary-noline-bg-hovered: var(
+    --button-primary-noline-bg-hovered
+  );
+  --color-button-primary-noline-bg-active: var(
+    --button-primary-noline-bg-active
+  );
+  --color-button-secondary-text-basic: var(--button-secondary-text-basic);
+  --color-button-secondary-text-deep: var(--button-secondary-text-deep);
+  --color-button-secondary-text-strong: var(--button-secondary-text-strong);
+  --color-button-secondary-icon-basic: var(--button-secondary-icon-basic);
+  --color-button-secondary-icon-deep: var(--button-secondary-icon-deep);
+  --color-button-secondary-icon-strong: var(--button-secondary-icon-strong);
+  --color-button-secondary-filled-bg-default: var(
+    --button-secondary-filled-bg-default
+  );
+  --color-button-secondary-filled-bg-hovered: var(
+    --button-secondary-filled-bg-hovered
+  );
+  --color-button-secondary-filled-bg-active: var(
+    --button-secondary-filled-bg-active
+  );
+  --color-button-secondary-filled-border-default: var(
+    --button-secondary-filled-border-default
+  );
+  --color-button-secondary-filled-border-hovered: var(
+    --button-secondary-filled-border-hovered
+  );
+  --color-button-secondary-filled-border-active: var(
+    --button-secondary-filled-border-active
+  );
+  --color-button-secondary-outlined-bg-default: var(
+    --button-secondary-outlined-bg-default
+  );
+  --color-button-secondary-outlined-bg-hovered: var(
+    --button-secondary-outlined-bg-hovered
+  );
+  --color-button-secondary-outlined-bg-active: var(
+    --button-secondary-outlined-bg-active
+  );
+  --color-button-secondary-outlined-border-default: var(
+    --button-secondary-outlined-border-default
+  );
+  --color-button-secondary-outlined-border-hovered: var(
+    --button-secondary-outlined-border-hovered
+  );
+  --color-button-secondary-outlined-border-active: var(
+    --button-secondary-outlined-border-active
+  );
+  --color-button-secondary-noline-bg-hovered: var(
+    --button-secondary-noline-bg-hovered
+  );
+  --color-button-secondary-noline-bg-active: var(
+    --button-secondary-noline-bg-active
+  );
+  --color-button-gray-text-basic: var(--button-gray-text-basic);
+  --color-button-gray-text-deep: var(--button-gray-text-deep);
+  --color-button-gray-text-strong: var(--button-gray-text-strong);
+  --color-button-gray-icon-basic: var(--button-gray-icon-basic);
+  --color-button-gray-icon-deep: var(--button-gray-icon-deep);
+  --color-button-gray-icon-strong: var(--button-gray-icon-strong);
+  --color-button-gray-filled-bg-default: var(--button-gray-filled-bg-default);
+  --color-button-gray-filled-bg-hovered: var(--button-gray-filled-bg-hovered);
+  --color-button-gray-filled-bg-active: var(--button-gray-filled-bg-active);
+  --color-button-gray-filled-border-default: var(
+    --button-gray-filled-border-default
+  );
+  --color-button-gray-filled-border-hovered: var(
+    --button-gray-filled-border-hovered
+  );
+  --color-button-gray-filled-border-active: var(
+    --button-gray-filled-border-active
+  );
+  --color-button-gray-outlined-bg-default: var(
+    --button-gray-outlined-bg-default
+  );
+  --color-button-gray-outlined-bg-hovered: var(
+    --button-gray-outlined-bg-hovered
+  );
+  --color-button-gray-outlined-bg-active: var(--button-gray-outlined-bg-active);
+  --color-button-gray-outlined-border-default: var(
+    --button-gray-outlined-border-default
+  );
+  --color-button-gray-outlined-border-hovered: var(
+    --button-gray-outlined-border-hovered
+  );
+  --color-button-gray-outlined-border-active: var(
+    --button-gray-outlined-border-active
+  );
+  --color-button-gray-noline-bg-hovered: var(--button-gray-noline-bg-hovered);
+  --color-button-gray-noline-bg-active: var(--button-gray-noline-bg-active);
 }
 
 :root {
@@ -58,7 +264,7 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: var(--primary-500);
-  --muted: oklch(0.97 0 0);
+  --muted: var(--grey-50); /* 설정 완 */
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: var(--primary-600);
@@ -218,6 +424,8 @@
   --button-gray-outlined-border-active: #abb9c7;
   --button-gray-noline-bg-hovered: #edf1f5;
   --button-gray-noline-bg-active: #e1e8ef;
+
+  --header-medium: 1.125rem;
 }
 
 .dark {

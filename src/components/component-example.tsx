@@ -96,6 +96,8 @@ import {
 } from 'lucide-react';
 
 import ChipExample from '@/components/chip-example';
+import { CustomDropdownExample } from '@/components/custom-dropdown-example';
+import { CustomTabsExample } from '@/components/custom-tabs-example';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -117,6 +119,8 @@ export function ComponentExample() {
         <MenuExample />
         <ButtonExample />
         <ChipExample />
+        <CustomTabsExample />
+        <CustomDropdownExample />
       </ExampleWrapper>
       <div className="h-400"></div>
     </>

@@ -66,28 +66,50 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  'bg-background hover:bg-muted focus:bg-muted data-open:hover:bg-muted data-open:focus:bg-muted data-open:bg-muted/50 focus-visible:ring-ring/50 data-popup-open:bg-muted/50 data-popup-open:hover:bg-muted px-4 py-2 text-m font-size-m font-semibold transition-all focus-visible:ring-[3px] focus-visible:outline-1 disabled:opacity-50 group/navigation-menu-trigger inline-flex h-16 w-max items-center justify-center disabled:pointer-events-none outline-none',
+  'bg-background hover:bg-transparent focus:bg-transparent data-open:hover:bg-transparent data-open:focus:bg-transparent data-open:bg-transparent focus-visible:ring-ring/50 data-popup-open:bg-transparent data-popup-open:hover:bg-transparent px-5 py-5 text-base font-semibold leading-6 text-[var(--color-text-strong)] transition-all focus-visible:ring-[3px] focus-visible:outline-1 disabled:opacity-50 group/navigation-menu-trigger inline-flex h-16 w-max items-center justify-center disabled:pointer-events-none outline-none',
+  {
+    variants: {
+      selected: {
+        true: 'border-b-[2px] border-[var(--color-primary-500)]',
+        false: '',
+      },
+    },
+    defaultVariants: {
+      selected: false,
+    },
+  },
 );
-// data-[state=selected]:border-b-2 border-blue-500 transition-all
+
+interface NavigationMenuTriggerProps
+  extends React.ComponentProps<typeof NavigationMenuPrimitive.Trigger> {
+  selected?: boolean;
+  isTransparent?: boolean;
+}
+
 function NavigationMenuTrigger({
   className,
   children,
+  selected = false,
+  isTransparent = false,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
+}: NavigationMenuTriggerProps) {
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
       className={cn(
-        navigationMenuTriggerStyle(),
-        'group',
-        'group-data-[selected=true]:border-primary-500 group-data-[selected=true]:border-b-[2px]',
+        navigationMenuTriggerStyle({ selected }),
+        'group transition-colors duration-300',
+        isTransparent ? 'text-white' : 'text-[var(--color-text-strong)]',
         className,
       )}
       {...props}
     >
       {children}{' '}
       <ChevronDownIcon
-        className="relative top-[1px] ml-1 size-5 stroke-primary transition duration-300 group-data-open/navigation-menu-trigger:rotate-180 group-data-popup-open/navigation-menu-trigger:rotate-180"
+        className={cn(
+          'relative top-[1px] ml-1 size-5 transition duration-300 group-data-open/navigation-menu-trigger:rotate-180 group-data-popup-open/navigation-menu-trigger:rotate-180',
+          isTransparent ? 'text-white' : 'text-[var(--color-text-strong)]',
+        )}
         aria-hidden="true"
       />
     </NavigationMenuPrimitive.Trigger>

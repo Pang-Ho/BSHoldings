@@ -61,10 +61,10 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
               <NavigationMenuTrigger selected={isProductsActive} isTransparent={isTransparent}>
                 제품소개
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <div className="w-full max-w-[1200px] px-4 lg:px-0 pb-10 pt-6">
+              <NavigationMenuContent className="!fixed !w-screen md:!w-screen !left-0 !top-16 lg:!top-20">
+                <div className="w-full max-w-[1200px] mx-auto px-4 lg:px-0 pb-10 pt-6">
                   <div className="mb-4 px-0 py-1">
-                    <h2 className="text-2xl font-bold leading-6 text-[var(--color-text-strong)]">
+                    <h2 className={"text-2xl font-bold leading-6 text-[var(--color-text-strong)]"}>
                       제품소개
                     </h2>
                   </div>
@@ -355,18 +355,18 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
 
             {/* 회사소개 */}
             <NavigationMenuItem state={isCompanyActive ? 'selected' : 'default'}>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
                   href="/company"
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300',
                     isTransparent
-                      ? 'text-white hover:text-white'
+                      ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent'
                       : 'text-[var(--color-text-strong)] hover:text-[var(--color-text-strong)]',
                     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isCompanyActive &&
                       (isTransparent
-                        ? 'border-b-2 border-white text-white'
+                        ? 'border-b-2 border-white text-white bg-transparent'
                         : 'border-b-2 border-[var(--color-primary-500)] text-[var(--color-text-strong)]'),
                   )}
                 >
@@ -377,18 +377,18 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
 
             {/* 오시는길 */}
             <NavigationMenuItem state={isLocationActive ? 'selected' : 'default'}>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
                   href="/location"
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300',
                     isTransparent
-                      ? 'text-white hover:text-white'
+                      ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent'
                       : 'text-[var(--color-text-strong)] hover:text-[var(--color-text-strong)]',
                     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isLocationActive &&
                       (isTransparent
-                        ? 'border-b-2 border-white text-white'
+                        ? 'border-b-2 border-white text-white bg-transparent'
                         : 'border-b-2 border-[var(--color-primary-500)] text-[var(--color-text-strong)]'),
                   )}
                 >
@@ -399,18 +399,18 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
 
             {/* 고객센터 */}
             <NavigationMenuItem state={isContactActive ? 'selected' : 'default'}>
-              <NavigationMenuLink asChild>
+              <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
                   href="/contact"
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300',
                     isTransparent
-                      ? 'text-white hover:text-white'
+                      ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent'
                       : 'text-[var(--color-text-strong)] hover:text-[var(--color-text-strong)]',
                     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isContactActive &&
                       (isTransparent
-                        ? 'border-b-2 border-white text-white'
+                        ? 'border-b-2 border-white text-white bg-transparent'
                         : 'border-b-2 border-[var(--color-primary-500)] text-[var(--color-text-strong)]'),
                   )}
                 >

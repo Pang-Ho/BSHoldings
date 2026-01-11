@@ -136,6 +136,38 @@ function NavigationMenuContent({
   );
 }
 
+const navigationMenuLinkItemVariants = cva(
+  'block rounded-sm px-2 py-1.5 text-[15px] leading-[22.5px] transition-colors',
+  {
+    variants: {
+      variant: {
+        default:
+          'text-[var(--color-grey-750)] hover:bg-[var(--color-primary-50)] hover:text-[var(--color-text-strong)]',
+        active:
+          'text-[var(--color-primary-500)] bg-[var(--color-primary-50)]',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  },
+);
+
+const navigationMenuContentTitleVariants = cva(
+  'font-semibold leading-[27px] text-[var(--color-text-strong)]',
+  {
+    variants: {
+      size: {
+        default: 'text-lg',
+        large: 'text-2xl',
+      },
+    },
+    defaultVariants: {
+      size: 'default',
+    },
+  },
+);
+
 function NavigationMenuViewport({
   className,
   ...props
@@ -208,4 +240,6 @@ export {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
   NavigationMenuViewport,
+  navigationMenuLinkItemVariants,
+  navigationMenuContentTitleVariants,
 };

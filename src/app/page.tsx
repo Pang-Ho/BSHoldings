@@ -89,6 +89,8 @@ export default function HomePage() {
             alt="heroImage"
             className="absolute max-w-none object-cover object-[50%_50%] size-full"
             src={heroImage}
+            priority
+            placeholder="blur"
           />
           <div className="absolute bg-black/25 inset-0" />
         </div>
@@ -112,14 +114,8 @@ export default function HomePage() {
         </div>
 
         {/* Gradient Section at Bottom */}
-        <div
-          className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center px-4 py-12 md:py-16 lg:py-20 w-full z-10 bg-hero-bottom-gradient"
-          // style={{
-          //   backgroundImage:
-          //     "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 1920 250\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(-261.15 -5.0224e-14 -4.9589e-15 -53.558 960 395.83)\\'><stop stop-color=\\'rgba(10,152,255,1)\\' offset=\\'0.18175\\'/><stop stop-color=\\'rgba(14,121,198,1)\\' offset=\\'0.26131\\'/><stop stop-color=\\'rgba(18,89,141,1)\\' offset=\\'0.34088\\'/><stop stop-color=\\'rgba(20,73,112,1)\\' offset=\\'0.38066\\'/><stop stop-color=\\'rgba(22,58,83,1)\\' offset=\\'0.42044\\'/><stop stop-color=\\'rgba(24,42,55,1)\\' offset=\\'0.46022\\'/><stop stop-color=\\'rgba(26,26,26,1)\\' offset=\\'0.5\\'/></radialGradient></defs></svg>')",
-          // }}
-        >
-          <div className="font-bold leading-6 text-lg md:text-2xl lg:text-[30px] text-white text-center w-full max-w-[1200px] leading-normal">
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center px-4 py-12 md:py-16 lg:py-20 w-full z-10 bg-hero-bottom-gradient">
+          <div className="font-bold text-lg md:text-2xl lg:text-[30px] leading-normal text-white text-center w-full max-w-300">
             <p className="mb-0">자동화 제품과 자동화 설비 컨설팅</p>
             <p>센서제작에 이르는 고객 맞춤형 서비스</p>
           </div>
@@ -251,6 +247,8 @@ export default function HomePage() {
             alt=""
             className="absolute max-w-none object-cover object-[50%_50%] size-full"
             src={heroImage}
+            priority
+            placeholder="blur"
           />
           <div className="absolute bg-[rgba(26,26,26,0.4)] inset-0" />
         </div>

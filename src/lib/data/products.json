@@ -1,0 +1,556 @@
+[
+  {
+    "id": 1,
+    "name": "특수용 센서",
+    "slug": "special-purpose-sensors",
+    "subCategories": [
+      {
+        "id": 101,
+        "name": "근접센서",
+        "slug": "proximity-sensors",
+        "products": [
+          {
+            "id": "prox-001",
+            "name": "PR18 Series",
+            "slug": "pr18-series",
+            "description": "원통형 근접센서",
+            "tags": ["근접센서", "원통형", "DC"],
+            "isNew": true
+          },
+          {
+            "id": "prox-002",
+            "name": "PR30 Series",
+            "slug": "pr30-series",
+            "description": "대형 근접센서",
+            "tags": ["근접센서", "대형", "고감도"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "name": "아날로그 출력 센서",
+        "slug": "analog-output-sensors",
+        "products": [
+          {
+            "id": "analog-001",
+            "name": "AO12 Series",
+            "slug": "ao12-series",
+            "description": "아날로그 출력 센서",
+            "tags": ["아날로그", "4-20mA", "고정밀"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "고압용 센서",
+        "slug": "high-pressure-sensors",
+        "products": [
+          {
+            "id": "hp-001",
+            "name": "HP500 Series",
+            "slug": "hp500-series",
+            "description": "고압용 근접센서",
+            "tags": ["고압용", "500bar", "스테인리스"],
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "name": "용접 전용 센서",
+        "slug": "welding-sensors",
+        "products": [
+          {
+            "id": "weld-001",
+            "name": "WS30 Series",
+            "slug": "ws30-series",
+            "description": "용접환경 전용 센서",
+            "tags": ["용접용", "내열", "스패터방지"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "name": "방폭용 센서",
+        "slug": "explosion-proof-sensors",
+        "products": [
+          {
+            "id": "exp-001",
+            "name": "EX18 Series",
+            "slug": "ex18-series",
+            "description": "방폭형 근접센서",
+            "tags": ["방폭", "ATEX", "IECEx"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "name": "내 화학용 센서",
+        "slug": "chemical-resistant-sensors",
+        "products": [
+          {
+            "id": "chem-001",
+            "name": "CR18 Series",
+            "slug": "cr18-series",
+            "description": "내화학용 센서",
+            "tags": ["내화학", "PTFE", "부식방지"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "name": "All metal 센서",
+        "slug": "all-metal-sensors",
+        "products": [
+          {
+            "id": "allm-001",
+            "name": "AM18 Series",
+            "slug": "am18-series",
+            "description": "올메탈 근접센서",
+            "tags": ["올메탈", "스테인리스", "고내구성"],
+            "isNew": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "포토 센서",
+    "slug": "photo-sensors",
+    "subCategories": [
+      {
+        "id": 201,
+        "name": "포토센서",
+        "slug": "standard-photo",
+        "products": [
+          {
+            "id": "photo-001",
+            "name": "OS10 Series",
+            "slug": "os10-series",
+            "description": "소형 포토센서",
+            "tags": ["포토센서", "소형", "BGS"],
+            "isNew": false
+          },
+          {
+            "id": "photo-002",
+            "name": "OS20 Series",
+            "slug": "os20-series",
+            "description": "고성능 포토센서",
+            "tags": ["포토센서", "레이저", "고정밀"],
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "id": 202,
+        "name": "초소형 포토센서",
+        "slug": "ultra-mini-photo",
+        "products": [
+          {
+            "id": "mini-001",
+            "name": "PM5 Series",
+            "slug": "pm5-series",
+            "description": "초소형 포토센서",
+            "tags": ["초소형", "M5", "협소공간"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 203,
+        "name": "원주형 포토 센서",
+        "slug": "cylindrical-photo",
+        "products": [
+          {
+            "id": "cyl-001",
+            "name": "CY18 Series",
+            "slug": "cy18-series",
+            "description": "원주형 포토센서",
+            "tags": ["원통형", "M18", "다목적"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "name": "색깔 감지용 포토 센서",
+        "slug": "color-detection-photo",
+        "products": [
+          {
+            "id": "color-001",
+            "name": "CS50 Series",
+            "slug": "cs50-series",
+            "description": "컬러센서",
+            "tags": ["컬러감지", "RGB", "마크감지"],
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "id": 205,
+        "name": "사각형 포토 센서",
+        "slug": "rectangular-photo",
+        "products": [
+          {
+            "id": "rect-001",
+            "name": "RS50 Series",
+            "slug": "rs50-series",
+            "description": "사각형 포토센서",
+            "tags": ["사각형", "장거리", "산업용"],
+            "isNew": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "정전용량 센서",
+    "slug": "capacitive-sensors",
+    "subCategories": [
+      {
+        "id": 301,
+        "name": "정전용량 센서",
+        "slug": "standard-capacitive",
+        "products": [
+          {
+            "id": "cap-001",
+            "name": "CA18 Series",
+            "slug": "ca18-series",
+            "description": "정전용량 센서",
+            "tags": ["정전용량", "비금속감지", "레벨감지"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 302,
+        "name": "원주형 정전용량 센서",
+        "slug": "cylindrical-capacitive",
+        "products": [
+          {
+            "id": "cylcap-001",
+            "name": "CC30 Series",
+            "slug": "cc30-series",
+            "description": "원주형 정전용량 센서",
+            "tags": ["원통형", "M30", "액체감지"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 303,
+        "name": "사각형 정전용량 센서",
+        "slug": "rectangular-capacitive",
+        "products": [
+          {
+            "id": "rectcap-001",
+            "name": "RC50 Series",
+            "slug": "rc50-series",
+            "description": "사각형 정전용량 센서",
+            "tags": ["사각형", "평면형", "비접촉"],
+            "isNew": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "초음파 센서",
+    "slug": "ultrasonic-sensors",
+    "subCategories": [
+      {
+        "id": 401,
+        "name": "초음파센서",
+        "slug": "standard-ultrasonic",
+        "products": [
+          {
+            "id": "ultra-001",
+            "name": "US18 Series",
+            "slug": "us18-series",
+            "description": "초음파 센서",
+            "tags": ["초음파", "거리측정", "비접촉"],
+            "isNew": false
+          },
+          {
+            "id": "ultra-002",
+            "name": "US30 Series",
+            "slug": "us30-series",
+            "description": "장거리 초음파 센서",
+            "tags": ["초음파", "장거리", "아날로그출력"],
+            "isNew": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "고온 센서",
+    "slug": "high-temp-sensors",
+    "subCategories": [
+      {
+        "id": 501,
+        "name": "고온 센서",
+        "slug": "standard-high-temp",
+        "products": [
+          {
+            "id": "ht-001",
+            "name": "HT120 Series",
+            "slug": "ht120-series",
+            "description": "고온용 센서 (120°C)",
+            "tags": ["고온", "120°C", "산업용"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 502,
+        "name": "고온용 센서",
+        "slug": "dedicated-high-temp",
+        "products": [
+          {
+            "id": "dht-001",
+            "name": "HT200 Series",
+            "slug": "ht200-series",
+            "description": "초고온용 센서 (200°C)",
+            "tags": ["초고온", "200°C", "특수환경"],
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "id": 503,
+        "name": "사용온도 범위가 넓은 센서",
+        "slug": "wide-range-temp",
+        "products": [
+          {
+            "id": "wr-001",
+            "name": "WR100 Series",
+            "slug": "wr100-series",
+            "description": "광범위 온도 센서",
+            "tags": ["광온도범위", "-40~100°C", "다목적"],
+            "isNew": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "레벨 센서",
+    "slug": "level-sensors",
+    "subCategories": [
+      {
+        "id": 601,
+        "name": "레벨센서",
+        "slug": "standard-level",
+        "products": [
+          {
+            "id": "lv-001",
+            "name": "LV30 Series",
+            "slug": "lv30-series",
+            "description": "레벨 센서",
+            "tags": ["레벨", "액체감지", "탱크용"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 602,
+        "name": "레벨 측정용 마이크로파 센서",
+        "slug": "microwave-level",
+        "products": [
+          {
+            "id": "mw-001",
+            "name": "MW80 Series",
+            "slug": "mw80-series",
+            "description": "마이크로파 레벨 센서",
+            "tags": ["마이크로파", "비접촉", "고정밀"],
+            "isNew": true
+          }
+        ]
+      },
+      {
+        "id": 603,
+        "name": "레벨 측정용 소형 초음파 센서",
+        "slug": "compact-ultrasonic-level",
+        "products": [
+          {
+            "id": "cul-001",
+            "name": "CUL50 Series",
+            "slug": "cul50-series",
+            "description": "소형 초음파 레벨 센서",
+            "tags": ["초음파", "소형", "레벨측정"],
+            "isNew": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "엔코더",
+    "slug": "encoders",
+    "subCategories": [
+      {
+        "id": 701,
+        "name": "엔코더",
+        "slug": "standard-encoder",
+        "products": [
+          {
+            "id": "enc-001",
+            "name": "EN58 Series",
+            "slug": "en58-series",
+            "description": "인크리멘탈 엔코더",
+            "tags": ["엔코더", "인크리멘탈", "고분해능"],
+            "isNew": false
+          },
+          {
+            "id": "enc-002",
+            "name": "EN36 Series",
+            "slug": "en36-series",
+            "description": "앱솔루트 엔코더",
+            "tags": ["엔코더", "앱솔루트", "멀티턴"],
+            "isNew": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "레이저 센서",
+    "slug": "laser-sensors",
+    "subCategories": [
+      {
+        "id": 801,
+        "name": "1D 레이저 변위 센서",
+        "slug": "1d-laser-displacement",
+        "products": [
+          {
+            "id": "ld1d-001",
+            "name": "LD100 Series",
+            "slug": "ld100-series",
+            "description": "1D 레이저 변위 센서",
+            "tags": ["레이저", "변위측정", "고정밀"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 802,
+        "name": "2D 라인 레이저 스캐너",
+        "slug": "2d-line-laser-scanner",
+        "products": [
+          {
+            "id": "ld2d-001",
+            "name": "LS200 Series",
+            "slug": "ls200-series",
+            "description": "2D 라인 레이저 스캐너",
+            "tags": ["라인스캔", "프로파일", "3D측정"],
+            "isNew": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "세이프티",
+    "slug": "safety",
+    "subCategories": [
+      {
+        "id": 901,
+        "name": "세이프티 라이트커튼",
+        "slug": "light-curtain",
+        "products": [
+          {
+            "id": "slc-001",
+            "name": "SLC(9) Series",
+            "slug": "slc9-series",
+            "description": "세이프티 라이트커튼",
+            "tags": ["손가락감지", "라이트커튼", "세이프티"],
+            "isNew": true
+          },
+          {
+            "id": "slc-002",
+            "name": "SLC(14) Series",
+            "slug": "slc14-series",
+            "description": "세이프티 라이트커튼",
+            "tags": ["손감지", "라이트커튼", "세이프티"],
+            "isNew": false
+          },
+          {
+            "id": "slc-003",
+            "name": "SLC(25) Series",
+            "slug": "slc25-series",
+            "description": "세이프티 라이트커튼",
+            "tags": ["팔감지", "라이트커튼", "세이프티"],
+            "isNew": false
+          },
+          {
+            "id": "slc-004",
+            "name": "SLC(40) Series",
+            "slug": "slc40-series",
+            "description": "세이프티 라이트커튼",
+            "tags": ["신체감지", "라이트커튼", "세이프티"],
+            "isNew": false
+          }
+        ]
+      },
+      {
+        "id": 902,
+        "name": "세이프티 릴레이",
+        "slug": "safety-relay",
+        "products": [
+          {
+            "id": "sr-001",
+            "name": "SR10 Series",
+            "slug": "sr10-series",
+            "description": "세이프티 릴레이",
+            "tags": ["세이프티", "릴레이", "비상정지"],
+            "isNew": false
+          },
+          {
+            "id": "sr-002",
+            "name": "SR20 Series",
+            "slug": "sr20-series",
+            "description": "다기능 세이프티 릴레이",
+            "tags": ["세이프티", "다기능", "PLC연동"],
+            "isNew": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "주문제작용 센서 (OEM)",
+    "slug": "oem-custom-sensors",
+    "subCategories": [
+      {
+        "id": 1001,
+        "name": "OEM 맞춤 제작",
+        "slug": "custom-oem",
+        "products": [
+          {
+            "id": "oem-001",
+            "name": "Custom Sensor",
+            "slug": "custom-sensor",
+            "description": "주문제작 센서",
+            "tags": ["OEM", "맞춤제작", "특수사양"],
+            "isNew": false
+          }
+        ]
+      }
+    ]
+  }
+]

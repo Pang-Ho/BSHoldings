@@ -254,11 +254,7 @@
   --color-button-gray-noline-bg-hovered: var(--button-gray-noline-bg-hovered);
   --color-button-gray-noline-bg-active: var(--button-gray-noline-bg-active);
 
-  --background-image-hero-bottom-gradient: radial-gradient(
-    214.23% 136.02% at 50% 158.33%,
-    #0a98ff 18.18%,
-    #1a1a1a 50%
-  );
+  --background-image-hero-bottom-gradient: var(--hero-bottom-gradient);
 }
 
 :root {
@@ -432,6 +428,12 @@
   --button-gray-noline-bg-active: #e1e8ef;
 
   --header-medium: 1.125rem;
+
+  --hero-bottom-gradient: radial-gradient(
+    ellipse 115% 150% at 50% 140%,
+    #0a98ff 0.18%,
+    #1a1a1a 55%
+  );
 }
 
 .dark {

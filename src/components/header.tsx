@@ -1,8 +1,8 @@
 'use client';
 
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import * as React from 'react';
-import { Menu, X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -15,9 +15,9 @@ import {
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 
+import Image from 'next/image';
 import logoColor from '../../public/icons/logo_color.svg';
 import logoWhite from '../../public/icons/logo_white.svg';
-import Image from 'next/image';
 
 interface HeaderProps {
   currentPath?: string;
@@ -57,14 +57,23 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
         <NavigationMenu viewport={false} className="hidden lg:flex flex-1">
           <NavigationMenuList className="gap-0">
             {/* 제품소개 with dropdown */}
-            <NavigationMenuItem state={isProductsActive ? 'selected' : 'default'}>
-              <NavigationMenuTrigger selected={isProductsActive} isTransparent={isTransparent}>
+            <NavigationMenuItem
+              state={isProductsActive ? 'selected' : 'default'}
+            >
+              <NavigationMenuTrigger
+                selected={isProductsActive}
+                isTransparent={isTransparent}
+              >
                 제품소개
               </NavigationMenuTrigger>
               <NavigationMenuContent className="!fixed !w-screen md:!w-screen !left-0 !top-16 lg:!top-20">
                 <div className="w-full max-w-[1200px] mx-auto px-4 lg:px-0 pb-10 pt-6">
                   <div className="mb-4 px-0 py-1">
-                    <h2 className={"text-2xl font-bold leading-6 text-[var(--color-text-strong)]"}>
+                    <h2
+                      className={
+                        'text-2xl font-bold leading-6 text-[var(--color-text-strong)]'
+                      }
+                    >
                       제품소개
                     </h2>
                   </div>
@@ -354,7 +363,9 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             </NavigationMenuItem>
 
             {/* 회사소개 */}
-            <NavigationMenuItem state={isCompanyActive ? 'selected' : 'default'}>
+            <NavigationMenuItem
+              state={isCompanyActive ? 'selected' : 'default'}
+            >
               <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
                   href="/company"
@@ -376,7 +387,9 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             </NavigationMenuItem>
 
             {/* 오시는길 */}
-            <NavigationMenuItem state={isLocationActive ? 'selected' : 'default'}>
+            <NavigationMenuItem
+              state={isLocationActive ? 'selected' : 'default'}
+            >
               <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
                   href="/location"
@@ -398,7 +411,9 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             </NavigationMenuItem>
 
             {/* 고객센터 */}
-            <NavigationMenuItem state={isContactActive ? 'selected' : 'default'}>
+            <NavigationMenuItem
+              state={isContactActive ? 'selected' : 'default'}
+            >
               <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
                   href="/contact"
@@ -425,7 +440,7 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
         <Button
           variant="outline"
           className={cn(
-            'hidden md:flex h-12 lg:h-14 rounded-md px-2 lg:px-3 py-2 text-sm lg:text-lg font-bold leading-[22.5px] transition-all duration-300',
+            'hidden md:flex h-12 lg:h-14 rounded-md px-2 lg:px-3 py-2 text-base lg:text-lg font-bold leading-[22.5px] transition-all duration-300',
             isTransparent
               ? 'border-white bg-transparent text-white hover:bg-white/10 hover:text-white hover:border-white'
               : 'border border-[var(--color-button-primary-outlined-border-default)] bg-white text-[var(--color-button-primary-text-basic)] hover:bg-white hover:text-[var(--color-button-primary-text-basic)]',

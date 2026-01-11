@@ -99,7 +99,9 @@ function NavigationMenuTrigger({
       className={cn(
         navigationMenuTriggerStyle({ selected }),
         'group transition-colors duration-300',
-        isTransparent ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent' : 'text-[var(--color-text-strong)]',
+        isTransparent
+          ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent'
+          : 'text-[var(--color-text-strong)]',
         className,
       )}
       {...props}
@@ -108,7 +110,9 @@ function NavigationMenuTrigger({
       <ChevronDownIcon
         className={cn(
           'relative top-[1px] ml-1 size-5 transition duration-300 group-data-open/navigation-menu-trigger:rotate-180 group-data-popup-open/navigation-menu-trigger:rotate-180',
-          isTransparent ? 'text-white group-data-open/navigation-menu-trigger:text-[var(--color-primary-800)]' : 'text-[var(--color-text-strong)]',
+          isTransparent
+            ? 'text-white group-data-open/navigation-menu-trigger:text-[var(--color-primary-800)]'
+            : 'text-[var(--color-text-strong)]',
         )}
         aria-hidden="true"
       />
@@ -158,13 +162,17 @@ function NavigationMenuLink({
   className,
   isTransparent = false,
   ...props
-}: React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Link> & { isTransparent?: boolean }) {
+}: React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Link> & {
+  isTransparent?: boolean;
+}) {
   return (
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "data-[active=true]:focus:bg-muted data-[active=true]:hover:bg-muted data-[active=true]:bg-muted/50 focus-visible:ring-ring/50 focus:bg-muted flex items-center gap-1.5 rounded-sm p-2 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
-        isTransparent ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent' : 'text-[var(--color-text-strong)] hover:bg-muted ',
+        "data-[active=true]:focus:bg-muted data-[active=true]:hover:bg-muted data-[active=true]:bg-muted/50 focus-visible:ring-ring/50 focus:bg-muted flex items-center gap-1.5 rounded-sm p-2 text-base transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+        isTransparent
+          ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent'
+          : 'text-[var(--color-text-strong)] hover:bg-muted ',
         className,
       )}
       {...props}

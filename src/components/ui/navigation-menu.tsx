@@ -143,8 +143,7 @@ const navigationMenuLinkItemVariants = cva(
       variant: {
         default:
           'text-[var(--color-grey-750)] hover:bg-[var(--color-primary-50)] hover:text-[var(--color-text-strong)]',
-        active:
-          'text-[var(--color-primary-500)] bg-[var(--color-primary-50)]',
+        active: 'text-[var(--color-primary-500)] bg-[var(--color-primary-50)]',
       },
     },
     defaultVariants: {
@@ -201,7 +200,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "data-[active=true]:focus:bg-muted data-[active=true]:hover:bg-muted data-[active=true]:bg-muted/50 focus-visible:ring-ring/50 focus:bg-muted flex items-center gap-1.5 rounded-sm p-2 text-base transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+        "data-[active=true]:focus:bg-muted data-[active=true]:hover:bg-muted data-[active=true]:bg-muted/50 focus-visible:ring-ring/50 focus:bg-muted flex items-center gap-1.5 p-2 text-base transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
         isTransparent
           ? 'text-white hover:text-[var(--color-primary-800)] bg-transparent'
           : 'text-[var(--color-text-strong)] hover:bg-muted ',
@@ -233,13 +232,13 @@ function NavigationMenuIndicator({
 export {
   NavigationMenu,
   NavigationMenuContent,
+  navigationMenuContentTitleVariants,
   NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
+  navigationMenuLinkItemVariants,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
   NavigationMenuViewport,
-  navigationMenuLinkItemVariants,
-  navigationMenuContentTitleVariants,
 };

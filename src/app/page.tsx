@@ -8,6 +8,13 @@ import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { ChipGroup, ChipGroupItem } from '@/components/ui/chip';
 import {
   CustomTabs,
@@ -24,44 +31,68 @@ import chevronDownIcon from '../../public/icons/chevronDownIcon.svg';
 import separatorIcon from '../../public/icons/separatorIcon.svg';
 import productImage from '../../public/images/productImage.jpg';
 
-const productCategories = [
-  '특수용 센서',
-  '포토 센서',
-  '정전용량 센서',
-  '초음파 센서',
-  '고온 센서',
-  '레벨 센서',
-  '엔코더',
-  '레이저 센서',
-  '세이프티',
-  '주문제작 센서(OEM)',
-];
+import productsData from '@/lib/data/products.json';
 
-const productChips = [
-  '근접센서',
-  '아날로그 출력 센서',
-  '고압용 센서',
-  '용접전용 센서',
-  '방폭용 센서',
-  '내 화학용 센서',
-  'All metal 센서',
-];
+// 타입 정의
+interface Product {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  tags: string[];
+  isNew: boolean;
+}
 
-const products = Array(6)
-  .fill(null)
-  .map((_, i) => ({
-    id: `slc-${i + 1}`,
-    name: 'SLC(9) Series',
-    description: '세이프티 라이트커튼',
-    tags: ['손가락감지', '라이트커튼', '세이프티'],
-    isNew: i === 0,
-  }));
+interface SubCategory {
+  id: number;
+  name: string;
+  slug: string;
+  products: Product[];
+}
+
+interface Category {
+  id: number;
+  name: string;
+  slug: string;
+  subCategories: SubCategory[];
+}
+
+const categories = productsData as Category[];
 
 export default function HomePage() {
   const pathname = usePathname();
-  const [selectedCategory, setSelectedCategory] = React.useState('특수용 센서');
-  const [selectedChip, setSelectedChip] = React.useState('근접센서');
+  const [selectedCategoryId, setSelectedCategoryId] = React.useState(
+    categories[0].id,
+  );
+  const [selectedSubCategoryId, setSelectedSubCategoryId] = React.useState<
+    number | null
+  >(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
+
+  // 선택된 카테고리 가져오기
+  const selectedCategory =
+    categories.find((cat) => cat.id === selectedCategoryId) || categories[0];
+
+  // 서브카테고리 목록
+  const subCategories = selectedCategory.subCategories;
+
+  // 선택된 서브카테고리 가져오기
+  const selectedSubCategory = subCategories.find(
+    (sub) => sub.id === selectedSubCategoryId,
+  );
+
+  // 표시할 제품들 (서브카테고리 선택시 해당 제품만, 아니면 전체)
+  const displayProducts = selectedSubCategory
+    ? selectedSubCategory.products
+    : subCategories.flatMap((sub) => sub.products);
+
+  // // 카테고리 변경시 첫 번째 서브카테고리 선택
+  // React.useEffect(() => {
+  //   const newCategory = categories.find((cat) => cat.id === selectedCategoryId);
+  //   if (newCategory && newCategory.subCategories.length > 0) {
+  //     setSelectedSubCategoryId(newCategory.subCategories[0].id);
+  //   }
+  // }, [selectedCategoryId]);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -129,109 +160,141 @@ export default function HomePage() {
             Product
           </p>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start w-full">
+            {/* 왼쪽 카테고리 탭 */}
             <div className="flex flex-col gap-[10px] items-start pb-0 pt-0 lg:pt-[54px] px-0 w-full lg:w-[200px]">
               <CustomTabs
-                value={selectedCategory}
-                onValueChange={setSelectedCategory}
+                value={String(selectedCategoryId)}
+                onValueChange={(val) => setSelectedCategoryId(Number(val))}
                 variant="vertical"
                 className="w-full"
               >
                 <CustomTabsList variant="vertical" className="w-full">
-                  {productCategories.map((category) => (
+                  {categories.map((category) => (
                     <CustomTabsTrigger
-                      key={category}
-                      value={category}
+                      key={category.id}
+                      value={String(category.id)}
                       variant="vertical"
                       className="w-full"
                     >
-                      {category}
+                      {category.name}
                     </CustomTabsTrigger>
                   ))}
                 </CustomTabsList>
               </CustomTabs>
             </div>
-            <div className="flex flex-col grow items-start w-full">
+            {/* 오른쪽 서브카테고리 칩 + 제품 캐러셀 */}
+            <div className="flex flex-col grow items-start w-full lg:w-auto">
               <div className="flex gap-2 md:gap-[6px] items-center w-full flex-wrap">
                 <ChipGroup
-                  value={selectedChip}
-                  onValueChange={setSelectedChip}
+                  value={String(selectedSubCategoryId || '')}
+                  onValueChange={(val) =>
+                    setSelectedSubCategoryId(
+                      String(selectedSubCategoryId) === val
+                        ? null
+                        : val
+                        ? Number(val)
+                        : null,
+                    )
+                  }
                   size="large"
                 >
-                  {productChips.map((chip) => (
-                    <ChipGroupItem key={chip} value={chip}>
-                      {chip}
+                  {subCategories.map((subCat) => (
+                    <ChipGroupItem key={subCat.id} value={String(subCat.id)}>
+                      {subCat.name}
                     </ChipGroupItem>
                   ))}
                 </ChipGroup>
               </div>
               <div className="h-5 w-full" />
-              <div className="flex gap-4 md:gap-6 items-start w-full flex-wrap justify-center lg:justify-start">
-                {products.map((product) => (
-                  <div
-                    key={product.id}
-                    className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[282px]"
-                  >
-                    <div className="flex h-[200px] items-center justify-center w-full">
-                      <div className="h-40 relative w-[126px]">
-                        <Image
-                          alt=""
-                          className="absolute inset-0 max-w-none object-cover object-[50%_50%] pointer-events-none size-full"
-                          src={productImage}
-                        />
-                      </div>
-                    </div>
-                    <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-col gap-1 items-start p-5 w-full">
-                      <div className="flex gap-1 items-end">
-                        <p className="font-bold leading-[1.25] text-xl text-[var(--color-text-strong)] text-center whitespace-nowrap">
-                          {product.name}
-                        </p>
-                        {product.isNew && (
-                          <div className="flex items-center justify-center px-2 py-1 rounded-[50px]">
-                            <Badge
-                              variant="destructive"
-                              className="text-xs font-semibold"
-                            >
-                              NEW
-                            </Badge>
+              {/* 제품 캐러셀 */}
+              <Carousel
+                opts={{
+                  align: 'start',
+                  loop: true,
+                  slidesToScroll: 1,
+                }}
+                className="w-full lg:max-w-[770px] xl:max-w-[960px]"
+              >
+                <CarouselContent>
+                  {displayProducts.map((product) => (
+                    <CarouselItem
+                      key={product.id}
+                      className="md:basis-[40%] lg:basis-[29%]"
+                    >
+                      <div className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-full">
+                        <div className="flex h-[200px] items-center justify-center w-full">
+                          <div className="h-40 relative w-[126px]">
+                            <Image
+                              alt=""
+                              className="absolute inset-0 max-w-none object-cover object-[50%_50%] pointer-events-none size-full"
+                              src={productImage}
+                            />
                           </div>
-                        )}
-                      </div>
-                      <p className="font-normal leading-6 text-sm text-[var(--color-text-basic)] whitespace-nowrap">
-                        {product.description}
-                      </p>
-                    </div>
-                    <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex gap-2 items-center p-5 w-full">
-                      {product.tags.map((tag, idx) => (
-                        <React.Fragment key={tag}>
-                          <p className="font-bold leading-[1.25] text-[13px] text-[var(--color-primary-600)] text-center whitespace-nowrap">
-                            {tag}
-                          </p>
-                          {idx < product.tags.length - 1 && (
-                            <div className="h-3 relative w-0">
-                              <div className="absolute inset-[0_-0.5px]">
-                                <Image
-                                  alt=""
-                                  className="block max-w-none size-full"
-                                  src={separatorIcon}
-                                />
+                        </div>
+                        <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-col gap-1 items-start p-5 w-full">
+                          <div className="flex gap-1 items-end">
+                            <p className="font-bold leading-[1.25] text-xl text-[var(--color-text-strong)] text-center whitespace-nowrap">
+                              {product.name}
+                            </p>
+                            {product.isNew && (
+                              <div className="flex items-center justify-center px-2 py-1 rounded-[50px]">
+                                <Badge
+                                  variant="destructive"
+                                  className="text-xs font-semibold"
+                                >
+                                  NEW
+                                </Badge>
                               </div>
-                            </div>
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </div>
-                    <div className="flex items-start justify-end pb-5 pt-3 px-5 w-full">
-                      <Button
-                        variant="default"
-                        className="bg-[var(--color-grey-850)] text-white min-h-9 px-3 py-2 rounded-md text-sm font-bold"
-                        asChild
-                      >
-                        <Link href={`/products/${product.id}`}>자세히보기</Link>
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                            )}
+                          </div>
+                          <p className="font-normal leading-6 text-sm text-[var(--color-text-basic)] whitespace-nowrap">
+                            {product.description}
+                          </p>
+                        </div>
+                        <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex gap-2 items-center p-5 w-full flex-wrap">
+                          {product.tags.map((tag: string, idx: number) => (
+                            <React.Fragment key={`${tag}-${idx}`}>
+                              <p className="font-bold leading-[1.25] text-[13px] text-[var(--color-primary-600)] text-center whitespace-nowrap">
+                                {tag}
+                              </p>
+                              {idx < product.tags.length - 1 && (
+                                <div className="h-3 relative w-0">
+                                  <div className="absolute inset-[0_-0.5px]">
+                                    <Image
+                                      alt=""
+                                      className="block max-w-none size-full"
+                                      src={separatorIcon}
+                                    />
+                                  </div>
+                                </div>
+                              )}
+                            </React.Fragment>
+                          ))}
+                        </div>
+                        <div className="flex items-start justify-end pb-5 pt-3 px-5 w-full">
+                          <Button
+                            variant="default"
+                            className="bg-[var(--color-grey-850)] text-white min-h-9 px-3 py-2 rounded-md text-sm font-bold"
+                            asChild
+                          >
+                            <Link
+                              href={`/products/${selectedCategory.slug}/${
+                                subCategories.find((sub) =>
+                                  sub.products.some((p) => p.id === product.id),
+                                )?.slug
+                              }/${product.slug}`}
+                            >
+                              자세히보기
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden lg:flex -left-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
+                <CarouselNext className="hidden lg:flex -right-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
+              </Carousel>
             </div>
           </div>
         </div>

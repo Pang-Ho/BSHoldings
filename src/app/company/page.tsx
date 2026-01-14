@@ -26,8 +26,8 @@ export default function CompanyPage() {
             <p>현장의 어려움 해소에 앞장서고 있습니다.</p>
           </div>
           <div className="bg-[var(--color-grey-50)] flex flex-col gap-3 items-center justify-center pb-12 md:pb-20 lg:pb-[140px] pt-12 md:pt-20 lg:pt-[120px] px-4 md:px-10 lg:px-20 w-full max-w-[900px]">
-            <div className="font-semibold leading-6 text-[var(--color-text-strong)] text-center tracking-[-0.36px]">
-              <p className="font-medium mb-0 text-[var(--color-grey-700)] text-2xl">
+            <div className="font-semibold leading-[1.5] text-[var(--color-text-strong)] text-center tracking-[-0.36px]">
+              <p className="font-medium mb-0 text-[#647180] text-[24px]">
                 자동화 제품과 자동화 설비 컨설팅 그리고 센서제작에 이르는
               </p>
               <p className="font-bold text-[36px]">고객 맞춤형 서비스</p>

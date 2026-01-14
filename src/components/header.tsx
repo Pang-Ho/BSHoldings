@@ -139,27 +139,27 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            {/* 고객센터 */}
+            {/* 고객센터 with dropdown */}
             <NavigationMenuItem
               state={isContactActive ? 'selected' : 'default'}
             >
-              <NavigationMenuLink isTransparent={isTransparent} asChild>
-                <Link
-                  href="/contact"
-                  className={cn(
-                    'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-                    isTransparent
-                      ? 'text-white hover:text-(--color-primary-800) bg-transparent'
-                      : 'text-(--color-text-strong)',
-                    isContactActive &&
-                      (isTransparent
-                        ? 'border-b-2 border-white'
-                        : 'border-b-2 border-(--color-primary-500)'),
-                  )}
-                >
-                  고객센터
-                </Link>
-              </NavigationMenuLink>
+              <NavigationMenuTrigger
+                selected={isContactActive}
+                isTransparent={isTransparent}
+              >
+                고객센터
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="left-auto! right-0! top-16! p-0! rounded-xl! shadow-xl! bg-white! border! border-(--color-grey-200)!">
+                <div className="px-6 py-5">
+                  <p className="text-2xl font-bold text-(--color-text-strong) tracking-tight whitespace-nowrap">
+                    031 - 411 - 5011
+                  </p>
+                  <div className="mt-3 text-sm text-(--color-text-default) space-y-0.5">
+                    <p><span className="font-medium">평일</span>: 오전 9시 ~ 오후 6시</p>
+                    <p>토, 일, 공휴일 휴무</p>
+                  </div>
+                </div>
+              </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

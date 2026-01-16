@@ -121,6 +121,7 @@
   --color-success-800: var(--success-800);
   --color-success-900: var(--success-900);
   --color-text-strong: var(--text-strong);
+  --color-text-basic: var(--text-basic);
   --color-button-primary-text-basic: var(--button-primary-text-basic);
   --color-button-primary-text-deep: var(--button-primary-text-deep);
   --color-button-primary-text-strong: var(--button-primary-text-strong);
@@ -366,6 +367,7 @@
   --success-800: #064335;
   --success-900: #043129;
   --text-strong: #1a1a1a;
+  --text-basic: #647180;
   --button-primary-text-basic: #118bf5;
   --button-primary-text-deep: #0d6fd8;
   --button-primary-text-strong: #08306c;
@@ -478,5 +480,11 @@
   body {
     @apply bg-background text-foreground;
     @apply bg-background text-foreground;
+  }
+
+  /* 드롭다운 열릴 때 스크롤바 제거로 인한 레이아웃 시프트 방지 */
+  body[data-scroll-locked] {
+    margin-right: 0 !important;
+    overflow: visible !important;
   }
 }

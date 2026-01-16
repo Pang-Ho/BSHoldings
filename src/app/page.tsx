@@ -31,6 +31,13 @@ import chevronDownIcon from '../../public/icons/chevronDownIcon.svg';
 import separatorIcon from '../../public/icons/separatorIcon.svg';
 import productImage from '../../public/images/productImage.jpg';
 
+import {
+  CustomDropdown,
+  CustomDropdownContent,
+  CustomDropdownItem,
+  CustomDropdownTrigger,
+  CustomDropdownValue,
+} from '@/components/ui/custom-dropdown';
 import productsData from '@/lib/data/products.json';
 
 // 타입 정의
@@ -157,18 +164,38 @@ export default function HomePage() {
 
       {/* Product Section */}
       <div className="bg-white flex flex-col min-h-[899px] items-center w-full">
-        <div className="flex flex-col gap-3 items-start pb-0 pt-12 md:pt-16 lg:pt-[100px] px-4 md:px-6 lg:px-0 w-full max-w-[1200px]">
+        <div className="flex flex-col gap-3 items-start pb-0 pt-12 md:pt-16 lg:pt-[100px] px-4 md:px-6 w-full max-w-[1200px]">
           <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] w-full">
             Product
           </p>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start w-full">
-            {/* 왼쪽 카테고리 탭 */}
+            {/* 왼쪽 카테고리 탭 - 모바일: Select, md 이상: CustomTabs */}
             <div className="flex flex-col gap-[10px] items-start pb-0 pt-0 lg:pt-[54px] px-0 w-full lg:w-[200px]">
+              {/* 모바일 Select */}
+              <CustomDropdown
+                value={String(selectedCategoryId)}
+                onValueChange={(val) => setSelectedCategoryId(Number(val))}
+              >
+                <CustomDropdownTrigger className="w-full lg:hidden h-12 text-base font-semibold">
+                  <CustomDropdownValue placeholder="카테고리 선택" />
+                </CustomDropdownTrigger>
+                <CustomDropdownContent>
+                  {categories.map((category) => (
+                    <CustomDropdownItem
+                      key={category.id}
+                      value={String(category.id)}
+                    >
+                      {category.name}
+                    </CustomDropdownItem>
+                  ))}
+                </CustomDropdownContent>
+              </CustomDropdown>
+              {/* md 이상 CustomTabs */}
               <CustomTabs
                 value={String(selectedCategoryId)}
                 onValueChange={(val) => setSelectedCategoryId(Number(val))}
                 variant="vertical"
-                className="w-full"
+                className="hidden lg:flex w-full"
               >
                 <CustomTabsList variant="vertical" className="w-full">
                   {categories.map((category) => (
@@ -317,14 +344,17 @@ export default function HomePage() {
           />
           <div className="absolute bg-[rgba(26,26,26,0.4)] inset-0" />
         </div>
-        <div className="relative flex flex-col gap-12 md:gap-20 lg:gap-[280px] items-start pb-12 md:pb-16 lg:pb-0 pt-12 md:pt-16 lg:pt-[100px] px-4 md:px-6 lg:px-0 w-full max-w-[1200px] z-10">
+        <div className="relative flex flex-col gap-12 md:gap-20 lg:gap-[280px] items-start pb-12 md:pb-16 lg:pb-0 pt-12 md:pt-16 lg:pt-[100px] px-4 md:px-6 w-full max-w-[1200px] z-10">
           <div className="font-semibold leading-[1.5] text-2xl md:text-3xl lg:text-[36px] text-white w-full">
             <p className="mb-0">자동화의</p>
             <p className="mb-0">모든 과정에 함께하는</p>
             <p>파트너, BS 홀딩스</p>
           </div>
           <div className="flex flex-col md:flex-row items-stretch md:items-start justify-end w-full gap-4 md:gap-0">
-            <div className="bg-[rgba(1,16,37,0.6)] flex flex-col gap-3 min-h-[200px] md:h-[320px] items-start justify-end p-6 md:p-10 w-full md:w-[340px]">
+            <Link
+              href="/location"
+              className="bg-[rgba(1,16,37,0.6)] flex flex-col gap-3 min-h-[200px] md:h-[320px] items-start justify-end p-6 md:p-10 w-full md:w-[340px] transition-all hover:bg-[rgba(1,16,37,0.8)]"
+            >
               <div className="flex gap-1 items-center">
                 <p className="font-bold leading-[1.25] text-xl md:text-2xl text-white text-center whitespace-nowrap">
                   찾아오시는 길
@@ -341,7 +371,7 @@ export default function HomePage() {
                 <p className="mb-0">경기도 안산시 단원구 원포공원 1로 59</p>
                 <p>B동 201호</p>
               </div>
-            </div>
+            </Link>
             <div className="bg-[rgba(10,152,255,0.6)] flex flex-col gap-3 min-h-[200px] md:h-[320px] items-start justify-end p-6 md:p-10 w-full md:w-[340px]">
               <div className="flex gap-1 items-center">
                 <p className="font-bold leading-[1.25] text-xl md:text-2xl text-white text-center whitespace-nowrap">

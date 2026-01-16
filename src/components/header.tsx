@@ -50,7 +50,7 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
           : 'bg-white border-(--color-grey-300)',
       )}
     >
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6 lg:px-0">
+      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <div className="flex h-16 w-32 md:w-40 items-center justify-start">
           <Link href="/" className="relative h-7 md:h-8 w-32 md:w-40">
@@ -103,7 +103,7 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isTransparent
-                      ? 'text-white bg-transparent hover:bg-white/10' //hover:text-(--color-primary-800)
+                      ? 'text-white bg-transparent hover:bg-white/10 focus:bg-transparent' //hover:text-(--color-primary-800)
                       : 'text-(--color-text-strong)',
                     isCompanyActive &&
                       (isTransparent
@@ -126,7 +126,7 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isTransparent
-                      ? 'text-white bg-transparent hover:bg-white/10' //hover:text-(--color-primary-800)
+                      ? 'text-white bg-transparent hover:bg-white/10 focus:bg-transparent' //hover:text-(--color-primary-800)
                       : 'text-(--color-text-strong)',
                     isLocationActive &&
                       (isTransparent
@@ -223,21 +223,23 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             >
               오시는길
             </Link>
-            <Link
-              href="/contact"
-              className={getMobileMenuItemClasses(isContactActive)}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              고객센터
-            </Link>
-            <div className="pt-2 border-t border-(--color-grey-300)">
-              <Button
-                variant="outline"
-                className="w-full h-12 rounded-md border border-(--color-button-primary-outlined-border-default) bg-white text-base font-bold text-(--color-button-primary-text-basic) hover:bg-white hover:text-(--color-button-primary-text-basic)"
-                asChild
+            {/* 고객센터 섹션 */}
+            <div className="pt-2 border-t border-(--color-grey-200)">
+              <p className="px-4 py-2 text-sm font-medium text-(--color-text-weak)">
+                고객센터
+              </p>
+              <a
+                href="tel:031-411-5011"
+                className="block px-4 py-2 text-xl font-bold text-(--color-primary-500)"
               >
-                <a href="tel:031-411-5011">031-411-5011</a>
-              </Button>
+                031-411-5011
+              </a>
+              <div className="px-4 pb-2 text-sm text-(--color-text-default) space-y-0.5">
+                <p>
+                  <span className="font-medium">평일</span>: 오전 9시 ~ 오후 6시
+                </p>
+                <p>토, 일, 공휴일 휴무</p>
+              </div>
             </div>
           </div>
         </div>

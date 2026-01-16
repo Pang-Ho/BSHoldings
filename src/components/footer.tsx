@@ -6,7 +6,7 @@ import separatorIcon from '../../public/icons/separatorIcon.svg';
 export function Footer() {
   return (
     <footer className="bg-[#0a111a] flex flex-col items-center w-full">
-      <div className="flex flex-col gap-4 md:gap-5 items-start px-4 md:px-6 lg:px-0 py-12 md:py-16 lg:py-20 w-full max-w-[1200px]">
+      <div className="flex flex-col gap-4 md:gap-5 items-start px-4 md:px-6 py-12 md:py-16 lg:py-20 w-full max-w-[1200px]">
         <div className="h-6 md:h-7 lg:h-8 relative shrink-0 w-32 md:w-36 lg:w-40">
           <Image
             alt="BS Holdings Logo"

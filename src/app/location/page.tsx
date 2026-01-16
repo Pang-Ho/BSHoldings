@@ -45,7 +45,7 @@ export default function LocationPage() {
       <Header currentPath={pathname} />
 
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
-        <div className="bg-white flex flex-col items-start px-4 md:px-6 lg:px-0 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
+        <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
           <div className="flex items-center">
             <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
               오시는길

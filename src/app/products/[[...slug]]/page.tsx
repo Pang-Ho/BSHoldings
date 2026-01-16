@@ -1,17 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { notFound } from 'next/navigation';
+import { notFound, usePathname } from 'next/navigation';
 import * as React from 'react';
 
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { Button } from '@/components/ui/button';
 import { ChipGroup, ChipGroupItem } from '@/components/ui/chip';
-import {
-  CustomTabs,
-  CustomTabsContent,
-  CustomTabsList,
-  CustomTabsTrigger,
-} from '@/components/ui/custom-tabs';
 import {
   CustomDropdown,
   CustomDropdownContent,
@@ -19,14 +15,16 @@ import {
   CustomDropdownTrigger,
   CustomDropdownValue,
 } from '@/components/ui/custom-dropdown';
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import {
+  CustomTabs,
+  CustomTabsContent,
+  CustomTabsList,
+  CustomTabsTrigger,
+} from '@/components/ui/custom-tabs';
 
-import productImage from '../../../../public/images/productImage.jpg';
-import separatorIcon from '../../../../public/icons/separatorIcon.svg';
 import Image from 'next/image';
+import separatorIcon from '../../../../public/icons/separatorIcon.svg';
+import productImage from '../../../../public/images/productImage.jpg';
 
 import productsData from '@/lib/data/products.json';
 
@@ -38,6 +36,9 @@ interface Product {
   description: string;
   tags: string[];
   isNew: boolean;
+  detailDescriptionKo?: string[];
+  detailDescriptionEn?: string;
+  features?: string[];
 }
 
 interface SubCategory {
@@ -61,14 +62,14 @@ function findCategory(categorySlug: string): Category | undefined {
 
 function findSubCategory(
   category: Category,
-  subCategorySlug: string
+  subCategorySlug: string,
 ): SubCategory | undefined {
   return category.subCategories.find((sub) => sub.slug === subCategorySlug);
 }
 
 function findProduct(
   subCategory: SubCategory,
-  productSlug: string
+  productSlug: string,
 ): Product | undefined {
   return subCategory.products.find((prod) => prod.slug === productSlug);
 }
@@ -87,7 +88,7 @@ const productTags = [
   '세이프티',
 ];
 
-const modelNames = ['Model Name', 'Model Name', 'Model Name'];
+const modelNames = ['Model Name1', 'Model Name2', 'Model Name3'];
 
 const specifications = [
   { label: 'Supply voltage', value: '10..30VDC' },
@@ -117,25 +118,25 @@ const downloadItems = [
     category: '매뉴얼',
     type: 'PDF',
     name: 'SLC Series',
-    options: ['옵션아이템', '옵션아이템', '옵션아이템'],
+    options: ['옵션아이템1', '옵션아이템2', '옵션아이템3'],
   },
   {
     category: 'CAD',
     type: 'DWG',
     name: '2D CAD (SLC Series)',
-    options: ['옵션아이템', '옵션아이템', '옵션아이템'],
+    options: ['옵션아이템1', '옵션아이템2', '옵션아이템3'],
   },
   {
     category: 'CAD',
     type: 'STEP',
     name: '3D CAD (SLC Series)',
-    options: ['옵션아이템', '옵션아이템', '옵션아이템'],
+    options: ['옵션아이템1', '옵션아이템2', '옵션아이템3'],
   },
   {
     category: '인증서 > 국내인증',
     type: 'PDF',
     name: 'SLC Series',
-    options: ['옵션아이템', '옵션아이템', '옵션아이템'],
+    options: ['옵션아이템1', '옵션아이템2', '옵션아이템3'],
   },
 ];
 
@@ -221,25 +222,35 @@ function ProductListView({
     ? selectedSubCategory.name
     : selectedCategory.name;
 
+  console.log(
+    selectedSubCategory?.slug,
+    selectedCategory.subCategories,
+    selectedCategory.subCategories.find(
+      (sub) => sub.slug === selectedSubCategory?.slug,
+    )?.slug,
+  );
   return (
     <div className="flex flex-col items-center relative size-full min-h-screen">
       <Header currentPath={pathname} />
 
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
-        <div className="bg-white flex flex-col items-start px-4 md:px-6 lg:px-0 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
+        <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
           <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
             {pageTitle}
           </p>
           <div className="h-3 w-full" />
 
           {/* 1레벨 탭 */}
-          <div className="flex gap-2 items-center w-full overflow-x-auto">
+          <div className="flex gap-2 items-center w-full">
             <CustomTabs
               value={selectedCategory.slug}
               onValueChange={() => {}}
               variant="horizontal"
             >
-              <CustomTabsList variant="horizontal" className="gap-0 flex-nowrap">
+              <CustomTabsList
+                variant="horizontal"
+                className="gap-0 flex-nowrap"
+              >
                 {categories.map((cat) => (
                   <Link key={cat.id} href={`/products/${cat.slug}`}>
                     <CustomTabsTrigger
@@ -261,7 +272,9 @@ function ProductListView({
           <div className="flex gap-1 md:gap-2 items-start w-full flex-wrap">
             <ChipGroup
               value={selectedSubCategory?.slug || ''}
-              onValueChange={() => {}}
+              onValueChange={(v) => {
+                console.log(v, selectedCategory.slug);
+              }}
               size="large"
             >
               {selectedCategory.subCategories.map((sub) => (
@@ -282,7 +295,7 @@ function ProductListView({
             {displayProducts.map((prod) => (
               <div
                 key={prod.id}
-                className="bg-white border flex flex-col items-center overflow-clip relative rounded-2xl w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[282px] border-[var(--color-button-gray-outlined-border-default)]"
+                className="group bg-white border-2 flex flex-col items-center overflow-clip relative rounded-2xl w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[282px] border-[var(--color-button-gray-outlined-border-default)] hover:border-[var(--color-Text-Strong)] transition-colors duration-200"
               >
                 <div className="flex h-[200px] items-center justify-center p-5 w-full">
                   <div className="aspect-[310/392] h-full relative">
@@ -300,12 +313,9 @@ function ProductListView({
                     </p>
                     {prod.isNew && (
                       <div className="flex items-center justify-center px-2 py-1 rounded-[50px]">
-                        <Badge
-                          variant="destructive"
-                          className="text-xs font-semibold"
-                        >
+                        <span className="text-xs font-semibold text-[var(--color-error-400)]">
                           NEW
-                        </Badge>
+                        </span>
                       </div>
                     )}
                   </div>
@@ -345,7 +355,7 @@ function ProductListView({
                       href={`/products/${selectedCategory.slug}/${
                         selectedSubCategory?.slug ||
                         selectedCategory.subCategories.find((sub) =>
-                          sub.products.some((p) => p.slug === prod.slug)
+                          sub.products.some((p) => p.slug === prod.slug),
                         )?.slug
                       }/${prod.slug}`}
                     >
@@ -377,14 +387,14 @@ function ProductDetailView({
   product: Product;
 }) {
   const [activeTab, setActiveTab] = React.useState('상세설명');
-  const [selectedModel, setSelectedModel] = React.useState('Model Name');
+  const [selectedModel, setSelectedModel] = React.useState('Model Name1');
 
   return (
     <div className="flex flex-col items-center relative size-full min-h-screen">
       <Header currentPath={pathname} />
 
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
-        <div className="bg-white flex flex-col items-start px-4 md:px-6 lg:px-0 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
+        <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
           {/* Breadcrumb and Title */}
           <div className="border-b border-[var(--color-button-gray-outlined-border-default)] flex flex-col md:flex-row items-start md:items-end justify-between gap-2 pb-1 pt-0 px-0 w-full">
             <p className="font-semibold leading-6 text-xl md:text-2xl lg:text-[30px] text-[var(--color-text-strong)]">
@@ -422,7 +432,7 @@ function ProductDetailView({
 
           {/* Product Image and Info */}
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 min-h-[360px] items-start w-full">
-            <div className="flex flex-col grow h-[360px] items-center overflow-clip p-10">
+            <div className="flex flex-col grow h-[360px] items-center overflow-clip p-10 w-full lg:w-auto">
               <div className="aspect-[310/392] grow relative">
                 <Image
                   alt=""
@@ -431,7 +441,7 @@ function ProductDetailView({
                 />
               </div>
             </div>
-            <div className="flex flex-col grow h-full items-start pb-0 pt-10 px-0">
+            <div className="flex flex-col grow h-full items-start pb-0 pt-10 px-0 w-full lg:w-auto">
               <div className="flex flex-col gap-1 items-start p-5 w-full">
                 <div className="flex gap-1 items-end">
                   <p className="font-semibold leading-[1.25] text-2xl text-[var(--color-text-strong)] whitespace-nowrap">
@@ -439,12 +449,9 @@ function ProductDetailView({
                   </p>
                   {product.isNew && (
                     <div className="flex items-center justify-center px-2 py-1 rounded-[50px]">
-                      <Badge
-                        variant="destructive"
-                        className="text-xs font-semibold"
-                      >
+                      <span className="text-xs font-semibold text-[var(--color-error-400)]">
                         NEW
-                      </Badge>
+                      </span>
                     </div>
                   )}
                 </div>
@@ -452,23 +459,25 @@ function ProductDetailView({
                   {product.description}
                 </p>
               </div>
-              <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-start p-5 w-full">
-                <div className="font-normal leading-6 text-sm text-[var(--color-text-basic)] w-full">
-                  <p className="mb-0">
-                    고성능 및 25.4mm 표준 장착 구멍 거리를 갖춘 미니 직사각형 광전
-                    센서 OS10 시리즈는
-                  </p>
-                  <p className="mb-0">
-                    BGS(배경 억제) 모드, 확산 반사 모드, 역반사 모드 및 관통 빔
-                    모드로 제공됩니다.
-                  </p>
-                  <p className="mb-0">
-                    적색 빔 또는 레이저 빔 소스(옵션)를 사용하면 인쇄 및 포장,
-                    제약, 전자, 소형 장비 및 기타 응용
-                  </p>
-                  <p>분야에 적합합니다.</p>
-                </div>
-              </div>
+              {product.detailDescriptionKo &&
+                product.detailDescriptionKo.length > 0 && (
+                  <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-start p-5 w-full">
+                    <div className="font-normal leading-6 text-sm text-[var(--color-text-basic)] w-full">
+                      {product.detailDescriptionKo.map((line, idx) => (
+                        <p
+                          key={idx}
+                          className={
+                            idx < product.detailDescriptionKo!.length - 1
+                              ? 'mb-0'
+                              : ''
+                          }
+                        >
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
               <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-wrap gap-2 items-center p-5 w-full">
                 {productTags.map((tag, idx) => (
                   <React.Fragment key={`${tag}-${idx}`}>
@@ -501,11 +510,9 @@ function ProductDetailView({
             value={activeTab}
             onValueChange={setActiveTab}
             variant="horizontal"
+            className="w-full"
           >
-            <CustomTabsList
-              variant="horizontal"
-              className="gap-2 w-full overflow-x-auto"
-            >
+            <CustomTabsList variant="horizontal" className="gap-2 w-full">
               <CustomTabsTrigger
                 value="상세설명"
                 variant="horizontal"
@@ -534,49 +541,38 @@ function ProductDetailView({
               <div className="h-3 w-full" />
               <div className="bg-[var(--color-grey-50)] flex flex-col gap-5 items-start p-4 md:p-5 w-full">
                 <div className="font-normal leading-0 text-[var(--color-text-strong)] w-full">
-                  <p className="font-bold leading-6 mb-0 text-[15px]">
-                    Description
-                  </p>
-                  <p className="leading-6 mb-0 text-[15px]">
-                    Mini-rectangular photoelectric sensors OS10 series, with
-                    high performance and 25.4mm standard mounting hole distance,
-                    are available as BGS (background suppression) mode, diffuse
-                    reflective mode, retro-reflective mode, and through-beam
-                    mode. With optional red beam or laser beam source, they are
-                    suitable for printing and packaging, pharmaceutical,
-                    electronic, small equipment and other application fields.
-                  </p>
-                  <p className="leading-6 mb-0 text-[15px]">&nbsp;</p>
-                  <p className="font-bold leading-6 mb-0 text-[var(--color-text-strong)] text-[15px]">
-                    Features
-                  </p>
-                  <ul className="list-disc">
-                    <li className="mb-0 ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
-                      <span className="leading-6 text-[15px]">
-                        BGS function has greatly improved the detection effect
-                      </span>
-                    </li>
-                    <li className="mb-0 ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
-                      <span className="leading-6 text-[15px]">
-                        Optional red beam or laser beam
-                      </span>
-                    </li>
-                    <li className="mb-0 ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
-                      <span className="leading-6 text-[15px]">
-                        Adjustable sensing range
-                      </span>
-                    </li>
-                    <li className="mb-0 ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
-                      <span className="leading-6 text-[15px]">
-                        Protection class IP67
-                      </span>
-                    </li>
-                    <li className="ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
-                      <span className="leading-6 text-[15px]">
-                        Optional M8 connector, 2 m pre-wired cable
-                      </span>
-                    </li>
-                  </ul>
+                  {product.detailDescriptionEn && (
+                    <>
+                      <p className="font-bold leading-6 mb-0 text-[15px]">
+                        Description
+                      </p>
+                      <p className="leading-6 mb-0 text-[15px]">
+                        {product.detailDescriptionEn}
+                      </p>
+                      <p className="leading-6 mb-0 text-[15px]">&nbsp;</p>
+                    </>
+                  )}
+                  {product.features && product.features.length > 0 && (
+                    <>
+                      <p className="font-bold leading-6 mb-0 text-[var(--color-text-strong)] text-[15px]">
+                        Features
+                      </p>
+                      <ul className="list-disc">
+                        {product.features.map((feature, idx) => (
+                          <li
+                            key={idx}
+                            className={`${
+                              idx < product.features!.length - 1 ? 'mb-0' : ''
+                            } ms-[calc(var(--list-marker-font-size,0)*1.5*1)]`}
+                          >
+                            <span className="leading-6 text-[15px]">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </div>
                 <div className="bg-[var(--color-grey-300)] flex h-[200px] md:h-[300px] lg:h-[400px] items-center justify-center rounded-lg w-full">
                   <p className="font-semibold leading-[1.25] text-lg md:text-xl lg:text-2xl text-[var(--color-text-strong)] whitespace-nowrap">
@@ -605,42 +601,68 @@ function ProductDetailView({
                 <div className="h-3 w-full" />
 
                 {/* Specifications Table */}
-                <div className="border-t border-[var(--color-grey-900)] flex flex-col items-center pb-0 pt-px px-0 w-full overflow-x-auto">
-                  <div className="min-w-[600px] w-full">
-                    {specifications.map((spec, idx) => (
-                      <div
-                        key={idx}
-                        className="flex flex-col md:flex-row items-start w-full"
-                      >
-                        <div className="bg-[var(--color-grey-50)] border-r-0 md:border-r border-b border-[var(--color-grey-350)] flex items-center px-4 md:px-5 py-3 md:py-4 w-full md:w-[360px]">
-                          <p className="font-semibold leading-6 text-sm md:text-base text-[var(--color-text-strong)] whitespace-nowrap">
-                            {spec.label}
-                          </p>
-                        </div>
-                        <div className="border-b border-[var(--color-grey-350)] flex grow items-center px-4 md:px-5 py-3 md:py-4 w-full">
+                <div className="w-full overflow-x-auto">
+                  <table className="w-full border-collapse border-t border-(--color-grey-900)">
+                    <tbody>
+                      {specifications.map((spec, idx) => (
+                        <React.Fragment key={idx}>
                           {Array.isArray(spec.value) ? (
-                            <div className="flex flex-col w-full">
-                              {spec.value.map((val, valIdx) => (
-                                <div
-                                  key={valIdx}
-                                  className="border-b border-[var(--color-grey-350)] flex items-center px-5 py-4 w-full last:border-b-0"
-                                >
-                                  <p className="font-normal leading-6 text-sm md:text-base text-[var(--color-text-strong)] break-words md:whitespace-nowrap">
+                            spec.value.map((val, valIdx) => (
+                              <tr key={`${idx}-${valIdx}`}>
+                                {valIdx === 0 && (
+                                  <th
+                                    rowSpan={spec.value.length}
+                                    className="bg-(--color-grey-50) border-b border-r border-(--color-grey-350) px-5 py-4 text-left align-top w-50 min-w-50"
+                                  >
+                                    <span className="font-semibold text-base text-(--color-text-strong)">
+                                      {spec.label}
+                                    </span>
+                                  </th>
+                                )}
+                                <td className="border-b border-(--color-grey-350) px-5 py-4">
+                                  <span className="font-normal text-base text-(--color-text-strong)">
                                     {val}
-                                  </p>
-                                </div>
-                              ))}
-                            </div>
+                                  </span>
+                                </td>
+                              </tr>
+                            ))
                           ) : (
-                            <p className="font-normal leading-6 text-sm md:text-base text-[var(--color-text-strong)] break-words md:whitespace-nowrap">
-                              {spec.value}
-                            </p>
+                            <tr>
+                              <th className="bg-(--color-grey-50) border-b border-r border-(--color-grey-350) px-5 py-4 text-left w-50 min-w-50">
+                                <span className="font-semibold text-base text-(--color-text-strong)">
+                                  {spec.label}
+                                </span>
+                              </th>
+                              <td className="border-b border-(--color-grey-350) px-5 py-4">
+                                <span className="font-normal text-base text-(--color-text-strong)">
+                                  {spec.value}
+                                </span>
+                              </td>
+                            </tr>
                           )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                        </React.Fragment>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
+              </div>
+            </CustomTabsContent>
+
+            {/* Video Tab Content */}
+            <CustomTabsContent value="동영상자료" className="mt-3">
+              <div className="h-3 w-full" />
+              <div className="bg-[var(--color-grey-50)] flex flex-col gap-5 items-start p-4 md:p-5 w-full">
+                <div className="aspect-video bg-[var(--color-grey-300)] flex items-center justify-center rounded-lg w-full">
+                  <p className="font-semibold leading-[1.25] text-lg md:text-xl lg:text-2xl text-[var(--color-text-strong)]">
+                    비디오 영역
+                  </p>
+                </div>
+                {product.detailDescriptionEn && (
+                  <div className="font-normal leading-6 text-[15px] text-[var(--color-text-strong)] w-full">
+                    <p className="font-bold mb-0">Description</p>
+                    <p>{product.detailDescriptionEn}</p>
+                  </div>
+                )}
               </div>
             </CustomTabsContent>
 
@@ -680,7 +702,7 @@ function ProductDetailView({
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-1.5 items-stretch sm:items-start justify-center pb-4 md:pb-5 pt-0 px-4 md:px-5 w-full">
+                    <div className="flex flex-col flex-row gap-2 gap-1.5 items-stretch items-start justify-center pb-4 md:pb-5 pt-0 px-4 md:px-5 w-full">
                       <CustomDropdown>
                         <CustomDropdownTrigger className="grow min-w-0">
                           <CustomDropdownValue placeholder="모델을 선택하세요" />
@@ -695,7 +717,7 @@ function ProductDetailView({
                       </CustomDropdown>
                       <Button
                         variant="default"
-                        className="bg-[var(--color-grey-850)] text-white min-h-9 px-3 py-2 rounded-md text-xs sm:text-sm font-bold gap-0.5 w-full sm:w-auto"
+                        className="bg-[var(--color-grey-850)] text-white min-h-9 px-3 py-2 rounded-md text-xs text-sm font-bold gap-0.5 w-full w-auto"
                       >
                         <span>다운로드</span>
                       </Button>

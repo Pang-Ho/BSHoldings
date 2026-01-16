@@ -10,7 +10,9 @@ import { Tooltip, TooltipContent, TooltipTrigger } from './tooltip';
 function CustomDropdown({
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Root>) {
-  return <SelectPrimitive.Root data-slot="custom-dropdown" {...props} />;
+  return (
+    <SelectPrimitive.Root data-slot="custom-dropdown" {...props} />
+  );
 }
 
 function CustomDropdownValue({

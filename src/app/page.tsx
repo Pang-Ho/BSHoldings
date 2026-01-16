@@ -116,16 +116,17 @@ export default function HomePage() {
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
         >
-          <Image
-            alt="heroImage"
-            className="absolute max-w-none object-cover object-[50%_50%] size-full"
-            src={heroImage}
-            priority
-            placeholder="blur"
+          <video
+            className="absolute max-w-none object-cover object-center size-full blur-[2px]"
+            src="/video/riftek-main.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
           <div className="absolute bg-black/25 inset-0" />
         </div>
-        <div className="relative flex flex-col grow items-center justify-between pb-3 pt-20 md:pt-40 lg:pt-[280px] px-4 w-full max-w-[1200px] z-10">
+        <div className="relative flex flex-col grow items-center justify-between pb-12 md:pb-16 lg:pb-20 pt-20 md:pt-40 lg:pt-[280px] px-4 w-full max-w-[1200px] z-10">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-20 items-center leading-6 text-white text-center w-full">
             <div className="font-extrabold relative text-3xl md:text-5xl lg:text-[80px] leading-normal">
               <p className="mb-0">시작부터 완성까지</p>
@@ -135,21 +136,22 @@ export default function HomePage() {
               The Best Sensors & Solutions
             </p>
           </div>
-          <div className="relative size-10 md:size-12 lg:size-[60px]">
+          {/* Scroll Down Indicator */}
+          <div className="relative size-10 md:size-12 lg:size-[40px] animate-bounce">
             <Image
-              alt=""
-              className="block max-w-none size-full"
+              alt="스크롤을 내려주세요"
+              className="block max-w-none size-full opacity-80"
               src={chevronDownIcon}
             />
           </div>
         </div>
+      </div>
 
-        {/* Gradient Section at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center px-4 py-12 md:py-16 lg:py-20 w-full z-10 bg-hero-bottom-gradient">
-          <div className="font-bold text-lg md:text-2xl lg:text-[30px] leading-normal text-white text-center w-full max-w-300">
-            <p className="mb-0">자동화 제품과 자동화 설비 컨설팅</p>
-            <p>센서제작에 이르는 고객 맞춤형 서비스</p>
-          </div>
+      {/* Gradient Text Section */}
+      <div className="flex flex-col items-center justify-center px-4 py-12 md:py-16 lg:py-20 w-full bg-hero-bottom-gradient">
+        <div className="font-bold text-lg md:text-2xl lg:text-[30px] leading-normal text-white text-center w-full max-w-[1200px]">
+          <p className="mb-0">자동화 제품과 자동화 설비 컨설팅</p>
+          <p>센서제작에 이르는 고객 맞춤형 서비스</p>
         </div>
       </div>
 
@@ -316,12 +318,12 @@ export default function HomePage() {
           <div className="absolute bg-[rgba(26,26,26,0.4)] inset-0" />
         </div>
         <div className="relative flex flex-col gap-12 md:gap-20 lg:gap-[280px] items-start pb-12 md:pb-16 lg:pb-0 pt-12 md:pt-16 lg:pt-[100px] px-4 md:px-6 lg:px-0 w-full max-w-[1200px] z-10">
-          <div className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-white w-full">
+          <div className="font-semibold leading-[1.5] text-2xl md:text-3xl lg:text-[36px] text-white w-full">
             <p className="mb-0">자동화의</p>
             <p className="mb-0">모든 과정에 함께하는</p>
             <p>파트너, BS 홀딩스</p>
           </div>
-          <div className="flex flex-col md:flex-row items-stretch md:items-start justify-end w-full gap-4 md:gap-6">
+          <div className="flex flex-col md:flex-row items-stretch md:items-start justify-end w-full gap-4 md:gap-0">
             <div className="bg-[rgba(1,16,37,0.6)] flex flex-col gap-3 min-h-[200px] md:h-[320px] items-start justify-end p-6 md:p-10 w-full md:w-[340px]">
               <div className="flex gap-1 items-center">
                 <p className="font-bold leading-[1.25] text-xl md:text-2xl text-white text-center whitespace-nowrap">

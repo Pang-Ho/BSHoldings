@@ -52,8 +52,8 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
     >
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <div className="flex h-16 w-32 md:w-40 items-center justify-start">
-          <Link href="/" className="relative h-7 md:h-8 w-32 md:w-40">
+        <div className="flex h-16 w-40 items-center justify-start">
+          <Link href="/" className="relative h-8 w-40">
             <Image
               alt="BS Holdings Logo"
               className={cn(
@@ -190,9 +190,9 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             aria-label="메뉴 열기"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`} />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`} />
             )}
           </Button>
         </div>

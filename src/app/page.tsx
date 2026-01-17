@@ -31,13 +31,6 @@ import chevronDownIcon from '../../public/icons/chevronDownIcon.svg';
 import separatorIcon from '../../public/icons/separatorIcon.svg';
 import productImage from '../../public/images/productImage.jpg';
 
-import {
-  CustomDropdown,
-  CustomDropdownContent,
-  CustomDropdownItem,
-  CustomDropdownTrigger,
-  CustomDropdownValue,
-} from '@/components/ui/custom-dropdown';
 import productsData from '@/lib/data/products.json';
 
 // 타입 정의
@@ -164,38 +157,45 @@ export default function HomePage() {
 
       {/* Product Section */}
       <div className="bg-white flex flex-col min-h-[899px] items-center w-full">
-        <div className="flex flex-col gap-3 items-start pb-0 pt-12 md:pt-16 lg:pt-[100px] px-4 md:px-6 w-full max-w-[1200px]">
+        <div className="flex flex-col gap-3 items-start pb-0 pt-12 md:pt-16 lg:pt-[100px] px-6 w-full max-w-[1200px]">
           <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] w-full">
             Product
           </p>
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start w-full">
-            {/* 왼쪽 카테고리 탭 - 모바일: Select, md 이상: CustomTabs */}
-            <div className="flex flex-col gap-[10px] items-start pb-0 pt-0 lg:pt-[54px] px-0 w-full lg:w-[200px]">
-              {/* 모바일 Select */}
-              <CustomDropdown
-                value={String(selectedCategoryId)}
-                onValueChange={(val) => setSelectedCategoryId(Number(val))}
+          {/* 1레벨 탭 - 모바일 */}
+          <div className="flex gap-2 w-full overflow-x-auto overflow-y-hidden h-12 items-start lg:hidden">
+            <CustomTabs
+              value={String(selectedCategoryId)}
+              onValueChange={(val) => setSelectedCategoryId(Number(val))}
+              variant="horizontal"
+            >
+              <CustomTabsList
+                variant="horizontal"
+                className="gap-0 flex-nowrap"
               >
-                <CustomDropdownTrigger className="w-full lg:hidden h-12 text-base font-semibold">
-                  <CustomDropdownValue placeholder="카테고리 선택" />
-                </CustomDropdownTrigger>
-                <CustomDropdownContent>
-                  {categories.map((category) => (
-                    <CustomDropdownItem
-                      key={category.id}
-                      value={String(category.id)}
-                    >
-                      {category.name}
-                    </CustomDropdownItem>
-                  ))}
-                </CustomDropdownContent>
-              </CustomDropdown>
-              {/* md 이상 CustomTabs */}
+                {categories.map((category) => (
+                  <CustomTabsTrigger
+                    key={category.id}
+                    value={String(category.id)}
+                    variant="horizontal"
+                    className="px-2 md:px-2.5 py-2 md:py-2.5 text-sm md:text-base whitespace-nowrap"
+                  >
+                    {category.name}
+                  </CustomTabsTrigger>
+                ))}
+              </CustomTabsList>
+            </CustomTabs>
+          </div>
+
+          <div className="h-4 lg:h-0 w-full" />
+
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start w-full">
+            {/* 왼쪽 카테고리 탭 - lg 이상 vertical */}
+            <div className="hidden lg:flex flex-col gap-[10px] items-start pb-0 pt-[54px] px-0 w-[200px]">
               <CustomTabs
                 value={String(selectedCategoryId)}
                 onValueChange={(val) => setSelectedCategoryId(Number(val))}
                 variant="vertical"
-                className="hidden lg:flex w-full"
+                className="w-full"
               >
                 <CustomTabsList variant="vertical" className="w-full">
                   {categories.map((category) => (
@@ -213,7 +213,7 @@ export default function HomePage() {
             </div>
             {/* 오른쪽 서브카테고리 칩 + 제품 캐러셀 */}
             <div className="flex flex-col grow items-start w-full lg:w-auto">
-              <div className="flex gap-2 md:gap-[6px] items-center w-full flex-wrap">
+              <div className="flex gap-1 md:gap-2 items-start w-full flex-nowrap overflow-x-auto overflow-y-hidden h-9 md:h-12">
                 <ChipGroup
                   value={String(selectedSubCategoryId || '')}
                   onValueChange={(val) =>
@@ -228,7 +228,11 @@ export default function HomePage() {
                   size="large"
                 >
                   {subCategories.map((subCat) => (
-                    <ChipGroupItem key={subCat.id} value={String(subCat.id)}>
+                    <ChipGroupItem
+                      key={subCat.id}
+                      value={String(subCat.id)}
+                      className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
+                    >
                       {subCat.name}
                     </ChipGroupItem>
                   ))}
@@ -246,11 +250,8 @@ export default function HomePage() {
               >
                 <CarouselContent>
                   {displayProducts.map((product) => (
-                    <CarouselItem
-                      key={product.id}
-                      className="md:basis-[40%] lg:basis-[29%]"
-                    >
-                      <div className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-full">
+                    <CarouselItem key={product.id} className="lg:basis-[29%]">
+                      <div className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-55">
                         <div className="flex h-[200px] items-center justify-center w-full">
                           <div className="h-40 relative w-[126px]">
                             <Image
@@ -321,8 +322,8 @@ export default function HomePage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="hidden lg:flex -left-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
-                <CarouselNext className="hidden lg:flex -right-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
+                <CarouselPrevious className="flex -left-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
+                <CarouselNext className="flex -right-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
               </Carousel>
             </div>
           </div>

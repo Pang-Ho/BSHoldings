@@ -75,11 +75,7 @@ const ChipGroup = React.forwardRef<HTMLDivElement, ChipGroupProps>(
     ref,
   ) => {
     return (
-      <div
-        ref={ref}
-        className={cn('flex flex-wrap gap-2', className)}
-        {...props}
-      >
+      <div ref={ref} className={cn('flex gap-2', className)} {...props}>
         {React.Children.map(children, (child) => {
           if (React.isValidElement(child) && child.type === ChipGroupItem) {
             const childProps = child.props as ChipGroupItemProps;

@@ -234,14 +234,14 @@ function ProductListView({
       <Header currentPath={pathname} />
 
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
-        <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
+        <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1248px]">
           <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
             {pageTitle}
           </p>
           <div className="h-3 w-full" />
 
           {/* 1레벨 탭 */}
-          <div className="flex gap-2 items-center w-full">
+          <div className="flex gap-2 w-full overflow-x-auto overflow-y-hidden h-12 items-start">
             <CustomTabs
               value={selectedCategory.slug}
               onValueChange={() => {}}
@@ -266,10 +266,10 @@ function ProductListView({
             </CustomTabs>
           </div>
 
-          <div className="h-8 md:h-12 w-full" />
+          <div className="h-4 md:h-12 w-full" />
 
           {/* 2레벨 칩 */}
-          <div className="flex gap-1 md:gap-2 items-start w-full flex-wrap">
+          <div className="flex gap-1 md:gap-2 items-start w-full flex-nowrap overflow-x-auto overflow-y-hidden h-9 md:h-12 items-start ">
             <ChipGroup
               value={selectedSubCategory?.slug || ''}
               onValueChange={(v) => {
@@ -282,7 +282,12 @@ function ProductListView({
                   key={sub.id}
                   href={`/products/${selectedCategory.slug}/${sub.slug}`}
                 >
-                  <ChipGroupItem value={sub.slug}>{sub.name}</ChipGroupItem>
+                  <ChipGroupItem
+                    value={sub.slug}
+                    className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
+                  >
+                    {sub.name}
+                  </ChipGroupItem>
                 </Link>
               ))}
             </ChipGroup>
@@ -291,7 +296,7 @@ function ProductListView({
           <div className="h-5 w-full" />
 
           {/* 제품 그리드 */}
-          <div className="flex flex-wrap gap-4 md:gap-6 items-start w-full justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-4 md:gap-6 items-start w-full justify-start">
             {displayProducts.map((prod) => (
               <div
                 key={prod.id}

@@ -37,7 +37,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col md:flex-row gap-2 md:gap-3 items-start md:items-center flex-wrap">
             <p className="font-normal leading-6 text-xs md:text-sm text-[var(--color-grey-400)] whitespace-nowrap">
-              대표이사 : 박명수
+              대표이사 : 이효종
             </p>
             <div className="hidden md:block h-3 relative shrink-0 w-0">
               <div className="absolute inset-[0_-0.5px]">

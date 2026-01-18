@@ -675,7 +675,7 @@ function ProductDetailView({
                 {downloadItems.map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center relative rounded-md w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(50%-0.625rem)] lg:w-[386.667px]"
+                    className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center relative rounded-md w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.875rem)]"
                   >
                     <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-col gap-1 items-start p-4 md:p-5 w-full">
                       <p className="font-medium leading-6 text-xs md:text-[13px] text-[var(--color-text-basic)] whitespace-nowrap">

@@ -11,27 +11,30 @@ const mapHtml = `
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <style>
       html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
       .root_daum_roughmap { width: 100% !important; height: 100% !important; }
-      .root_daum_roughmap .wrap_map { width: 100% !important; height: 100% !important; }
-      .root_daum_roughmap .wrap_map .map { width: 100% !important; height: 100% !important; }
-      .root_daum_roughmap .wrap_controllers { display: none !important; }
-      .root_daum_roughmap .wrap_btn_zoom { display: block !important; }
-      .root_daum_roughmap .wrap_info { display: none !important; }
-      .root_daum_roughmap .cont { display: none !important; }
+      /* ... 기존 스타일 생략 ... */
     </style>
   </head>
   <body>
     <div id="daumRoughmapContainer1768400232152" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%; height:100%;"></div>
+    
     <script charset="UTF-8" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    
     <script charset="UTF-8">
-      new daum.roughmap.Lander({
-        "timestamp" : "1768400232152",
-        "key" : "fmvjmvtb5ad",
-        "mapWidth" : "100%",
-        "mapHeight" : "480"
-      }).render();
+      // 스크립트가 로드되었는지 확인 후 실행하는 것이 안전합니다.
+      window.onload = function() {
+        if (window.daum && daum.roughmap && daum.roughmap.Lander) {
+          new daum.roughmap.Lander({
+            "timestamp" : "1768400232152",
+            "key" : "fmvjmvtb5ad",
+            "mapWidth" : "100%",
+            "mapHeight" : "480"
+          }).render();
+        }
+      };
     </script>
   </body>
 </html>

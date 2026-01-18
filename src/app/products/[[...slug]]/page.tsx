@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { notFound, usePathname } from 'next/navigation';
+import { notFound, usePathname, useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { Footer } from '@/components/footer';
@@ -206,6 +206,7 @@ function ProductListView({
   category: Category | null;
   subCategory: SubCategory | null;
 }) {
+  const router = useRouter();
   const categories = productsData as Category[];
 
   // 선택된 카테고리 (기본값: 첫 번째 카테고리)
@@ -273,22 +274,18 @@ function ProductListView({
             <ChipGroup
               value={selectedSubCategory?.slug || ''}
               onValueChange={(v) => {
-                console.log(v, selectedCategory.slug);
+                router.push(`/products/${selectedCategory.slug}/${v}`);
               }}
               size="large"
             >
               {selectedCategory.subCategories.map((sub) => (
-                <Link
+                <ChipGroupItem
                   key={sub.id}
-                  href={`/products/${selectedCategory.slug}/${sub.slug}`}
+                  value={sub.slug}
+                  className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
                 >
-                  <ChipGroupItem
-                    value={sub.slug}
-                    className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
-                  >
-                    {sub.name}
-                  </ChipGroupItem>
-                </Link>
+                  {sub.name}
+                </ChipGroupItem>
               ))}
             </ChipGroup>
           </div>
@@ -562,7 +559,7 @@ function ProductDetailView({
                       <p className="font-bold leading-6 mb-0 text-[var(--color-text-strong)] text-[15px]">
                         Features
                       </p>
-                      <ul className="list-disc">
+                      <ul className="list-disc pl-5">
                         {product.features.map((feature, idx) => (
                           <li
                             key={idx}

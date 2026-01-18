@@ -157,10 +157,11 @@ export default function HomePage() {
 
       {/* Product Section */}
       <div className="bg-white flex flex-col min-h-[899px] items-center w-full">
-        <div className="flex flex-col gap-3 items-start pb-0 pt-12 md:pt-16 lg:pt-[100px] px-6 w-full max-w-[1200px]">
-          <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] w-full">
+        <div className="flex flex-col items-start pb-0 pt-12 md:pt-16 lg:pt-[100px] px-6 w-full max-w-[1200px]">
+          <p className="font-semibold leading-normal text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] w-full">
             Product
           </p>
+          <div className="h-3 w-full" />
           {/* 1레벨 탭 - 모바일 */}
           <div className="flex gap-2 w-full overflow-x-auto overflow-y-hidden h-12 items-start lg:hidden">
             <CustomTabs

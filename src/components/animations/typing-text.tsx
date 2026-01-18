@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 interface TypingTextProps {
   children: string;
@@ -17,7 +17,7 @@ export function TypingText({
 }: TypingTextProps) {
   const letters = Array.from(children);
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
@@ -25,7 +25,7 @@ export function TypingText({
     }),
   };
 
-  const child = {
+  const child: Variants = {
     visible: {
       opacity: 1,
       y: 0,

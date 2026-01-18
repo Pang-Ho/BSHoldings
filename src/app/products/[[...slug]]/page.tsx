@@ -236,7 +236,7 @@ function ProductListView({
 
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
         <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1248px]">
-          <p className="font-semibold leading-6 text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
+          <p className="font-semibold leading-normal text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
             {pageTitle}
           </p>
           <div className="h-3 w-full" />

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound, usePathname, useRouter } from 'next/navigation';
 import * as React from 'react';
 
+import { FadeIn } from '@/components/animations';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -229,66 +230,73 @@ function ProductListView({
 
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
         <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1248px]">
-          <p className="font-semibold leading-normal text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
-            {pageTitle}
-          </p>
+          <FadeIn delay={0.1} direction="left">
+            <p className="font-semibold leading-normal text-2xl md:text-3xl lg:text-[36px] text-[var(--color-text-strong)] whitespace-nowrap">
+              {pageTitle}
+            </p>
+          </FadeIn>
           <div className="h-3 w-full" />
 
           {/* 1레벨 탭 */}
-          <div className="flex gap-2 w-full overflow-x-auto overflow-y-hidden h-12 items-start">
-            <CustomTabs
-              value={selectedCategory.slug}
-              onValueChange={() => {}}
-              variant="horizontal"
-            >
-              <CustomTabsList
+          <FadeIn delay={0.2} className="w-full">
+            <div className="flex gap-2 w-full overflow-x-auto overflow-y-hidden h-12 items-start">
+              <CustomTabs
+                value={selectedCategory.slug}
+                onValueChange={() => {}}
                 variant="horizontal"
-                className="gap-0 flex-nowrap"
               >
-                {categories.map((cat) => (
-                  <Link key={cat.id} href={`/products/${cat.slug}`}>
-                    <CustomTabsTrigger
-                      value={cat.slug}
-                      variant="horizontal"
-                      className="px-2 md:px-2.5 py-2 md:py-2.5 text-sm md:text-base lg:text-lg whitespace-nowrap"
-                    >
-                      {cat.name}
-                    </CustomTabsTrigger>
-                  </Link>
-                ))}
-              </CustomTabsList>
-            </CustomTabs>
-          </div>
+                <CustomTabsList
+                  variant="horizontal"
+                  className="gap-0 flex-nowrap"
+                >
+                  {categories.map((cat) => (
+                    <Link key={cat.id} href={`/products/${cat.slug}`}>
+                      <CustomTabsTrigger
+                        value={cat.slug}
+                        variant="horizontal"
+                        className="px-2 md:px-2.5 py-2 md:py-2.5 text-sm md:text-base lg:text-lg whitespace-nowrap"
+                      >
+                        {cat.name}
+                      </CustomTabsTrigger>
+                    </Link>
+                  ))}
+                </CustomTabsList>
+              </CustomTabs>
+            </div>
+          </FadeIn>
 
           <div className="h-4 md:h-12 w-full" />
 
           {/* 2레벨 칩 */}
-          <div className="flex gap-1 md:gap-2 items-start w-full flex-nowrap overflow-x-auto overflow-y-hidden h-9 md:h-12 items-start ">
-            <ChipGroup
-              value={selectedSubCategory?.slug || ''}
-              onValueChange={(v) => {
-                if (selectedSubCategory?.slug === v)
-                  router.push(`/products/${selectedCategory.slug}`);
-                else router.push(`/products/${selectedCategory.slug}/${v}`);
-              }}
-              size="large"
-            >
-              {selectedCategory.subCategories.map((sub) => (
-                <ChipGroupItem
-                  key={sub.id}
-                  value={sub.slug}
-                  className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
-                >
-                  {sub.name}
-                </ChipGroupItem>
-              ))}
-            </ChipGroup>
-          </div>
+          <FadeIn delay={0.3} className="w-full">
+            <div className="flex gap-1 md:gap-2 items-start w-full flex-nowrap overflow-x-auto overflow-y-hidden h-9 md:h-12 items-start ">
+              <ChipGroup
+                value={selectedSubCategory?.slug || ''}
+                onValueChange={(v) => {
+                  if (selectedSubCategory?.slug === v)
+                    router.push(`/products/${selectedCategory.slug}`);
+                  else router.push(`/products/${selectedCategory.slug}/${v}`);
+                }}
+                size="large"
+              >
+                {selectedCategory.subCategories.map((sub) => (
+                  <ChipGroupItem
+                    key={sub.id}
+                    value={sub.slug}
+                    className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
+                  >
+                    {sub.name}
+                  </ChipGroupItem>
+                ))}
+              </ChipGroup>
+            </div>
+          </FadeIn>
 
           <div className="h-5 w-full" />
 
           {/* 제품 그리드 */}
-          <div className="flex flex-wrap gap-4 md:gap-6 items-start w-full justify-start">
+          <FadeIn delay={0.4} duration={0.8} className="w-full">
+            <div className="flex flex-wrap gap-4 md:gap-6 items-start w-full justify-start">
             {displayProducts.map((prod) => (
               <div
                 key={prod.id}
@@ -362,7 +370,8 @@ function ProductListView({
                 </div>
               </div>
             ))}
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </div>
 
@@ -393,42 +402,45 @@ function ProductDetailView({
       <div className="flex flex-col grow items-center w-full pt-16 lg:pt-20">
         <div className="bg-white flex flex-col items-start px-4 md:px-6 py-12 md:py-16 lg:py-[68px] w-full max-w-[1200px]">
           {/* Breadcrumb and Title */}
-          <div className="border-b border-[var(--color-button-gray-outlined-border-default)] flex flex-col md:flex-row items-start md:items-end justify-between gap-2 pb-1 pt-0 px-0 w-full">
-            <p className="font-semibold leading-6 text-xl md:text-2xl lg:text-[30px] text-[var(--color-text-strong)]">
-              {product.name}
-            </p>
-            <p className="font-normal leading-6 text-xs md:text-sm lg:text-[13px] text-[var(--color-text-basic)]">
-              <Link href="/" className="hover:underline">
-                Home
-              </Link>
-              {' > '}
-              <Link href="/products" className="hover:underline">
-                제품소개
-              </Link>
-              {' > '}
-              <Link
-                href={`/products/${category.slug}`}
-                className="hover:underline"
-              >
-                {category.name}
-              </Link>
-              {' > '}
-              <Link
-                href={`/products/${category.slug}/${subCategory.slug}`}
-                className="hover:underline"
-              >
-                {subCategory.name}
-              </Link>
-              {' > '}
-              <span className="font-semibold text-[var(--color-text-strong)]">
+          <FadeIn delay={0.1} direction="left" className="w-full">
+            <div className="border-b border-[var(--color-button-gray-outlined-border-default)] flex flex-col md:flex-row items-start md:items-end justify-between gap-2 pb-1 pt-0 px-0 w-full">
+              <p className="font-semibold leading-6 text-xl md:text-2xl lg:text-[30px] text-[var(--color-text-strong)]">
                 {product.name}
-              </span>
-            </p>
-          </div>
+              </p>
+              <p className="font-normal leading-6 text-xs md:text-sm lg:text-[13px] text-[var(--color-text-basic)]">
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+                {' > '}
+                <Link href="/products" className="hover:underline">
+                  제품소개
+                </Link>
+                {' > '}
+                <Link
+                  href={`/products/${category.slug}`}
+                  className="hover:underline"
+                >
+                  {category.name}
+                </Link>
+                {' > '}
+                <Link
+                  href={`/products/${category.slug}/${subCategory.slug}`}
+                  className="hover:underline"
+                >
+                  {subCategory.name}
+                </Link>
+                {' > '}
+                <span className="font-semibold text-[var(--color-text-strong)]">
+                  {product.name}
+                </span>
+              </p>
+            </div>
+          </FadeIn>
           <div className="h-3 w-full" />
 
           {/* Product Image and Info */}
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 min-h-[360px] items-start w-full">
+          <FadeIn delay={0.2} duration={0.8} className="w-full">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 min-h-[360px] items-start w-full">
             <div className="flex flex-col grow h-[360px] items-center overflow-clip p-10 w-full lg:w-auto">
               <div className="aspect-[310/392] grow relative">
                 <Image
@@ -498,17 +510,19 @@ function ProductDetailView({
                 ))}
               </div>
             </div>
-          </div>
+            </div>
+          </FadeIn>
 
           <div className="h-9 w-full" />
 
           {/* Tabs */}
-          <CustomTabs
-            value={activeTab}
-            onValueChange={setActiveTab}
-            variant="horizontal"
-            className="w-full"
-          >
+          <FadeIn delay={0.4} duration={0.8} className="w-full">
+            <CustomTabs
+              value={activeTab}
+              onValueChange={setActiveTab}
+              variant="horizontal"
+              className="w-full"
+            >
             <CustomTabsList variant="horizontal" className="gap-2 w-full">
               <CustomTabsTrigger
                 value="상세설명"
@@ -723,7 +737,8 @@ function ProductDetailView({
                 ))}
               </div>
             </CustomTabsContent>
-          </CustomTabs>
+            </CustomTabs>
+          </FadeIn>
         </div>
       </div>
 

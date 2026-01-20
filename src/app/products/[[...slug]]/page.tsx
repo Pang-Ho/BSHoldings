@@ -223,13 +223,6 @@ function ProductListView({
     ? selectedSubCategory.name
     : selectedCategory.name;
 
-  console.log(
-    selectedSubCategory?.slug,
-    selectedCategory.subCategories,
-    selectedCategory.subCategories.find(
-      (sub) => sub.slug === selectedSubCategory?.slug,
-    )?.slug,
-  );
   return (
     <div className="flex flex-col items-center relative size-full min-h-screen">
       <Header currentPath={pathname} />
@@ -274,7 +267,9 @@ function ProductListView({
             <ChipGroup
               value={selectedSubCategory?.slug || ''}
               onValueChange={(v) => {
-                router.push(`/products/${selectedCategory.slug}/${v}`);
+                if (selectedSubCategory?.slug === v)
+                  router.push(`/products/${selectedCategory.slug}`);
+                else router.push(`/products/${selectedCategory.slug}/${v}`);
               }}
               size="large"
             >

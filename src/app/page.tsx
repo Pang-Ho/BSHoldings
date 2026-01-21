@@ -16,7 +16,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { ChipGroup, ChipGroupItem } from '@/components/ui/chip';
 import {
   CustomTabs,
   CustomTabsList,
@@ -44,18 +43,11 @@ interface Product {
   isNew: boolean;
 }
 
-interface SubCategory {
-  id: number;
-  name: string;
-  slug: string;
-  products: Product[];
-}
-
 interface Category {
   id: number;
   name: string;
   slug: string;
-  subCategories: SubCategory[];
+  products: Product[];
 }
 
 const categories = productsData as Category[];
@@ -65,35 +57,14 @@ export default function HomePage() {
   const [selectedCategoryId, setSelectedCategoryId] = React.useState(
     categories[0].id,
   );
-  const [selectedSubCategoryId, setSelectedSubCategoryId] = React.useState<
-    number | null
-  >(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   // 선택된 카테고리 가져오기
   const selectedCategory =
     categories.find((cat) => cat.id === selectedCategoryId) || categories[0];
 
-  // 서브카테고리 목록
-  const subCategories = selectedCategory.subCategories;
-
-  // 선택된 서브카테고리 가져오기
-  const selectedSubCategory = subCategories.find(
-    (sub) => sub.id === selectedSubCategoryId,
-  );
-
-  // 표시할 제품들 (서브카테고리 선택시 해당 제품만, 아니면 전체)
-  const displayProducts = selectedSubCategory
-    ? selectedSubCategory.products
-    : subCategories.flatMap((sub) => sub.products);
-
-  // // 카테고리 변경시 첫 번째 서브카테고리 선택
-  // React.useEffect(() => {
-  //   const newCategory = categories.find((cat) => cat.id === selectedCategoryId);
-  //   if (newCategory && newCategory.subCategories.length > 0) {
-  //     setSelectedSubCategoryId(newCategory.subCategories[0].id);
-  //   }
-  // }, [selectedCategoryId]);
+  // 표시할 제품들
+  const displayProducts = selectedCategory.products;
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -118,14 +89,15 @@ export default function HomePage() {
           className="absolute inset-0 pointer-events-none"
         >
           <video
-            className="absolute max-w-none object-cover object-center size-full blur-[2px]"
+            className="absolute max-w-none object-cover object-center size-full"
             src="/video/riftek-main.mp4"
             autoPlay
             loop
             muted
             playsInline
           />
-          <div className="absolute bg-black/25 inset-0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40" />
+          {/* <div className="absolute bg-black/25 inset-0" /> */}
         </div>
         <div className="relative flex flex-col grow items-center justify-between pb-12 md:pb-16 lg:pb-20 pt-20 md:pt-40 lg:pt-[280px] px-4 w-full max-w-[1200px] z-10">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-20 items-center leading-6 text-white text-center w-full">
@@ -229,44 +201,18 @@ export default function HomePage() {
                 </CustomTabsList>
               </CustomTabs>
             </FadeIn>
-            {/* 오른쪽 서브카테고리 칩 + 제품 캐러셀 */}
+            {/* 오른쪽 제품 캐러셀 */}
             <FadeIn
               delay={0.5}
               className="w-full lg:max-w-[770px] xl:max-w-[960px]"
             >
               <div className="flex flex-col grow items-start w-full lg:w-auto">
-                <div className="flex gap-1 md:gap-2 items-start w-full flex-nowrap overflow-x-auto overflow-y-hidden h-9 md:h-12">
-                  <ChipGroup
-                    value={String(selectedSubCategoryId || '')}
-                    onValueChange={(val) =>
-                      setSelectedSubCategoryId(
-                        String(selectedSubCategoryId) === val
-                          ? null
-                          : val
-                          ? Number(val)
-                          : null,
-                      )
-                    }
-                    size="large"
-                  >
-                    {subCategories.map((subCat) => (
-                      <ChipGroupItem
-                        key={subCat.id}
-                        value={String(subCat.id)}
-                        className="h-[30px] md:h-[34px] text-sm md:text-base lg:text-lg"
-                      >
-                        {subCat.name}
-                      </ChipGroupItem>
-                    ))}
-                  </ChipGroup>
-                </div>
-                <div className="h-5 w-full" />
                 {/* 제품 캐러셀 */}
                 <Carousel
                   opts={{
                     align: 'start',
                     loop: true,
-                    slidesToScroll: 1,
+                    // slidesToScroll: 1,
                   }}
                   className="w-full lg:max-w-[770px] xl:max-w-[960px]"
                 >
@@ -330,13 +276,7 @@ export default function HomePage() {
                               asChild
                             >
                               <Link
-                                href={`/products/${selectedCategory.slug}/${
-                                  subCategories.find((sub) =>
-                                    sub.products.some(
-                                      (p) => p.id === product.id,
-                                    ),
-                                  )?.slug
-                                }/${product.slug}`}
+                                href={`/products/${selectedCategory.slug}/${product.slug}`}
                               >
                                 자세히보기
                               </Link>

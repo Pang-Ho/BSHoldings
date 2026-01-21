@@ -96,7 +96,8 @@ export default function HomePage() {
             muted
             playsInline
           />
-          <div className="absolute bg-black/25 inset-0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40" />
+          {/* <div className="absolute bg-black/25 inset-0" /> */}
         </div>
         <div className="relative flex flex-col grow items-center justify-between pb-12 md:pb-16 lg:pb-20 pt-20 md:pt-40 lg:pt-[280px] px-4 w-full max-w-[1200px] z-10">
           <div className="flex flex-col gap-8 md:gap-12 lg:gap-20 items-center leading-6 text-white text-center w-full">

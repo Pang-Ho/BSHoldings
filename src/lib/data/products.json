@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "근접센서",
-    "slug": "proximity-sensors",
+    "name": "특수용센서",
+    "slug": "special-purpose-sensors",
     "mainImage": "/images/products/proximity/근접센서.png",
     "products": [
       {
@@ -155,7 +155,7 @@
         "isNew": true,
         "mainImage": "/images/products/proximity/용접전용센서_M12.png",
         "detailDescriptionKo": [
-          "용접 스패터에 강한 특수 코팅 처리",
+          "용접 스팟에 강한 특수 코팅 처리",
           "고온 환경에서도 안정적인 작동",
           "자동 용접 라인 및 로봇 용접에 최적화",
           "전자기 간섭(EMI)에 강한 설계",
@@ -169,7 +169,7 @@
           "Long lifespan with low maintenance costs"
         ],
         "features": [
-          "용접 스패터 방지 코팅",
+          "용접 스팟 방지 코팅",
           "고온 환경 안정 작동",
           "자동/로봇 용접 최적화",
           "EMI 내성 설계",
@@ -337,7 +337,7 @@
         "detailDescriptionKo": [
           "모든 금속 재질에 동일한 검출 거리 제공",
           "철, 스테인리스, 알루미늄, 구리 등 구분 없이 검출",
-          "감쇠 계수(Reduction Factor) 1 실현",
+          "감소 계수(Reduction Factor) 1 실현",
           "다양한 금속 혼재 환경에서 안정적 동작",
           "간편한 설치 및 교체"
         ],
@@ -351,7 +351,7 @@
         "features": [
           "모든 금속 동일 검출 거리",
           "다양한 금속 재질 검출",
-          "감쇠 계수 1",
+          "감소 계수 1",
           "혼재 환경 안정 동작",
           "간편한 설치"
         ],
@@ -858,7 +858,7 @@
                   "fileUrl": "/files/capacity/capacity_6.pdf"
                 },
                 {
-                  "name": "방폭용",
+                  "name": "플라스틱 중형 : Q34",
                   "fileName": "rectangular_capacitive_sensor_Q34_manual.pdf",
                   "fileUrl": "/files/capacity/capacity_7.pdf"
                 }
@@ -1016,12 +1016,12 @@
         "id": "hightemp-002",
         "name": "사용온도 범위가 넓은 센서",
         "slug": "wide-range-temp",
-        "description": "광범위 온도 센서",
-        "tags": ["고온 센서", "광온도범위"],
+        "description": "넓은 온도 범위 센서",
+        "tags": ["고온 센서", "넓은 온도 범위"],
         "isNew": false,
         "mainImage": "/images/products/hightemp/고온센서_범위용_원주형_M12.png",
         "detailDescriptionKo": [
-          "-40°C ~ 100°C 광범위 온도 범위 대응",
+          "-40°C ~ 100°C 넓은 온도 범위 대응",
           "냉동 창고부터 고온 환경까지 다목적 사용",
           "온도 변화에도 안정적인 작동 성능",
           "다양한 산업 환경에서 범용 적용 가능",
@@ -1434,7 +1434,13 @@
         "name": "세이프티 라이트커튼",
         "slug": "light-curtain",
         "description": "세이프티 라이트커튼",
-        "tags": ["세이프티", "라이트커튼"],
+        "tags": [
+          "세이프티",
+          "라이트커튼",
+          "국내인증(KCs, S Mark)",
+          "유렵인증(CE)",
+          "미국인증(UL)"
+        ],
         "isNew": true,
         "mainImage": "/images/products/safety/light_curtain/safety_slc(9).png",
         "detailDescriptionKo": [
@@ -1442,7 +1448,8 @@
           "다양한 안전 관련 기능이 내장되어 현장 상황에 유연한 대처가 가능하며, 우수한",
           "내구성 및 내환경성 설계로 저온, 오일, 고압 세척 등 가혹한 환경에서도 안심하고",
           "사용할 수 있습니다. 또한, 전용 소프트웨어를 통해 실시간 모니터링 및 뮤팅, 블랭킹",
-          "등의 안전 관련 기능을 설정할 수 있습니다."
+          "등의 안전 관련 기능을 설정할 수 있습니다.",
+          "국내외 모든 안전 인증 획득으로 신뢰할 수 있는 제품입니다.(요청시 인증서 제공)"
         ],
         "detailDescriptionEn": [
           "9mm/18mm resolution for finger/hand detection",
@@ -1575,14 +1582,14 @@
         "isNew": false,
         "mainImage": "",
         "detailDescriptionKo": [
-          "정전용량, 초음파, 레벨 센서 등 맞춤 제작",
+          "정전용량, 특수 센서, 레벨 센서 등 맞춤 제작",
           "특수 산업 요구사항에 맞춘 설계",
           "표준 제품으로 해결 불가한 요구 충족",
           "OEM 브랜드 라벨링 가능",
           "전담 기술 지원 및 유연한 생산 수량"
         ],
         "detailDescriptionEn": [
-          "Custom manufacturing of capacitive, ultrasonic, level sensors",
+          "Custom manufacturing of capacitive, level sensors",
           "Design for special industry requirements",
           "Meets needs unaddressed by standard products",
           "OEM brand labeling available",

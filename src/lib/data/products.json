@@ -1,396 +1,704 @@
 [
   {
     "id": 1,
-    "name": "특수용 센서",
-    "slug": "special-purpose-sensors",
-    "subCategories": [
+    "name": "근접센서",
+    "slug": "proximity-sensors",
+    "mainImage": "/images/products/proximity/근접센서.png",
+    "products": [
       {
-        "id": 101,
-        "name": "근접센서",
-        "slug": "proximity-sensors",
-        "products": [
-          {
-            "id": "prox-001",
-            "name": "PR18 Series",
-            "slug": "pr18-series",
-            "description": "원통형 근접센서",
-            "tags": ["근접센서", "원통형", "DC"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "고성능 및 M18 표준 사이즈를 갖춘 원통형 근접센서 PR18 시리즈는",
-              "다양한 금속 감지 모드와 긴 감지거리를 제공합니다.",
-              "산업 자동화, 기계 장비, 생산라인 등 다양한 응용 분야에 적합합니다."
-            ],
-            "detailDescriptionEn": "Cylindrical proximity sensor PR18 series, with high performance and M18 standard size, offers various metal detection modes and long sensing distances. Suitable for industrial automation, machinery, production lines and other application fields.",
-            "features": [
-              "수천종의 다양한 외형, 검출거리 및 기능",
-              "IP67 또는 그 이상 강력한 내구성, 내 부식성",
-              "고객사용 환경에 맞춘 주문제작 가능 \n : 외형, 검출거리, 케이블 재질 등",
-              "모든 종류의 Application 완벽 대응 \n (NPN, PNP, NO, NC, AC, DC, AC/DC",
-              "주문자 상표 제작 및 공급 가능 (OEM)",
-              "주문자 요청의 특수 센서 제작가능",
-              "최상의 solution 제공, 최적의 가격 경쟁력"
-            ]
-          },
-          {
-            "id": "prox-002",
-            "name": "PR30 Series",
-            "slug": "pr30-series",
-            "description": "대형 근접센서",
-            "tags": ["근접센서", "대형", "고감도"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "M30 규격의 대형 원통형 근접센서 PR30 시리즈는",
-              "최대 15mm의 긴 감지거리와 높은 감도를 제공합니다.",
-              "대형 기계장비 및 중공업 분야에 최적화되어 있습니다."
-            ],
-            "detailDescriptionEn": "Large cylindrical proximity sensor PR30 series with M30 standard size offers long sensing distance up to 15mm and high sensitivity. Optimized for large machinery and heavy industry applications.",
-            "features": [
-              "Extended sensing distance up to 15mm",
-              "M30 standard mounting",
-              "High sensitivity detection",
-              "Robust metal housing",
-              "Protection class IP67"
-            ]
-          }
-        ]
-      },
-      {
-        "id": 102,
+        "id": "prox-001",
         "name": "아날로그 출력 센서",
         "slug": "analog-output-sensors",
-        "products": [
+        "description": "아날로그 출력 센서",
+        "tags": ["근접센서", "아날로그 출력 센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/아날로그_출력센서.png",
+        "detailDescriptionKo": [
+          "거리에 비례한 아날로그 신호(전압/전류) 출력",
+          "정밀한 위치 제어 및 거리 측정에 적합",
+          "IP67 이상의 강력한 내구성 및 내부식성",
+          "NPN/PNP, 전압/전류 출력 다양한 옵션",
+          "고객 요구에 맞춘 주문제작 가능"
+        ],
+        "detailDescriptionEn": [
+          "Analog signal output (voltage/current) proportional to distance",
+          "Suitable for precise position control and distance measurement",
+          "IP67 or higher durability and corrosion resistance",
+          "Various options: NPN/PNP, voltage/current output",
+          "Custom manufacturing available upon request"
+        ],
+        "features": [
+          "거리에 비례한 아날로그 신호 출력",
+          "정밀한 위치 제어 및 거리 측정",
+          "IP67 이상의 강력한 내구성",
+          "다양한 출력 옵션 지원",
+          "주문제작 가능"
+        ],
+        "models": [
           {
-            "id": "analog-001",
-            "name": "AO12 Series",
-            "slug": "ao12-series",
-            "description": "아날로그 출력 센서",
-            "tags": ["아날로그", "4-20mA", "고정밀"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "고정밀 아날로그 출력 센서 AO12 시리즈는",
-              "4-20mA 또는 0-10V 아날로그 신호를 출력하여",
-              "정밀한 거리 측정 및 위치 제어가 가능합니다."
-            ],
-            "detailDescriptionEn": "High-precision analog output sensor AO12 series provides 4-20mA or 0-10V analog signal output for precise distance measurement and position control applications.",
-            "features": [
-              "4-20mA / 0-10V analog output",
-              "High precision measurement",
-              "Linear output characteristics",
-              "Adjustable sensitivity",
-              "Protection class IP67"
-            ]
+            "name": "메탈 12파이 : M12",
+            "image": "/images/products/proximity/아날로그_출력센서_M12.png"
+          },
+          {
+            "name": "메탈 18파이 : M18",
+            "image": "/images/products/proximity/아날로그_출력센서_M18.png"
+          },
+          {
+            "name": "메탈 30파이 : M30",
+            "image": "/images/products/proximity/아날로그_출력센서_M30.png"
+          },
+          {
+            "name": "플라스틱 중형 : W40",
+            "image": "/images/products/proximity/아날로그_출력센서_W40.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "아날로그 출력 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "메탈 12파이 : M12",
+                  "fileName": "analog_output_sensor_M12_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_1.pdf"
+                },
+                {
+                  "name": "메탈 18파이 : M18",
+                  "fileName": "analog_output_sensor_M18_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_2.pdf"
+                },
+                {
+                  "name": "메탈 30파이 : M30",
+                  "fileName": "analog_output_sensor_M30_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_3.pdf"
+                },
+                {
+                  "name": "플라스틱 중형 : W40",
+                  "fileName": "analog_output_sensor_W40_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_4.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 103,
+        "id": "prox-002",
         "name": "고압용 센서",
         "slug": "high-pressure-sensors",
-        "products": [
+        "description": "고압용 센서",
+        "tags": ["근접센서", "고압용 센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/고압용센서.png",
+        "detailDescriptionKo": [
+          "최대 500bar 고압 환경에서 사용 가능",
+          "스테인리스 스틸 하우징으로 뛰어난 내구성",
+          "유압 시스템, 프레스 장비 등에 적합",
+          "극한 압력 환경에서도 안정적인 검출 성능",
+          "IP67 이상의 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Suitable for high-pressure environments up to 500bar",
+          "Excellent durability with stainless steel housing",
+          "Ideal for hydraulic systems and press equipment",
+          "Reliable detection performance in extreme pressure",
+          "IP67 or higher water and dust protection"
+        ],
+        "features": [
+          "최대 500bar 고압 환경 대응",
+          "스테인리스 스틸 하우징",
+          "유압 시스템 및 프레스 장비용",
+          "극한 환경 안정적 검출",
+          "IP67 이상 방진 방수"
+        ],
+        "models": [
           {
-            "id": "hp-001",
-            "name": "HP500 Series",
-            "slug": "hp500-series",
-            "description": "고압용 근접센서",
-            "tags": ["고압용", "500bar", "스테인리스"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "500bar 고압 환경에서 사용 가능한 HP500 시리즈는",
-              "스테인리스 스틸 하우징으로 유압 시스템, 프레스 장비 등",
-              "극한의 압력 환경에서 안정적인 감지 성능을 제공합니다."
-            ],
-            "detailDescriptionEn": "HP500 series is designed for high-pressure environments up to 500bar. With stainless steel housing, it provides reliable detection performance in hydraulic systems, press equipment and extreme pressure environments.",
-            "features": [
-              "Pressure resistant up to 500bar",
-              "Full stainless steel housing",
-              "Suitable for hydraulic systems",
-              "High durability design",
-              "Protection class IP69K"
-            ]
+            "name": "고압용",
+            "image": "/images/products/proximity/고압용센서.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "고압용 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "고압용",
+                  "fileName": "analog_output_sensor_high_pressure_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_5.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 104,
+        "id": "prox-003",
         "name": "용접 전용 센서",
         "slug": "welding-sensors",
-        "products": [
+        "description": "용접 전용 센서",
+        "tags": ["근접센서", "용접 전용 센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/용접전용센서_M12.png",
+        "detailDescriptionKo": [
+          "용접 스패터에 강한 특수 코팅 처리",
+          "고온 환경에서도 안정적인 작동",
+          "자동 용접 라인 및 로봇 용접에 최적화",
+          "전자기 간섭(EMI)에 강한 설계",
+          "긴 수명과 낮은 유지보수 비용"
+        ],
+        "detailDescriptionEn": [
+          "Special coating resistant to welding spatter",
+          "Stable operation in high-temperature environments",
+          "Optimized for automatic welding lines and robot welding",
+          "EMI-resistant design",
+          "Long lifespan with low maintenance costs"
+        ],
+        "features": [
+          "용접 스패터 방지 코팅",
+          "고온 환경 안정 작동",
+          "자동/로봇 용접 최적화",
+          "EMI 내성 설계",
+          "긴 수명"
+        ],
+        "models": [
           {
-            "id": "weld-001",
-            "name": "WS30 Series",
-            "slug": "ws30-series",
-            "description": "용접환경 전용 센서",
-            "tags": ["용접용", "내열", "스패터방지"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "용접 환경 전용으로 설계된 WS30 시리즈는",
-              "스패터 방지 코팅과 내열 하우징으로",
-              "용접 로봇 및 자동화 라인에서 안정적으로 작동합니다."
-            ],
-            "detailDescriptionEn": "WS30 series is specially designed for welding environments. With spatter-resistant coating and heat-resistant housing, it operates reliably in welding robots and automation lines.",
-            "features": [
-              "Spatter-resistant coating",
-              "Heat-resistant housing",
-              "Optimized for welding robots",
-              "Resistant to electromagnetic interference",
-              "Protection class IP67"
-            ]
+            "name": "원주형 메탈 12파이 : M12",
+            "image": "/images/products/proximity/용접전용센서_M12.png"
+          },
+          {
+            "name": "원주형 메탈 18파이 : M18",
+            "image": "/images/products/proximity/용접전용센서_M18.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "용접 전용 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "원주형 메탈 12파이 : M12",
+                  "fileName": "welding_sensor_M12_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_6.pdf"
+                },
+                {
+                  "name": "원주형 메탈 18파이 : M18",
+                  "fileName": "welding_sensor_M18_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_7.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 105,
+        "id": "prox-004",
         "name": "방폭용 센서",
         "slug": "explosion-proof-sensors",
-        "products": [
+        "description": "방폭용 센서",
+        "tags": ["근접센서", "방폭용 센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/방폭용센서.png",
+        "detailDescriptionKo": [
+          "Ex 인증 획득 방폭 등급 센서",
+          "가연성 가스, 분진 환경에서 안전하게 사용",
+          "석유화학, 도장 라인, 곡물 저장소 등에 적합",
+          "본질안전 방폭 구조 (Ex ia)",
+          "국제 방폭 인증 규격 준수"
+        ],
+        "detailDescriptionEn": [
+          "Ex certified explosion-proof sensor",
+          "Safe for use in flammable gas and dust environments",
+          "Suitable for petrochemical, painting lines, grain storage",
+          "Intrinsically safe design (Ex ia)",
+          "Compliant with international explosion-proof standards"
+        ],
+        "features": [
+          "Ex 인증 방폭 등급",
+          "가연성 환경 안전 사용",
+          "석유화학/도장/저장소용",
+          "본질안전 방폭 구조",
+          "국제 인증 규격"
+        ],
+        "models": [
           {
-            "id": "exp-001",
-            "name": "EX18 Series",
-            "slug": "ex18-series",
-            "description": "방폭형 근접센서",
-            "tags": ["방폭", "ATEX", "IECEx"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "ATEX 및 IECEx 인증을 받은 방폭형 센서 EX18 시리즈는",
-              "폭발 위험 지역(Zone 0, 1, 2)에서 안전하게 사용할 수 있으며",
-              "석유화학, 가스, 광산 등의 산업에 적합합니다."
-            ],
-            "detailDescriptionEn": "EX18 series explosion-proof sensor with ATEX and IECEx certification can be safely used in hazardous areas (Zone 0, 1, 2). Suitable for petrochemical, gas, and mining industries.",
-            "features": [
-              "ATEX / IECEx certified",
-              "Suitable for Zone 0, 1, 2",
-              "Intrinsically safe design",
-              "Stainless steel housing",
-              "Protection class IP67"
-            ]
+            "name": "방폭용",
+            "image": "/images/products/proximity/방폭용센서.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "방폭용 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "방폭용",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_8.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 106,
+        "id": "prox-005",
         "name": "내 화학용 센서",
         "slug": "chemical-resistant-sensors",
-        "products": [
+        "description": "내 화학용 센서",
+        "tags": ["근접센서", "내 화학용 센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/내화학용센서.png",
+        "detailDescriptionKo": [
+          "테플론(PTFE) 코팅으로 내화학성 우수",
+          "산, 알칼리, 유기용제 환경에서 사용 가능",
+          "반도체, 제약, 화학 공정에 최적화",
+          "부식 방지 및 오염 방지 설계",
+          "세척이 용이한 표면 처리"
+        ],
+        "detailDescriptionEn": [
+          "Excellent chemical resistance with PTFE coating",
+          "Suitable for acid, alkali, and organic solvent environments",
+          "Optimized for semiconductor, pharmaceutical, chemical processes",
+          "Anti-corrosion and anti-contamination design",
+          "Easy-to-clean surface treatment"
+        ],
+        "features": [
+          "테플론(PTFE) 코팅",
+          "산/알칼리/유기용제 대응",
+          "반도체/제약/화학 공정용",
+          "부식 및 오염 방지",
+          "세척 용이"
+        ],
+        "models": [
           {
-            "id": "chem-001",
-            "name": "CR18 Series",
-            "slug": "cr18-series",
-            "description": "내화학용 센서",
-            "tags": ["내화학", "PTFE", "부식방지"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "PTFE 코팅 및 내화학성 소재로 제작된 CR18 시리즈는",
-              "산, 알칼리, 용제 등 부식성 환경에서",
-              "장기간 안정적인 성능을 유지합니다."
-            ],
-            "detailDescriptionEn": "CR18 series made with PTFE coating and chemical-resistant materials maintains stable long-term performance in corrosive environments including acids, alkalis, and solvents.",
-            "features": [
-              "PTFE coating",
-              "Acid and alkali resistant",
-              "Corrosion-proof design",
-              "Long service life",
-              "Protection class IP68"
-            ]
+            "name": "내 화학용 테플론 코팅 센서",
+            "image": "/images/products/proximity/내화학용센서.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "내 화학용 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "내 화학용 테플론 코팅 센서",
+                  "fileName": "chemical_resistant_sensor_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_9.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 107,
+        "id": "prox-006",
         "name": "All metal 센서",
         "slug": "all-metal-sensors",
-        "products": [
+        "description": "All metal 센서",
+        "tags": ["근접센서", "All metal 센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/All메탈센서_M12.png",
+        "detailDescriptionKo": [
+          "모든 금속 재질에 동일한 검출 거리 제공",
+          "철, 스테인리스, 알루미늄, 구리 등 구분 없이 검출",
+          "감쇠 계수(Reduction Factor) 1 실현",
+          "다양한 금속 혼재 환경에서 안정적 동작",
+          "간편한 설치 및 교체"
+        ],
+        "detailDescriptionEn": [
+          "Same detection distance for all metal materials",
+          "Detects iron, stainless steel, aluminum, copper without distinction",
+          "Reduction Factor 1 achieved",
+          "Stable operation in mixed metal environments",
+          "Easy installation and replacement"
+        ],
+        "features": [
+          "모든 금속 동일 검출 거리",
+          "다양한 금속 재질 검출",
+          "감쇠 계수 1",
+          "혼재 환경 안정 동작",
+          "간편한 설치"
+        ],
+        "models": [
           {
-            "id": "allm-001",
-            "name": "AM18 Series",
-            "slug": "am18-series",
-            "description": "올메탈 근접센서",
-            "tags": ["올메탈", "스테인리스", "고내구성"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "전체 스테인리스 스틸로 제작된 AM18 시리즈는",
-              "모든 금속을 동일한 감지거리로 감지하며",
-              "식품, 제약 등 위생이 중요한 환경에 적합합니다."
-            ],
-            "detailDescriptionEn": "AM18 series made entirely of stainless steel detects all metals at the same sensing distance. Suitable for hygienic environments such as food and pharmaceutical industries.",
-            "features": [
-              "Equal sensing distance for all metals",
-              "Full stainless steel construction",
-              "FDA compliant materials",
-              "Easy to clean design",
-              "Protection class IP69K"
-            ]
+            "name": "금속 원주형 12파이 : M12",
+            "image": "/images/products/proximity/All메탈센서_M12.png"
+          },
+          {
+            "name": "금속 원주형 18파이 : M18",
+            "image": "/images/products/proximity/All메탈센서_M18.png"
+          },
+          {
+            "name": "금속 원주형 30파이 : M30",
+            "image": "/images/products/proximity/All메탈센서_M30.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "All metal 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "금속 원주형 12파이 : M12",
+                  "fileName": "all_metal_sensor_M12_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_10.pdf"
+                },
+                {
+                  "name": "금속 원주형 18파이 : M18",
+                  "fileName": "all_metal_sensor_M18_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_10.pdf"
+                },
+                {
+                  "name": "금속 원주형 30파이 : M30",
+                  "fileName": "all_metal_sensor_M30_manual.pdf",
+                  "fileUrl": "/files/proximity/proximity_10.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
   {
     "id": 2,
-    "name": "포토 센서",
+    "name": "포토센서",
     "slug": "photo-sensors",
-    "subCategories": [
+    "mainImage": "/images/products/photo/포토센서.png",
+    "products": [
       {
-        "id": 201,
-        "name": "포토센서",
-        "slug": "standard-photo",
-        "products": [
-          {
-            "id": "photo-001",
-            "name": "OS10 Series",
-            "slug": "os10-series",
-            "description": "소형 포토센서",
-            "tags": ["포토센서", "소형", "BGS"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "고성능 및 25.4mm 표준 장착 구멍 거리를 갖춘 미니 직사각형 광전 센서 OS10 시리즈는",
-              "BGS(배경 억제) 모드, 확산 반사 모드, 역반사 모드 및 관통 빔 모드로 제공됩니다.",
-              "적색 빔 또는 레이저 빔 소스(옵션)를 사용하면 인쇄 및 포장, 제약, 전자, 소형 장비 및 기타 응용",
-              "분야에 적합합니다."
-            ],
-            "detailDescriptionEn": "Mini-rectangular photoelectric sensors OS10 series, with high performance and 25.4mm standard mounting hole distance, are available as BGS (background suppression) mode, diffuse reflective mode, retro-reflective mode, and through-beam mode. With optional red beam or laser beam source, they are suitable for printing and packaging, pharmaceutical, electronic, small equipment and other application fields.",
-            "features": [
-              "BGS function has greatly improved the detection effect",
-              "Optional red beam or laser beam",
-              "Adjustable sensing range",
-              "Protection class IP67",
-              "Optional M8 connector, 2 m pre-wired cable"
-            ]
-          },
-          {
-            "id": "photo-002",
-            "name": "OS20 Series",
-            "slug": "os20-series",
-            "description": "고성능 포토센서",
-            "tags": ["포토센서", "레이저", "고정밀"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "레이저 광원을 사용하는 고성능 포토센서 OS20 시리즈는",
-              "미세한 물체 감지와 정밀한 위치 제어가 가능합니다.",
-              "반도체, 전자부품 검사 등 고정밀 응용 분야에 최적화되어 있습니다."
-            ],
-            "detailDescriptionEn": "OS20 series high-performance photoelectric sensor with laser light source enables detection of small objects and precise position control. Optimized for high-precision applications such as semiconductor and electronic component inspection.",
-            "features": [
-              "Laser light source for precision",
-              "Small object detection capability",
-              "High-speed response time",
-              "Excellent repeatability",
-              "Protection class IP67"
-            ]
-          }
-        ]
-      },
-      {
-        "id": 202,
+        "id": "photo-001",
         "name": "초소형 포토센서",
         "slug": "ultra-mini-photo",
-        "products": [
+        "description": "초소형 포토센서",
+        "tags": ["포토센서", "초소형"],
+        "isNew": false,
+        "mainImage": "/images/products/photo/초소형_포토센서_OS10.png",
+        "detailDescriptionKo": [
+          "초소형 설계로 협소한 공간에 설치 가능",
+          "소형 자동화 장비 및 로봇 핸드에 최적화",
+          "경량 설계로 이동부 부하 최소화",
+          "빠른 응답 속도로 고속 라인 대응",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Ultra-compact design for installation in confined spaces",
+          "Optimized for small automation equipment and robot hands",
+          "Lightweight design minimizes moving part load",
+          "Fast response time for high-speed line applications",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "초소형 설계",
+          "협소 공간 설치",
+          "경량 설계",
+          "고속 응답",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "mini-001",
-            "name": "PM5 Series",
-            "slug": "pm5-series",
-            "description": "초소형 포토센서",
-            "tags": ["초소형", "M5", "협소공간"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "M5 규격의 초소형 포토센서 PM5 시리즈는",
-              "협소한 공간에서도 설치가 가능하며",
-              "소형 자동화 장비, 로봇 핸드 등에 적합합니다."
-            ],
-            "detailDescriptionEn": "PM5 series ultra-miniature photoelectric sensor with M5 size can be installed in confined spaces. Suitable for small automation equipment and robot hands.",
-            "features": [
-              "Ultra-compact M5 size",
-              "Ideal for confined spaces",
-              "Lightweight design",
-              "Fast response time",
-              "Protection class IP67"
-            ]
+            "name": "초소형 OS10",
+            "image": "/images/products/photo/초소형_포토센서_OS10.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "초소형 포토센서 매뉴얼",
+              "models": [
+                {
+                  "name": "초소형 OS10",
+                  "fileName": "ultra_mini_photo_sensor_OS10_manual.pdf",
+                  "fileUrl": "/files/photo/DATASHEET_OS10.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 203,
+        "id": "photo-002",
         "name": "원주형 포토 센서",
         "slug": "cylindrical-photo",
-        "products": [
+        "description": "원주형 포토센서",
+        "tags": ["포토센서", "원주형"],
+        "isNew": false,
+        "mainImage": "/images/products/photo/원주형_포토센서_O(B)G18.png",
+        "detailDescriptionKo": [
+          "M18 원주형 하우징으로 근접센서와 동일한 장착 방식",
+          "교체 및 설치가 용이한 표준 규격",
+          "다양한 검출 모드 지원 (투과형, 반사형, 확산형)",
+          "감도 조절 기능으로 다양한 환경 대응",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "M18 cylindrical housing with same mounting as proximity sensors",
+          "Easy replacement and installation with standard specifications",
+          "Multiple detection modes (through-beam, retro-reflective, diffuse)",
+          "Sensitivity adjustment for various environments",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "M18 원주형 하우징",
+          "표준 장착 방식",
+          "다양한 검출 모드",
+          "감도 조절",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "cyl-001",
-            "name": "CY18 Series",
-            "slug": "cy18-series",
-            "description": "원주형 포토센서",
-            "tags": ["원통형", "M18", "다목적"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "M18 원주형 하우징의 CY18 시리즈 포토센서는",
-              "근접센서와 동일한 장착 방식으로 교체가 용이하며",
-              "다양한 산업 환경에서 범용으로 사용됩니다."
-            ],
-            "detailDescriptionEn": "CY18 series photoelectric sensor with M18 cylindrical housing is easy to replace with the same mounting method as proximity sensors. Widely used in various industrial environments.",
-            "features": [
-              "M18 cylindrical housing",
-              "Compatible with proximity sensor mounting",
-              "Multiple detection modes",
-              "Adjustable sensitivity",
-              "Protection class IP67"
-            ]
+            "name": "원주형 O(B)G18",
+            "image": "/images/products/photo/원주형_포토센서_O(B)G18.png"
+          },
+          {
+            "name": "원주형 OP(M)18",
+            "image": "/images/products/photo/원주형_포토센서_OP(M)18.png"
+          },
+          {
+            "name": "원주형 OP(M)30",
+            "image": "/images/products/photo/원주형_포토센서_OP(M)30.png"
+          },
+          {
+            "name": "원주형 OSQ18",
+            "image": "/images/products/photo/원주형_포토센서_OSQ18.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "원주형 포토센서 매뉴얼",
+              "models": [
+                {
+                  "name": "플라스틱 18파이 : O(B)G18",
+                  "fileName": "cylindrical_photo_sensor_OBG18_manual.pdf",
+                  "fileUrl": "/files/photo/photo_1.pdf"
+                },
+                {
+                  "name": "메탈 18파이 : OP(M)18",
+                  "fileName": "cylindrical_photo_sensor_OPM18_manual.pdf",
+                  "fileUrl": "/files/photo/photo_2.pdf"
+                },
+                {
+                  "name": "메탈 30파이 : OP(M)30",
+                  "fileName": "cylindrical_photo_sensor_OPM30_manual.pdf",
+                  "fileUrl": "/files/photo/photo_3.pdf"
+                },
+                {
+                  "name": "혼합형 18파이 : OSQ18",
+                  "fileName": "cylindrical_photo_sensor_OSQ18_manual.pdf",
+                  "fileUrl": "/files/photo/photo_4.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 204,
+        "id": "photo-003",
         "name": "색깔 감지용 포토 센서",
         "slug": "color-detection-photo",
-        "products": [
+        "description": "색깔 감지용 포토센서",
+        "tags": ["포토센서", "컬러감지"],
+        "isNew": true,
+        "mainImage": "/images/products/photo/색깔_감지용_포토센서_CS20(B).png",
+        "detailDescriptionKo": [
+          "RGB LED 광원으로 정확한 색상 구분",
+          "다양한 색상 학습 및 저장 기능",
+          "인쇄물 검사, 포장 라인, 마크 감지에 활용",
+          "Teach-in 기능으로 간편한 설정",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Accurate color discrimination with RGB LED light source",
+          "Multiple color learning and storage function",
+          "Used for print inspection, packaging lines, mark detection",
+          "Easy setup with Teach-in function",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "RGB LED 광원",
+          "색상 학습/저장",
+          "인쇄물/포장/마크 감지",
+          "Teach-in 기능",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "color-001",
-            "name": "CS50 Series",
-            "slug": "cs50-series",
-            "description": "컬러센서",
-            "tags": ["컬러감지", "RGB", "마크감지"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "RGB LED 광원을 사용하는 컬러센서 CS50 시리즈는",
-              "다양한 색상을 정확하게 구분하고 감지합니다.",
-              "인쇄물 검사, 포장 라인, 마크 감지 등에 활용됩니다."
-            ],
-            "detailDescriptionEn": "CS50 series color sensor with RGB LED light source accurately distinguishes and detects various colors. Used for print inspection, packaging lines, and mark detection.",
-            "features": [
-              "RGB LED light source",
-              "Accurate color discrimination",
-              "Teach-in function",
-              "Multiple color storage",
-              "Protection class IP67"
-            ]
+            "name": "색깔 감지용 CS20(B)",
+            "image": "/images/products/photo/색깔_감지용_포토센서_CS20(B).png"
+          },
+          {
+            "name": "색깔 감지용 CW3",
+            "image": "/images/products/photo/색깔_감지용_포토센서_CW3.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "색깔 감지용 포토 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "CS20(B)",
+                  "fileName": "color_detection_photo_sensor_CS20B_manual.pdf",
+                  "fileUrl": "/files/photo/photo_5.pdf"
+                },
+                {
+                  "name": "CW3 CM3",
+                  "fileName": "color_detection_photo_sensor_CW3_manual.pdf",
+                  "fileUrl": "/files/photo/photo_6.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 205,
+        "id": "photo-004",
         "name": "사각형 포토 센서",
         "slug": "rectangular-photo",
-        "products": [
+        "description": "사각형 포토센서",
+        "tags": ["포토센서", "사각형"],
+        "isNew": false,
+        "mainImage": "/images/products/photo/사각형_포토센서_OS25.png",
+        "detailDescriptionKo": [
+          "장거리 검출이 가능한 사각형 하우징",
+          "대형 컨베이어 시스템 및 물류 자동화에 적합",
+          "다양한 장착 옵션으로 유연한 설치",
+          "높은 주변광 내성으로 안정적 검출",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Long-range detection with rectangular housing",
+          "Suitable for large conveyor systems and logistics automation",
+          "Flexible installation with various mounting options",
+          "Stable detection with high ambient light immunity",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "장거리 검출",
+          "대형 시스템 적합",
+          "다양한 장착 옵션",
+          "주변광 내성",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "rect-001",
-            "name": "RS50 Series",
-            "slug": "rs50-series",
-            "description": "사각형 포토센서",
-            "tags": ["사각형", "장거리", "산업용"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "사각형 하우징의 RS50 시리즈 포토센서는",
-              "장거리 감지가 가능하며 대형 컨베이어 시스템,",
-              "물류 자동화 등 산업용 응용 분야에 적합합니다."
-            ],
-            "detailDescriptionEn": "RS50 series photoelectric sensor with rectangular housing enables long-range detection. Suitable for industrial applications such as large conveyor systems and logistics automation.",
-            "features": [
-              "Long sensing distance",
-              "Rectangular robust housing",
-              "Multiple mounting options",
-              "High ambient light immunity",
-              "Protection class IP67"
-            ]
+            "name": "사각형 OS25",
+            "image": "/images/products/photo/사각형_포토센서_OS25.png"
+          },
+          {
+            "name": "사각형 OS28",
+            "image": "/images/products/photo/사각형_포토센서_OS28.png"
+          },
+          {
+            "name": "사각형 OS80",
+            "image": "/images/products/photo/사각형_포토센서_OS80.png"
+          },
+          {
+            "name": "사각형 OSM48",
+            "image": "/images/products/photo/사각형_포토센서_OSM48.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "사각형 포토 센서 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "Compact OS25",
+                  "fileName": "rectangular_photo_sensor_OS25_manual.pdf",
+                  "fileUrl": "/files/photo/photo_7.pdf"
+                },
+                {
+                  "name": "Compact OS28",
+                  "fileName": "rectangular_photo_sensor_OS28_manual.pdf",
+                  "fileUrl": "/files/photo/photo_8.pdf"
+                },
+                {
+                  "name": "Compact OS80",
+                  "fileName": "rectangular_photo_sensor_OS80_manual.pdf",
+                  "fileUrl": "/files/photo/photo_9.pdf"
+                },
+                {
+                  "name": "Compact OSM48",
+                  "fileName": "rectangular_photo_sensor_OM48_manual.pdf",
+                  "fileUrl": "/files/photo/photo_10.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -398,90 +706,166 @@
     "id": 3,
     "name": "정전용량 센서",
     "slug": "capacitive-sensors",
-    "subCategories": [
+    "mainImage": "/images/products/capacity/정전용량센서_원주형_M12.png",
+    "products": [
       {
-        "id": 301,
-        "name": "정전용량 센서",
-        "slug": "standard-capacitive",
-        "products": [
-          {
-            "id": "cap-001",
-            "name": "CA18 Series",
-            "slug": "ca18-series",
-            "description": "정전용량 센서",
-            "tags": ["정전용량", "비금속감지", "레벨감지"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "정전용량 방식의 CA18 시리즈 센서는",
-              "금속뿐만 아니라 플라스틱, 유리, 액체 등",
-              "비금속 물체도 감지할 수 있습니다."
-            ],
-            "detailDescriptionEn": "CA18 series capacitive sensor can detect not only metals but also non-metallic objects such as plastic, glass, and liquids.",
-            "features": [
-              "Detects metallic and non-metallic objects",
-              "Suitable for level detection",
-              "Adjustable sensitivity",
-              "M18 cylindrical housing",
-              "Protection class IP67"
-            ]
-          }
-        ]
-      },
-      {
-        "id": 302,
+        "id": "cap-001",
         "name": "원주형 정전용량 센서",
         "slug": "cylindrical-capacitive",
-        "products": [
+        "description": "원주형 정전용량 센서",
+        "tags": ["정전용량 센서", "원주형"],
+        "isNew": false,
+        "mainImage": "/images/products/capacity/정전용량센서_원주형_M12.png",
+        "detailDescriptionKo": [
+          "탱크 외부에서 내부 액체 레벨 감지 가능",
+          "비금속 물체(플라스틱, 목재, 분말 등) 검출",
+          "식품, 제약, 화학 산업에서 널리 사용",
+          "비접촉 레벨 센싱으로 위생적",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Detects liquid level inside tanks from outside",
+          "Detects non-metallic objects (plastic, wood, powder)",
+          "Widely used in food, pharmaceutical, chemical industries",
+          "Hygienic with non-contact level sensing",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "외부에서 레벨 감지",
+          "비금속 물체 검출",
+          "식품/제약/화학용",
+          "비접촉 센싱",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "cylcap-001",
-            "name": "CC30 Series",
-            "slug": "cc30-series",
-            "description": "원주형 정전용량 센서",
-            "tags": ["원통형", "M30", "액체감지"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "M30 원통형 정전용량 센서 CC30 시리즈는",
-              "탱크 내부의 액체 레벨을 외부에서 감지할 수 있으며",
-              "식품, 제약, 화학 산업에서 널리 사용됩니다."
-            ],
-            "detailDescriptionEn": "CC30 series M30 cylindrical capacitive sensor can detect liquid level inside tanks from outside. Widely used in food, pharmaceutical, and chemical industries.",
-            "features": [
-              "Through-wall liquid detection",
-              "M30 cylindrical housing",
-              "High sensitivity",
-              "Non-contact level sensing",
-              "Protection class IP67"
-            ]
+            "name": "원주형 M12",
+            "image": "/images/products/capacity/정전용량센서_원주형_M12.png"
+          },
+          {
+            "name": "원주형 M18",
+            "image": "/images/products/capacity/정전용량센서_원주형_M18.png"
+          },
+          {
+            "name": "원주형 H32",
+            "image": "/images/products/capacity/정전용량센서_원주형_H32.png"
+          },
+          {
+            "name": "원주형 P18",
+            "image": "/images/products/capacity/정전용량센서_원주형_P18.png"
+          },
+          {
+            "name": "원주형 S32",
+            "image": "/images/products/capacity/정전용량센서_원주형_S32.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "원주형 정전용량 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "메탈 32파이 : H32",
+                  "fileName": "cylindrical_capacitive_sensor_H32_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_1.pdf"
+                },
+                {
+                  "name": "메탈 12파이 : M12",
+                  "fileName": "cylindrical_capacitive_sensor_M12_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_2.pdf"
+                },
+                {
+                  "name": "메탈 18파이 : H18",
+                  "fileName": "cylindrical_capacitive_sensor_M18_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_3.pdf"
+                },
+                {
+                  "name": "플라스틱 18파이 : P18",
+                  "fileName": "cylindrical_capacitive_sensor_P18_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_4.pdf"
+                },
+                {
+                  "name": "플라스틱 32파이 : S32",
+                  "fileName": "cylindrical_capacitive_sensor_S32_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_5.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 303,
+        "id": "cap-002",
         "name": "사각형 정전용량 센서",
         "slug": "rectangular-capacitive",
-        "products": [
+        "description": "사각형 정전용량 센서",
+        "tags": ["정전용량 센서", "사각형"],
+        "isNew": true,
+        "mainImage": "/images/products/capacity/정전용량센서_사각형_Q07.png",
+        "detailDescriptionKo": [
+          "넓은 감지 영역을 제공하는 평면형 설계",
+          "필름, 시트 등 얇은 물체 감지에 최적화",
+          "플러시 마운팅 가능한 구조",
+          "다양한 비금속 소재 검출 가능",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Flat design providing wide detection area",
+          "Optimized for thin objects like films and sheets",
+          "Flush mounting possible",
+          "Detects various non-metallic materials",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "넓은 감지 영역",
+          "얇은 물체 감지",
+          "플러시 마운팅",
+          "다양한 소재 검출",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "rectcap-001",
-            "name": "RC50 Series",
-            "slug": "rc50-series",
-            "description": "사각형 정전용량 센서",
-            "tags": ["사각형", "평면형", "비접촉"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "평면형 사각 하우징의 RC50 시리즈는",
-              "넓은 감지 영역을 제공하며",
-              "필름, 시트 등 얇은 물체의 감지에 최적화되어 있습니다."
-            ],
-            "detailDescriptionEn": "RC50 series with flat rectangular housing provides a wide detection area. Optimized for detecting thin objects such as films and sheets.",
-            "features": [
-              "Wide detection area",
-              "Flat rectangular design",
-              "Thin object detection",
-              "Flush mounting possible",
-              "Protection class IP67"
-            ]
+            "name": "사각형 Q07",
+            "image": "/images/products/capacity/정전용량센서_사각형_Q07.png"
+          },
+          {
+            "name": "사각형 Q34",
+            "image": "/images/products/capacity/정전용량센서_사각형_Q34.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "사각형 정전용량 매뉴얼",
+              "models": [
+                {
+                  "name": "플라스틱 소형 : Q07",
+                  "fileName": "rectangular_capacitive_sensor_Q07_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_6.pdf"
+                },
+                {
+                  "name": "방폭용",
+                  "fileName": "rectangular_capacitive_sensor_Q34_manual.pdf",
+                  "fileUrl": "/files/capacity/capacity_7.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -489,55 +873,64 @@
     "id": 4,
     "name": "초음파 센서",
     "slug": "ultrasonic-sensors",
-    "subCategories": [
+    "mainImage": "/images/products/ultrasonic/초음파센서.png",
+    "products": [
       {
-        "id": 401,
-        "name": "초음파센서",
+        "id": "ultra-001",
+        "name": "초음파 센서",
         "slug": "standard-ultrasonic",
-        "products": [
+        "description": "초음파 센서",
+        "tags": ["초음파 센서", "거리측정"],
+        "isNew": false,
+        "mainImage": "/images/products/ultrasonic/초음파센서.png",
+        "detailDescriptionKo": [
+          "색상, 투명도, 표면 상태에 관계없이 물체 검출",
+          "비접촉 방식으로 거리 측정 가능",
+          "투명 물체 및 액체 레벨 감지에 적합",
+          "넓은 검출 범위와 안정적인 성능",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Detects objects regardless of color, transparency, surface",
+          "Non-contact distance measurement capability",
+          "Suitable for transparent objects and liquid level detection",
+          "Wide detection range with stable performance",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "색상/투명도 무관 검출",
+          "비접촉 거리 측정",
+          "투명 물체/액체 감지",
+          "넓은 검출 범위",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "ultra-001",
-            "name": "US18 Series",
-            "slug": "us18-series",
-            "description": "초음파 센서",
-            "tags": ["초음파", "거리측정", "비접촉"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "비접촉 방식의 US18 시리즈 초음파 센서는",
-              "색상, 투명도, 표면 상태에 관계없이",
-              "물체를 감지하고 거리를 측정할 수 있습니다."
-            ],
-            "detailDescriptionEn": "US18 series non-contact ultrasonic sensor can detect objects and measure distance regardless of color, transparency, or surface condition.",
-            "features": [
-              "Color-independent detection",
-              "Transparent object detection",
-              "Distance measurement capability",
-              "M18 cylindrical housing",
-              "Protection class IP67"
-            ]
-          },
-          {
-            "id": "ultra-002",
-            "name": "US30 Series",
-            "slug": "us30-series",
-            "description": "장거리 초음파 센서",
-            "tags": ["초음파", "장거리", "아날로그출력"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "장거리 감지가 가능한 US30 시리즈 초음파 센서는",
-              "최대 6m까지 측정 가능하며",
-              "아날로그 출력으로 정밀한 거리 측정이 가능합니다."
-            ],
-            "detailDescriptionEn": "US30 series long-range ultrasonic sensor can measure up to 6m and provides precise distance measurement with analog output.",
-            "features": [
-              "Long range up to 6m",
-              "Analog output (4-20mA / 0-10V)",
-              "Temperature compensation",
-              "M30 cylindrical housing",
-              "Protection class IP67"
-            ]
+            "name": "초음파센서",
+            "image": "/images/products/ultrasonic/초음파센서.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "초음파 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "초음파 센서",
+                  "fileName": "ultrasonic_sensor_manual.pdf",
+                  "fileUrl": "/files/ultrasonic/DATASHEET_ultrasonic.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -545,90 +938,154 @@
     "id": 5,
     "name": "고온 센서",
     "slug": "high-temp-sensors",
-    "subCategories": [
+    "mainImage": "/images/products/hightemp/고온센서.png",
+    "products": [
       {
-        "id": 501,
-        "name": "고온 센서",
-        "slug": "standard-high-temp",
-        "products": [
-          {
-            "id": "ht-001",
-            "name": "HT120 Series",
-            "slug": "ht120-series",
-            "description": "고온용 센서 (120°C)",
-            "tags": ["고온", "120°C", "산업용"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "120°C 고온 환경에서 사용 가능한 HT120 시리즈는",
-              "열처리 공정, 건조로, 오븐 등",
-              "고온 산업 환경에서 안정적으로 작동합니다."
-            ],
-            "detailDescriptionEn": "HT120 series can be used in high-temperature environments up to 120°C. Operates reliably in heat treatment processes, drying ovens, and other high-temperature industrial environments.",
-            "features": [
-              "Operating temperature up to 120°C",
-              "Heat-resistant housing",
-              "Stable performance at high temperatures",
-              "M18 cylindrical housing",
-              "Protection class IP67"
-            ]
-          }
-        ]
-      },
-      {
-        "id": 502,
+        "id": "hightemp-001",
         "name": "고온용 센서",
         "slug": "dedicated-high-temp",
-        "products": [
+        "description": "고온용 센서",
+        "tags": ["고온 센서", "고온용"],
+        "isNew": true,
+        "mainImage": "/images/products/hightemp/고온센서_고온용.png",
+        "detailDescriptionKo": [
+          "200°C 이상 초고온 환경에서 사용 가능",
+          "세라믹 하우징 및 특수 내열 소재 사용",
+          "용광로, 주조 라인 등 극한 환경에 적합",
+          "고온에서도 안정적인 검출 성능 유지",
+          "특수 케이블로 열 손상 방지"
+        ],
+        "detailDescriptionEn": [
+          "Suitable for ultra-high-temperature over 200°C",
+          "Ceramic housing and special heat-resistant materials",
+          "Ideal for furnaces, casting lines, extreme environments",
+          "Maintains stable detection in high temperatures",
+          "Heat damage prevention with special cables"
+        ],
+        "features": [
+          "200°C 이상 대응",
+          "세라믹/내열 소재",
+          "극한 환경 적합",
+          "고온 안정 성능",
+          "특수 케이블"
+        ],
+        "models": [
           {
-            "id": "dht-001",
-            "name": "HT200 Series",
-            "slug": "ht200-series",
-            "description": "초고온용 센서 (200°C)",
-            "tags": ["초고온", "200°C", "특수환경"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "200°C 초고온 환경에서 사용 가능한 HT200 시리즈는",
-              "세라믹 하우징과 특수 내열 소재로 제작되어",
-              "용광로, 주조 라인 등 극한 환경에서 사용됩니다."
-            ],
-            "detailDescriptionEn": "HT200 series can be used in ultra-high-temperature environments up to 200°C. Made with ceramic housing and special heat-resistant materials for use in furnaces, casting lines, and extreme environments.",
-            "features": [
-              "Operating temperature up to 200°C",
-              "Ceramic housing",
-              "Special heat-resistant materials",
-              "Suitable for extreme environments",
-              "Protection class IP67"
-            ]
+            "name": "고온용",
+            "image": "/images/products/hightemp/고온센서_고온용.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "고온용 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "고온용",
+                  "fileName": "high_temp_sensor_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_1.pdf"
+                },
+                {
+                  "name": "저온용 원주형 메탈 12파이 : M12",
+                  "fileName": "high_temp_sensor_M12_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_2.pdf"
+                },
+                {
+                  "name": "저온용 원주형 메탈 18파이 : M18",
+                  "fileName": "high_temp_sensor_M18_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_3.pdf"
+                },
+                {
+                  "name": "저온용 원주형 메탈 30파이 : M30",
+                  "fileName": "high_temp_sensor_M30_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_4.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 503,
+        "id": "hightemp-002",
         "name": "사용온도 범위가 넓은 센서",
         "slug": "wide-range-temp",
-        "products": [
+        "description": "광범위 온도 센서",
+        "tags": ["고온 센서", "광온도범위"],
+        "isNew": false,
+        "mainImage": "/images/products/hightemp/고온센서_범위용_원주형_M12.png",
+        "detailDescriptionKo": [
+          "-40°C ~ 100°C 광범위 온도 범위 대응",
+          "냉동 창고부터 고온 환경까지 다목적 사용",
+          "온도 변화에도 안정적인 작동 성능",
+          "다양한 산업 환경에서 범용 적용 가능",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Wide temperature range from -40°C to 100°C",
+          "Versatile use from cold storage to high-temp environments",
+          "Stable operation despite temperature changes",
+          "Universal application in various industries",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "-40°C ~ 100°C 범위",
+          "냉동~고온 다목적",
+          "온도 변화 안정",
+          "범용 적용",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "wr-001",
-            "name": "WR100 Series",
-            "slug": "wr100-series",
-            "description": "광범위 온도 센서",
-            "tags": ["광온도범위", "-40~100°C", "다목적"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "-40°C~100°C 광범위한 온도에서 사용 가능한 WR100 시리즈는",
-              "냉동 창고부터 고온 환경까지",
-              "다양한 온도 조건에서 안정적으로 작동합니다."
-            ],
-            "detailDescriptionEn": "WR100 series can be used in wide temperature range from -40°C to 100°C. Operates reliably in various temperature conditions from cold storage to high-temperature environments.",
-            "features": [
-              "Wide temperature range -40°C to 100°C",
-              "Cold storage compatible",
-              "Stable performance across temperatures",
-              "Versatile applications",
-              "Protection class IP67"
-            ]
+            "name": "범위용 원주형 M12",
+            "image": "/images/products/hightemp/고온센서_범위용_원주형_M12.png"
+          },
+          {
+            "name": "범위용 원주형 M18",
+            "image": "/images/products/hightemp/고온센서_범위용_원주형_M18.png"
+          },
+          {
+            "name": "범위용 원주형 M30",
+            "image": "/images/products/hightemp/고온센서_범위용_원주형_M30.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "사용온도 범위가 넓은 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "원주형 메탈 12파이 : M12",
+                  "fileName": "high_temp_sensor_M12_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_5.pdf"
+                },
+                {
+                  "name": "원주형 메탈 18파이 : M18",
+                  "fileName": "high_temp_sensor_M18_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_6.pdf"
+                },
+                {
+                  "name": "원주형 메탈 30파이 : M30",
+                  "fileName": "high_temp_sensor_M30_manual.pdf",
+                  "fileUrl": "/files/hightemp/hightemp_7.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -636,90 +1093,121 @@
     "id": 6,
     "name": "레벨 센서",
     "slug": "level-sensors",
-    "subCategories": [
+    "mainImage": "/images/products/level/레벨센서.png",
+    "products": [
       {
-        "id": 601,
-        "name": "레벨센서",
-        "slug": "standard-level",
-        "products": [
-          {
-            "id": "lv-001",
-            "name": "LV30 Series",
-            "slug": "lv30-series",
-            "description": "레벨 센서",
-            "tags": ["레벨", "액체감지", "탱크용"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "탱크 및 용기의 액체 레벨을 감지하는 LV30 시리즈는",
-              "물, 오일, 화학약품 등 다양한 액체에 사용 가능하며",
-              "공정 자동화에 필수적인 센서입니다."
-            ],
-            "detailDescriptionEn": "LV30 series detects liquid level in tanks and containers. Can be used for various liquids including water, oil, and chemicals. Essential sensor for process automation.",
-            "features": [
-              "Liquid level detection",
-              "Compatible with various liquids",
-              "Easy installation",
-              "Reliable switching output",
-              "Protection class IP67"
-            ]
-          }
-        ]
-      },
-      {
-        "id": 602,
+        "id": "level-001",
         "name": "레벨 측정용 마이크로파 센서",
         "slug": "microwave-level",
-        "products": [
+        "description": "마이크로파 레벨 센서",
+        "tags": ["레벨 센서", "마이크로파"],
+        "isNew": false,
+        "mainImage": "/images/products/level/레벨센서_마이크로파.png",
+        "detailDescriptionKo": [
+          "마이크로파 기술로 정밀한 레벨 측정",
+          "분진, 증기, 거품 등에 영향받지 않음",
+          "비접촉 연속 레벨 측정 가능",
+          "사일로, 탱크 등 대용량 저장소에 적합",
+          "높은 정밀도와 신뢰성"
+        ],
+        "detailDescriptionEn": [
+          "Precise level measurement with microwave technology",
+          "Unaffected by dust, vapor, or foam",
+          "Non-contact continuous level measurement",
+          "Suitable for silos, tanks, large storage facilities",
+          "High precision and reliability"
+        ],
+        "features": [
+          "마이크로파 기술",
+          "분진/증기/거품 내성",
+          "비접촉 연속 측정",
+          "대용량 저장소용",
+          "높은 정밀도"
+        ],
+        "models": [
           {
-            "id": "mw-001",
-            "name": "MW80 Series",
-            "slug": "mw80-series",
-            "description": "마이크로파 레벨 센서",
-            "tags": ["마이크로파", "비접촉", "고정밀"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "마이크로파 기술을 사용하는 MW80 시리즈 레벨 센서는",
-              "분진, 증기, 거품 등의 영향을 받지 않고",
-              "정밀한 레벨 측정이 가능합니다."
-            ],
-            "detailDescriptionEn": "MW80 series level sensor using microwave technology enables precise level measurement without being affected by dust, vapor, or foam.",
-            "features": [
-              "Microwave technology",
-              "Non-contact measurement",
-              "Immune to dust and vapor",
-              "High precision",
-              "Protection class IP67"
-            ]
+            "name": "마이크로파 레벨 센서",
+            "image": "/images/products/level/레벨센서_마이크로파.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "레벨 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "레벨 측정용 마이크로파 센서",
+                  "fileName": "level_sensor_manual.pdf",
+                  "fileUrl": "/files/level/level_1.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 603,
+        "id": "level-002",
         "name": "레벨 측정용 소형 초음파 센서",
         "slug": "compact-ultrasonic-level",
-        "products": [
+        "description": "소형 초음파 레벨 센서",
+        "tags": ["레벨 센서", "초음파"],
+        "isNew": false,
+        "mainImage": "/images/products/level/레벨센서_소형_초음파.png",
+        "detailDescriptionKo": [
+          "소형 설계로 제한된 공간에 설치 가능",
+          "소형 탱크의 연속 레벨 측정에 적합",
+          "아날로그 출력으로 정밀 제어 연동",
+          "설치 및 설정이 간편한 구조",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Compact design for installation in limited spaces",
+          "Suitable for continuous level measurement in small tanks",
+          "Analog output for precise control integration",
+          "Easy installation and configuration",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "소형 설계",
+          "소형 탱크 적합",
+          "아날로그 출력",
+          "간편한 설치",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "cul-001",
-            "name": "CUL50 Series",
-            "slug": "cul50-series",
-            "description": "소형 초음파 레벨 센서",
-            "tags": ["초음파", "소형", "레벨측정"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "소형 초음파 레벨 센서 CUL50 시리즈는",
-              "제한된 공간에서도 설치가 가능하며",
-              "소형 탱크의 연속 레벨 측정에 적합합니다."
-            ],
-            "detailDescriptionEn": "CUL50 series compact ultrasonic level sensor can be installed in limited spaces. Suitable for continuous level measurement in small tanks.",
-            "features": [
-              "Compact design",
-              "Continuous level measurement",
-              "Analog output",
-              "Easy installation",
-              "Protection class IP67"
-            ]
+            "name": "소형 초음파 레벨 센서",
+            "image": "/images/products/level/레벨센서_소형_초음파.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "레벨 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "레벨 측정용 소형 초음파 센서",
+                  "fileName": "compact_ultrasonic_level_sensor_manual.pdf",
+                  "fileUrl": "/files/level/level_2.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -727,55 +1215,89 @@
     "id": 7,
     "name": "엔코더",
     "slug": "encoders",
-    "subCategories": [
+    "mainImage": "/images/products/encoder/엔코더.png",
+    "products": [
       {
-        "id": 701,
+        "id": "enc-001",
         "name": "엔코더",
         "slug": "standard-encoder",
-        "products": [
+        "description": "인크리멘탈 엔코더",
+        "tags": ["엔코더", "인크리멘탈"],
+        "isNew": false,
+        "mainImage": "/images/products/encoder/엔코더.png",
+        "detailDescriptionKo": [
+          "최대 10,000 PPR 고분해능 제공",
+          "정밀 위치 제어 및 속도 측정에 사용",
+          "다양한 출력 옵션 (TTL, HTL, Push-Pull)",
+          "견고한 설계로 산업 환경에 적합",
+          "IP65 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "High resolution up to 10,000 PPR",
+          "Used for precise position control and speed measurement",
+          "Various output options (TTL, HTL, Push-Pull)",
+          "Robust design suitable for industrial environments",
+          "IP65 water and dust protection"
+        ],
+        "features": [
+          "최대 10,000 PPR",
+          "정밀 위치/속도 측정",
+          "다양한 출력 옵션",
+          "견고한 산업용 설계",
+          "IP65"
+        ],
+        "models": [
           {
-            "id": "enc-001",
-            "name": "EN58 Series",
-            "slug": "en58-series",
-            "description": "인크리멘탈 엔코더",
-            "tags": ["엔코더", "인크리멘탈", "고분해능"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "고분해능 인크리멘탈 엔코더 EN58 시리즈는",
-              "최대 10,000 PPR의 높은 분해능을 제공하며",
-              "정밀 위치 제어 및 속도 측정에 사용됩니다."
-            ],
-            "detailDescriptionEn": "EN58 series high-resolution incremental encoder provides up to 10,000 PPR resolution. Used for precise position control and speed measurement.",
-            "features": [
-              "Resolution up to 10,000 PPR",
-              "High accuracy",
-              "Multiple output options",
-              "Robust design",
-              "Protection class IP65"
-            ]
-          },
-          {
-            "id": "enc-002",
-            "name": "EN36 Series",
-            "slug": "en36-series",
-            "description": "앱솔루트 엔코더",
-            "tags": ["엔코더", "앱솔루트", "멀티턴"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "멀티턴 앱솔루트 엔코더 EN36 시리즈는",
-              "전원이 꺼져도 위치 정보를 유지하며",
-              "기어드 모터, 로봇 관절 등에 적합합니다."
-            ],
-            "detailDescriptionEn": "EN36 series multi-turn absolute encoder maintains position information even when power is off. Suitable for geared motors and robot joints.",
-            "features": [
-              "Multi-turn absolute position",
-              "No battery required",
-              "Position memory without power",
-              "Various communication interfaces",
-              "Protection class IP65"
-            ]
+            "name": "엔코더",
+            "image": "/images/products/encoder/엔코더.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "엔코더 매뉴얼",
+              "models": [
+                {
+                  "name": "EAS58",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/encoder/encoder_1.pdf"
+                },
+                {
+                  "name": "CAC58",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/encoder/encoder_2.pdf"
+                },
+                {
+                  "name": "EAD58",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/encoder/encoder_3.pdf"
+                },
+                {
+                  "name": "PAM90P",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/encoder/encoder_4.pdf"
+                },
+                {
+                  "name": "PAM58 90 115",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/encoder/encoder_5.pdf"
+                },
+                {
+                  "name": "EAC58",
+                  "fileName": "explosion_proof_sensor_manual.pdf",
+                  "fileUrl": "/files/encoder/encoder_6.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -783,62 +1305,121 @@
     "id": 8,
     "name": "레이저 센서",
     "slug": "laser-sensors",
-    "subCategories": [
+    "mainImage": "/images/products/laser/1d-laser/RF602.jpg",
+    "products": [
       {
-        "id": 801,
+        "id": "laser-001",
         "name": "1D 레이저 변위 센서",
         "slug": "1d-laser-displacement",
-        "products": [
+        "description": "1D 레이저 변위 센서",
+        "tags": ["레이저 센서", "변위측정"],
+        "isNew": false,
+        "mainImage": "/images/products/laser/1d-laser/RF602.jpg",
+        "detailDescriptionKo": [
+          "마이크로미터 수준의 고정밀 거리 측정",
+          "두께 측정, 진동 분석 등에 활용",
+          "고속 샘플링으로 빠른 응답 속도",
+          "다양한 출력 옵션 (아날로그, 디지털)",
+          "컴팩트한 설계로 협소 공간 설치 가능"
+        ],
+        "detailDescriptionEn": [
+          "Micrometer-level high-precision distance measurement",
+          "Used for thickness measurement and vibration analysis",
+          "Fast response with high-speed sampling",
+          "Various output options (analog, digital)",
+          "Compact design for installation in tight spaces"
+        ],
+        "features": [
+          "마이크로미터 정밀도",
+          "두께/진동 측정",
+          "고속 샘플링",
+          "다양한 출력",
+          "컴팩트 설계"
+        ],
+        "models": [
           {
-            "id": "ld1d-001",
-            "name": "LD100 Series",
-            "slug": "ld100-series",
-            "description": "1D 레이저 변위 센서",
-            "tags": ["레이저", "변위측정", "고정밀"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "1D 레이저 변위 센서 LD100 시리즈는",
-              "마이크로미터 수준의 고정밀 거리 측정이 가능하며",
-              "두께 측정, 진동 분석 등에 활용됩니다."
-            ],
-            "detailDescriptionEn": "LD100 series 1D laser displacement sensor enables micrometer-level high-precision distance measurement. Used for thickness measurement and vibration analysis.",
-            "features": [
-              "Micrometer-level precision",
-              "High-speed sampling",
-              "Various output options",
-              "Compact design",
-              "Protection class IP67"
-            ]
+            "name": "RF602",
+            "image": "/images/products/laser/1d-laser/RF602.jpg"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/embed/6_yQ5lakgRY?wmode=transparent&amp;rel=0"
+        },
+        "downloads": {
+          "enabled": false,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "1D 레이저 변위 센서 매뉴얼",
+              "models": [
+                {
+                  "name": "RF600 Series",
+                  "fileName": "RF600 Series Manual.pdf",
+                  "fileUrl": "/files/laser/1d-laser/RF600 Series.pdf"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 802,
+        "id": "laser-002",
         "name": "2D 라인 레이저 스캐너",
         "slug": "2d-line-laser-scanner",
-        "products": [
+        "description": "2D 라인 레이저 스캐너",
+        "tags": ["레이저 센서", "라인스캔"],
+        "isNew": true,
+        "mainImage": "/images/products/laser/2d-laser/RF627-3.jpg",
+        "detailDescriptionKo": [
+          "물체의 단면 프로파일 측정",
+          "3D 형상 검사, 용접 비드 검사에 사용",
+          "고속 스캐닝으로 라인 생산에 적합",
+          "산업용 이더넷 인터페이스 지원",
+          "IP67 방수 방진 등급"
+        ],
+        "detailDescriptionEn": [
+          "Measures cross-sectional profile of objects",
+          "Used for 3D shape inspection and weld bead inspection",
+          "High-speed scanning suitable for line production",
+          "Industrial Ethernet interface support",
+          "IP67 water and dust protection"
+        ],
+        "features": [
+          "단면 프로파일 측정",
+          "3D/용접 검사",
+          "고속 스캐닝",
+          "산업용 이더넷",
+          "IP67"
+        ],
+        "models": [
           {
-            "id": "ld2d-001",
-            "name": "LS200 Series",
-            "slug": "ls200-series",
-            "description": "2D 라인 레이저 스캐너",
-            "tags": ["라인스캔", "프로파일", "3D측정"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "2D 라인 레이저 스캐너 LS200 시리즈는",
-              "물체의 단면 프로파일을 측정하여",
-              "3D 형상 검사, 용접 비드 검사 등에 사용됩니다."
-            ],
-            "detailDescriptionEn": "LS200 series 2D line laser scanner measures cross-sectional profiles of objects. Used for 3D shape inspection and weld bead inspection.",
-            "features": [
-              "2D profile measurement",
-              "3D shape inspection capability",
-              "High-speed scanning",
-              "Industrial Ethernet interface",
-              "Protection class IP67"
-            ]
+            "name": "RF627-3",
+            "image": "/images/products/laser/2d-laser/RF627-3.jpg"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/embed/7gbIiPOlAvU?wmode=transparent&amp;rel=0"
+        },
+        "downloads": {
+          "enabled": false,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "2D 라인 레이저 스캐너 매뉴얼",
+              "models": [
+                {
+                  "name": "RF627 Series",
+                  "fileName": "RF627 Series Manual.pdf",
+                  "fileUrl": "/files/laser/2d-laser/RF627 Series.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -846,144 +1427,134 @@
     "id": 9,
     "name": "세이프티",
     "slug": "safety",
-    "subCategories": [
+    "mainImage": "/images/products/safety/light_curtain/safety_slc(9).png",
+    "products": [
       {
-        "id": 901,
+        "id": "safety-001",
         "name": "세이프티 라이트커튼",
         "slug": "light-curtain",
-        "products": [
+        "description": "세이프티 라이트커튼",
+        "tags": ["세이프티", "라이트커튼"],
+        "isNew": true,
+        "mainImage": "/images/products/safety/light_curtain/safety_slc(9).png",
+        "detailDescriptionKo": [
+          "세이프티 라이트 커튼 SLC 시리즈는 손가락을 검출할 수 있는 폭 넓은 라인업과",
+          "다양한 안전 관련 기능이 내장되어 현장 상황에 유연한 대처가 가능하며, 우수한",
+          "내구성 및 내환경성 설계로 저온, 오일, 고압 세척 등 가혹한 환경에서도 안심하고",
+          "사용할 수 있습니다. 또한, 전용 소프트웨어를 통해 실시간 모니터링 및 뮤팅, 블랭킹",
+          "등의 안전 관련 기능을 설정할 수 있습니다."
+        ],
+        "detailDescriptionEn": [
+          "9mm/18mm resolution for finger/hand detection",
+          "Type 4 / SIL 3 / PL e safety rating",
+          "Used for operator protection in presses, robot cells",
+          "Cascade connection and muting function support",
+          "IP65 water and dust protection"
+        ],
+        "features": [
+          "9mm/18mm 분해능",
+          "Type 4 / SIL 3 / PL e",
+          "작업자 보호",
+          "캐스케이드/뮤팅",
+          "IP65"
+        ],
+        "models": [
           {
-            "id": "slc-001",
-            "name": "SLC(9) Series",
-            "slug": "slc9-series",
-            "description": "세이프티 라이트커튼",
-            "tags": ["손가락감지", "라이트커튼", "세이프티"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "9mm 분해능의 세이프티 라이트커튼 SLC(9) 시리즈는",
-              "손가락 감지가 가능하며",
-              "프레스, 로봇 셀 등의 작업자 보호에 사용됩니다."
-            ],
-            "detailDescriptionEn": "SLC(9) series safety light curtain with 9mm resolution enables finger detection. Used for operator protection in presses and robot cells.",
-            "features": [
-              "9mm resolution for finger detection",
-              "Type 4 / SIL 3 / PL e",
-              "Cascade connection possible",
-              "Muting function available",
-              "Protection class IP65"
-            ]
+            "name": "SLC(9) - 손가락 감지형",
+            "image": "/images/products/safety/light_curtain/safety_slc(9).png"
           },
           {
-            "id": "slc-002",
-            "name": "SLC(14) Series",
-            "slug": "slc14-series",
-            "description": "세이프티 라이트커튼",
-            "tags": ["손감지", "라이트커튼", "세이프티"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "14mm 분해능의 세이프티 라이트커튼 SLC(14) 시리즈는",
-              "손 감지가 가능하며",
-              "다양한 산업 기계의 안전 보호에 활용됩니다."
-            ],
-            "detailDescriptionEn": "SLC(14) series safety light curtain with 14mm resolution enables hand detection. Used for safety protection in various industrial machines.",
-            "features": [
-              "14mm resolution for hand detection",
-              "Type 4 / SIL 3 / PL e",
-              "Easy alignment",
-              "Diagnostic display",
-              "Protection class IP65"
-            ]
+            "name": "SLC(18) - 손 감지형",
+            "image": "/images/products/safety/light_curtain/safety_slc(18).png"
           },
           {
-            "id": "slc-003",
-            "name": "SLC(25) Series",
-            "slug": "slc25-series",
-            "description": "세이프티 라이트커튼",
-            "tags": ["팔감지", "라이트커튼", "세이프티"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "25mm 분해능의 세이프티 라이트커튼 SLC(25) 시리즈는",
-              "팔 감지가 가능하며",
-              "중형 기계장비의 접근 보호에 적합합니다."
-            ],
-            "detailDescriptionEn": "SLC(25) series safety light curtain with 25mm resolution enables arm detection. Suitable for access protection of medium-sized machinery.",
-            "features": [
-              "25mm resolution for arm detection",
-              "Type 4 / SIL 3 / PL e",
-              "Long protection height available",
-              "Multiple configuration options",
-              "Protection class IP65"
-            ]
+            "name": "SSL Series",
+            "image": "/images/products/safety/light_curtain/safety_ssl.png"
           },
           {
-            "id": "slc-004",
-            "name": "SLC(40) Series",
-            "slug": "slc40-series",
-            "description": "세이프티 라이트커튼",
-            "tags": ["신체감지", "라이트커튼", "세이프티"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "40mm 분해능의 세이프티 라이트커튼 SLC(40) 시리즈는",
-              "전신 감지가 가능하며",
-              "대형 기계, 위험 구역 접근 방지에 사용됩니다."
-            ],
-            "detailDescriptionEn": "SLC(40) series safety light curtain with 40mm resolution enables body detection. Used for large machines and hazardous area access prevention.",
-            "features": [
-              "40mm resolution for body detection",
-              "Type 4 / SIL 3 / PL e",
-              "Area protection applications",
-              "Cost-effective solution",
-              "Protection class IP65"
-            ]
+            "name": "SSR Series",
+            "image": "/images/products/safety/light_curtain/safety_ssr.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "SLC Series 매뉴얼",
+              "models": [
+                { "name": "SLC(9)", "fileName": "SLC9_manual.pdf" },
+                { "name": "SLC(18)", "fileName": "SLC18_manual.pdf" }
+              ]
+            },
+            {
+              "category": "CAD",
+              "type": "DWG",
+              "name": "2D CAD (SLC Series)",
+              "models": [
+                { "name": "SLC(9)", "fileName": "SLC9_2d.dwg" },
+                { "name": "SLC(18)", "fileName": "SLC18_2d.dwg" }
+              ]
+            },
+            {
+              "category": "CAD",
+              "type": "STEP",
+              "name": "3D CAD (SLC Series)",
+              "models": [
+                { "name": "SLC(9)", "fileName": "SLC9_3d.step" },
+                { "name": "SLC(18)", "fileName": "SLC18_3d.step" }
+              ]
+            },
+            {
+              "category": "인증서 > 국내인증",
+              "type": "PDF",
+              "name": "SLC Series 인증서",
+              "models": [
+                { "name": "SLC(9)", "fileName": "SLC9_certificate.pdf" },
+                { "name": "SLC(18)", "fileName": "SLC18_certificate.pdf" }
+              ]
+            }
+          ]
+        }
       },
       {
-        "id": 902,
+        "id": "safety-002",
         "name": "세이프티 릴레이",
         "slug": "safety-relay",
-        "products": [
+        "description": "세이프티 릴레이",
+        "tags": ["세이프티", "릴레이"],
+        "isNew": false,
+        "mainImage": "/images/products/safety/relay/safety_relay_ssru.png",
+        "detailDescriptionKo": [
+          "비상정지 버튼, 안전 스위치 신호 처리",
+          "기계의 안전한 정지 보장",
+          "강제 가이드 접점으로 신뢰성 확보",
+          "LED 상태 표시로 간편한 모니터링",
+          "DIN 레일 장착 방식"
+        ],
+        "detailDescriptionEn": [
+          "Processes emergency stop buttons, safety switch signals",
+          "Ensures safe machine shutdown",
+          "Reliability with force-guided contacts",
+          "Easy monitoring with LED status indication",
+          "DIN rail mounting"
+        ],
+        "features": [
+          "비상정지/안전스위치 처리",
+          "안전한 정지 보장",
+          "강제 가이드 접점",
+          "LED 상태 표시",
+          "DIN 레일 장착"
+        ],
+        "models": [
           {
-            "id": "sr-001",
-            "name": "SR10 Series",
-            "slug": "sr10-series",
-            "description": "세이프티 릴레이",
-            "tags": ["세이프티", "릴레이", "비상정지"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "세이프티 릴레이 SR10 시리즈는",
-              "비상정지 버튼, 안전 스위치 등의 신호를 처리하여",
-              "기계의 안전한 정지를 보장합니다."
-            ],
-            "detailDescriptionEn": "SR10 series safety relay processes signals from emergency stop buttons and safety switches to ensure safe machine shutdown.",
-            "features": [
-              "Emergency stop processing",
-              "Safety switch monitoring",
-              "Force-guided contacts",
-              "LED status indication",
-              "DIN rail mounting"
-            ]
-          },
-          {
-            "id": "sr-002",
-            "name": "SR20 Series",
-            "slug": "sr20-series",
-            "description": "다기능 세이프티 릴레이",
-            "tags": ["세이프티", "다기능", "PLC연동"],
-            "isNew": true,
-            "detailDescriptionKo": [
-              "다기능 세이프티 릴레이 SR20 시리즈는",
-              "여러 안전 장치를 동시에 모니터링하며",
-              "PLC와의 연동으로 유연한 안전 시스템 구성이 가능합니다."
-            ],
-            "detailDescriptionEn": "SR20 series multi-function safety relay monitors multiple safety devices simultaneously. Enables flexible safety system configuration with PLC integration.",
-            "features": [
-              "Multiple safety device monitoring",
-              "PLC integration capability",
-              "Configurable safety functions",
-              "Diagnostic output",
-              "DIN rail mounting"
-            ]
+            "name": "SSRU",
+            "image": "/images/products/safety/relay/safety_relay_ssru.png"
           }
         ]
       }
@@ -993,34 +1564,38 @@
     "id": 10,
     "name": "주문제작용 센서 (OEM)",
     "slug": "oem-custom-sensors",
-    "subCategories": [
+    "mainImage": "",
+    "products": [
       {
-        "id": 1001,
-        "name": "OEM 맞춤 제작",
-        "slug": "custom-oem",
-        "products": [
-          {
-            "id": "oem-001",
-            "name": "Custom Sensor",
-            "slug": "custom-sensor",
-            "description": "주문제작 센서",
-            "tags": ["OEM", "맞춤제작", "특수사양"],
-            "isNew": false,
-            "detailDescriptionKo": [
-              "고객의 요구사항에 맞춘 OEM 맞춤 제작 센서는",
-              "특수 사이즈, 특수 환경, 특수 기능 등",
-              "표준 제품으로 해결할 수 없는 요구를 충족합니다."
-            ],
-            "detailDescriptionEn": "OEM custom sensors tailored to customer requirements meet needs that cannot be addressed by standard products, including special sizes, environments, and functions.",
-            "features": [
-              "Custom size available",
-              "Special environment adaptation",
-              "Custom output signals",
-              "Dedicated technical support",
-              "Flexible production quantity"
-            ]
-          }
-        ]
+        "id": "oem-003",
+        "name": "주문제작 기타 센서",
+        "slug": "custom-oem-others",
+        "description": "주문제작 기타 센서",
+        "tags": ["OEM", "맞춤제작", "특수센서"],
+        "isNew": false,
+        "mainImage": "",
+        "detailDescriptionKo": [
+          "정전용량, 초음파, 레벨 센서 등 맞춤 제작",
+          "특수 산업 요구사항에 맞춘 설계",
+          "표준 제품으로 해결 불가한 요구 충족",
+          "OEM 브랜드 라벨링 가능",
+          "전담 기술 지원 및 유연한 생산 수량"
+        ],
+        "detailDescriptionEn": [
+          "Custom manufacturing of capacitive, ultrasonic, level sensors",
+          "Design for special industry requirements",
+          "Meets needs unaddressed by standard products",
+          "OEM brand labeling available",
+          "Dedicated technical support and flexible production quantity"
+        ],
+        "features": [
+          "다양한 센서 맞춤 제작",
+          "특수 산업 요구 대응",
+          "비표준 요구 충족",
+          "OEM 라벨링",
+          "유연한 생산"
+        ],
+        "models": []
       }
     ]
   }

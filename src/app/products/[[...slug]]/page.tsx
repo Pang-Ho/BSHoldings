@@ -606,11 +606,12 @@ function ProductDetailView({
                       )}
                     </Carousel>
                   ) : (
-                    <div className="bg-[var(--color-grey-300)] flex h-[200px] md:h-[300px] lg:h-[400px] items-center justify-center rounded-lg w-full">
-                      <p className="font-semibold leading-[1.25] text-lg md:text-xl lg:text-2xl text-[var(--color-text-strong)] whitespace-nowrap">
-                        이미지 영역
-                      </p>
-                    </div>
+                    // <div className="bg-[var(--color-grey-300)] flex h-[200px] md:h-[300px] lg:h-[400px] items-center justify-center rounded-lg w-full">
+                    //   <p className="font-semibold leading-[1.25] text-lg md:text-xl lg:text-2xl text-[var(--color-text-strong)] whitespace-nowrap">
+                    //     이미지 영역
+                    //   </p>
+                    // </div>
+                    <></>
                   )}
                 </div>
 

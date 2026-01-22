@@ -7,6 +7,58 @@
     "products": [
       {
         "id": "prox-001",
+        "name": "근접센서",
+        "slug": "analog-output-sensors",
+        "description": "근접센서",
+        "tags": ["근접센서"],
+        "isNew": true,
+        "mainImage": "/images/products/proximity/근접센서.png",
+        "detailDescriptionKo": [
+          "수천종의 다양한 외형, 검출거리 및 기능",
+          "IP67 이상의 강력한 내구성 및 내부식성",
+          "모든 종류의 Application 완벽 대응",
+          "(NPN, PNP, NO, NC, AC, DC, AC/DC)",
+          "주문자 상표 제작 및 공급 가능 (OEM)",
+          "주문자 요청의 특수 센서 제작가능",
+          "최상의 solution 제공, 최적의 가격 경쟁력",
+          "고객 요구에 맞춘 주문제작 가능 : 외형, 검출거리, 케이블 재질 등"
+        ],
+        "detailDescriptionEn": [
+          "Thousands of various shapes, detection distances and functions",
+          "IP67 or higher durability and corrosion resistance",
+          "Perfect compatibility with all types of applications",
+          "(NPN, PNP, NO, NC, AC, DC, AC/DC)",
+          "OEM manufacturing and supply available",
+          "Custom special sensor manufacturing upon request",
+          "Best solutions with optimal price competitiveness",
+          "Custom manufacturing available: shape, detection distance, cable material, etc."
+        ],
+        "features": [
+          "수천종의 다양한 외형 및 기능",
+          "IP67 이상 내구성/내부식성",
+          "모든 Application 대응",
+          "OEM 제작 가능",
+          "주문제작 가능"
+        ],
+        "models": [],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=example1"
+        },
+        "downloads": {
+          "enabled": false,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "근접센서 매뉴얼",
+              "models": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "prox-002",
         "name": "아날로그 출력 센서",
         "slug": "analog-output-sensors",
         "description": "아날로그 출력 센서",
@@ -90,7 +142,7 @@
         }
       },
       {
-        "id": "prox-002",
+        "id": "prox-003",
         "name": "고압용 센서",
         "slug": "high-pressure-sensors",
         "description": "고압용 센서",
@@ -147,7 +199,7 @@
         }
       },
       {
-        "id": "prox-003",
+        "id": "prox-004",
         "name": "용접 전용 센서",
         "slug": "welding-sensors",
         "description": "용접 전용 센서",
@@ -213,7 +265,7 @@
         }
       },
       {
-        "id": "prox-004",
+        "id": "prox-005",
         "name": "방폭용 센서",
         "slug": "explosion-proof-sensors",
         "description": "방폭용 센서",
@@ -270,7 +322,7 @@
         }
       },
       {
-        "id": "prox-005",
+        "id": "prox-006",
         "name": "내 화학용 센서",
         "slug": "chemical-resistant-sensors",
         "description": "내 화학용 센서",
@@ -327,7 +379,7 @@
         }
       },
       {
-        "id": "prox-006",
+        "id": "prox-007",
         "name": "All metal 센서",
         "slug": "all-metal-sensors",
         "description": "All metal 센서",
@@ -415,7 +467,7 @@
         "slug": "ultra-mini-photo",
         "description": "초소형 포토센서",
         "tags": ["포토센서", "초소형"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/photo/초소형_포토센서_OS10.png",
         "detailDescriptionKo": [
           "초소형 설계로 협소한 공간에 설치 가능",
@@ -472,7 +524,7 @@
         "slug": "cylindrical-photo",
         "description": "원주형 포토센서",
         "tags": ["포토센서", "원주형"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/photo/원주형_포토센서_O(B)G18.png",
         "detailDescriptionKo": [
           "M18 원주형 하우징으로 근접센서와 동일한 장착 방식",
@@ -622,7 +674,7 @@
         "slug": "rectangular-photo",
         "description": "사각형 포토센서",
         "tags": ["포토센서", "사각형"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/photo/사각형_포토센서_OS25.png",
         "detailDescriptionKo": [
           "장거리 검출이 가능한 사각형 하우징",
@@ -714,7 +766,7 @@
         "slug": "cylindrical-capacitive",
         "description": "원주형 정전용량 센서",
         "tags": ["정전용량 센서", "원주형"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/capacity/정전용량센서_원주형_M12.png",
         "detailDescriptionKo": [
           "탱크 외부에서 내부 액체 레벨 감지 가능",
@@ -881,7 +933,7 @@
         "slug": "standard-ultrasonic",
         "description": "초음파 센서",
         "tags": ["초음파 센서", "거리측정"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/ultrasonic/초음파센서.png",
         "detailDescriptionKo": [
           "색상, 투명도, 표면 상태에 관계없이 물체 검출",
@@ -1018,7 +1070,7 @@
         "slug": "wide-range-temp",
         "description": "넓은 온도 범위 센서",
         "tags": ["고온 센서", "넓은 온도 범위"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/hightemp/고온센서_범위용_원주형_M12.png",
         "detailDescriptionKo": [
           "-40°C ~ 100°C 넓은 온도 범위 대응",
@@ -1101,7 +1153,7 @@
         "slug": "microwave-level",
         "description": "마이크로파 레벨 센서",
         "tags": ["레벨 센서", "마이크로파"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/level/레벨센서_마이크로파.png",
         "detailDescriptionKo": [
           "마이크로파 기술로 정밀한 레벨 측정",
@@ -1158,7 +1210,7 @@
         "slug": "compact-ultrasonic-level",
         "description": "소형 초음파 레벨 센서",
         "tags": ["레벨 센서", "초음파"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/level/레벨센서_소형_초음파.png",
         "detailDescriptionKo": [
           "소형 설계로 제한된 공간에 설치 가능",
@@ -1223,7 +1275,7 @@
         "slug": "standard-encoder",
         "description": "인크리멘탈 엔코더",
         "tags": ["엔코더", "인크리멘탈"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/encoder/엔코더.png",
         "detailDescriptionKo": [
           "최대 10,000 PPR 고분해능 제공",
@@ -1313,7 +1365,7 @@
         "slug": "1d-laser-displacement",
         "description": "1D 레이저 변위 센서",
         "tags": ["레이저 센서", "변위측정"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/laser/1d-laser/RF602.jpg",
         "detailDescriptionKo": [
           "마이크로미터 수준의 고정밀 거리 측정",
@@ -1347,7 +1399,7 @@
           "youtubeUrl": "https://www.youtube.com/embed/6_yQ5lakgRY?wmode=transparent&amp;rel=0"
         },
         "downloads": {
-          "enabled": false,
+          "enabled": true,
           "items": [
             {
               "category": "매뉴얼",
@@ -1355,9 +1407,9 @@
               "name": "1D 레이저 변위 센서 매뉴얼",
               "models": [
                 {
-                  "name": "RF600 Series",
-                  "fileName": "RF600 Series Manual.pdf",
-                  "fileUrl": "/files/laser/1d-laser/RF600 Series.pdf"
+                  "name": "RF603 Series Manual",
+                  "fileName": "RF603 Series Manual.pdf",
+                  "fileUrl": "/files/laser/1d-laser/Laser_Triangulation_Sensors_RF603_Series_eng.pdf"
                 }
               ]
             }
@@ -1404,7 +1456,7 @@
           "youtubeUrl": "https://www.youtube.com/embed/7gbIiPOlAvU?wmode=transparent&amp;rel=0"
         },
         "downloads": {
-          "enabled": false,
+          "enabled": true,
           "items": [
             {
               "category": "매뉴얼",
@@ -1412,9 +1464,9 @@
               "name": "2D 라인 레이저 스캐너 매뉴얼",
               "models": [
                 {
-                  "name": "RF627 Series",
-                  "fileName": "RF627 Series Manual.pdf",
-                  "fileUrl": "/files/laser/2d-laser/RF627 Series.pdf"
+                  "name": "RF62x Series",
+                  "fileName": "RF62x Series Manual.pdf",
+                  "fileUrl": "/files/laser/2d-laser/2D_Laser_Scanners_eng.pdf"
                 }
               ]
             }
@@ -1434,13 +1486,7 @@
         "name": "세이프티 라이트커튼",
         "slug": "light-curtain",
         "description": "세이프티 라이트커튼",
-        "tags": [
-          "세이프티",
-          "라이트커튼",
-          "국내인증(KCs, S Mark)",
-          "유렵인증(CE)",
-          "미국인증(UL)"
-        ],
+        "tags": ["세이프티", "국내외인증(KCs, S Mark, CE, UL)"],
         "isNew": true,
         "mainImage": "/images/products/safety/light_curtain/safety_slc(9).png",
         "detailDescriptionKo": [
@@ -1449,7 +1495,8 @@
           "내구성 및 내환경성 설계로 저온, 오일, 고압 세척 등 가혹한 환경에서도 안심하고",
           "사용할 수 있습니다. 또한, 전용 소프트웨어를 통해 실시간 모니터링 및 뮤팅, 블랭킹",
           "등의 안전 관련 기능을 설정할 수 있습니다.",
-          "국내외 모든 안전 인증 획득으로 신뢰할 수 있는 제품입니다.(요청시 인증서 제공)"
+          "국내외 모든 안전 인증 획득으로 신뢰할 수 있는 제품입니다.(요청시 인증서 제공)",
+          "국내인증(KCs, S Mark, CE), 유렵인증(CE), 미국인증(UL)"
         ],
         "detailDescriptionEn": [
           "9mm/18mm resolution for finger/hand detection",
@@ -1495,35 +1542,21 @@
               "type": "PDF",
               "name": "SLC Series 매뉴얼",
               "models": [
-                { "name": "SLC(9)", "fileName": "SLC9_manual.pdf" },
-                { "name": "SLC(18)", "fileName": "SLC18_manual.pdf" }
-              ]
-            },
-            {
-              "category": "CAD",
-              "type": "DWG",
-              "name": "2D CAD (SLC Series)",
-              "models": [
-                { "name": "SLC(9)", "fileName": "SLC9_2d.dwg" },
-                { "name": "SLC(18)", "fileName": "SLC18_2d.dwg" }
-              ]
-            },
-            {
-              "category": "CAD",
-              "type": "STEP",
-              "name": "3D CAD (SLC Series)",
-              "models": [
-                { "name": "SLC(9)", "fileName": "SLC9_3d.step" },
-                { "name": "SLC(18)", "fileName": "SLC18_3d.step" }
-              ]
-            },
-            {
-              "category": "인증서 > 국내인증",
-              "type": "PDF",
-              "name": "SLC Series 인증서",
-              "models": [
-                { "name": "SLC(9)", "fileName": "SLC9_certificate.pdf" },
-                { "name": "SLC(18)", "fileName": "SLC18_certificate.pdf" }
+                {
+                  "name": "SLC Series 매뉴얼(KCs-Mark)",
+                  "fileName": "SLC_series_manual.pdf",
+                  "fileUrl": "/files/safety/light_curtain/SLC series 제품설명서(KCs-Mark).pdf"
+                },
+                {
+                  "name": "SSL Series 매뉴얼(KCs-Mark)",
+                  "fileName": "SSL_series_manual.pdf",
+                  "fileUrl": "/files/safety/light_curtain/148-1. SSL 제품설명서(KCs, 240417).pdf"
+                },
+                {
+                  "name": "SSR Series 매뉴얼(KCs-Mark)",
+                  "fileName": "SSR_series_manual.pdf",
+                  "fileUrl": "/files/safety/light_curtain/153 SSR series 제품설명서(KCs,240617).pdf"
+                }
               ]
             }
           ]
@@ -1535,7 +1568,7 @@
         "slug": "safety-relay",
         "description": "세이프티 릴레이",
         "tags": ["세이프티", "릴레이"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "/images/products/safety/relay/safety_relay_ssru.png",
         "detailDescriptionKo": [
           "비상정지 버튼, 안전 스위치 신호 처리",
@@ -1560,10 +1593,31 @@
         ],
         "models": [
           {
-            "name": "SSRU",
+            "name": "SSRU-41",
             "image": "/images/products/safety/relay/safety_relay_ssru.png"
           }
-        ]
+        ],
+        "video": {
+          "enabled": false,
+          "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        "downloads": {
+          "enabled": true,
+          "items": [
+            {
+              "category": "매뉴얼",
+              "type": "PDF",
+              "name": "SSRU Series 매뉴얼",
+              "models": [
+                {
+                  "name": "SSRU Series 매뉴얼(KCs-Mark)",
+                  "fileName": "SSRU_series_manual.pdf",
+                  "fileUrl": "/files/safety/relay/173. SSRU 제품설명서.pdf"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -1579,7 +1633,7 @@
         "slug": "custom-oem-others",
         "description": "주문제작 기타 센서",
         "tags": ["OEM", "맞춤제작", "특수센서"],
-        "isNew": false,
+        "isNew": true,
         "mainImage": "",
         "detailDescriptionKo": [
           "정전용량, 특수 센서, 레벨 센서 등 맞춤 제작",

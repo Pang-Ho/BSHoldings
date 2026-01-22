@@ -285,7 +285,7 @@ function ProductListView({
               {displayProducts.map((prod) => (
                 <div
                   key={prod.id}
-                  className="group bg-white border-2 flex flex-col items-center overflow-clip relative rounded-2xl w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[282px] border-[var(--color-button-gray-outlined-border-default)] hover:border-[var(--color-Text-Strong)] transition-colors duration-200"
+                  className="group bg-white border-2 flex flex-col items-center overflow-clip relative rounded-2xl w-[282px] border-[var(--color-button-gray-outlined-border-default)] hover:border-[var(--color-Text-Strong)] transition-colors duration-200"
                 >
                   <div className="flex h-[200px] items-center justify-center p-5 w-full">
                     <div className="w-full h-full relative">
@@ -579,7 +579,7 @@ function ProductDetailView({
                       <CarouselContent>
                         {product.models.map((model, idx) =>
                           model.image ? (
-                            <CarouselItem key={idx} className="lg:basis-[40%]">
+                            <CarouselItem key={idx} className="basis-[40%]">
                               <div className="flex flex-col items-center gap-3">
                                 <div className="relative h-[200px] md:h-[300px] lg:h-[400px] w-full bg-gray-300">
                                   <Image

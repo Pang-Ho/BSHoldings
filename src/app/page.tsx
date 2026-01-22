@@ -41,6 +41,7 @@ interface Product {
   description: string;
   tags: string[];
   isNew: boolean;
+  mainImage?: string;
 }
 
 interface Category {
@@ -179,7 +180,7 @@ export default function HomePage() {
             <FadeIn
               delay={0.3}
               direction="left"
-              className="hidden lg:flex flex-col gap-[10px] items-start pb-0 pt-[54px] px-0 w-[200px]"
+              className="hidden lg:flex flex-col gap-[10px] items-start pb-0 pt-0 px-0 w-50"
             >
               <CustomTabs
                 value={String(selectedCategoryId)}
@@ -203,7 +204,9 @@ export default function HomePage() {
             </FadeIn>
             {/* 오른쪽 제품 캐러셀 */}
             <FadeIn
-              delay={0.5}
+              key={`carousel-${selectedCategoryId}`}
+              delay={0.1}
+              duration={0.5}
               className="w-full lg:max-w-[770px] xl:max-w-[960px]"
             >
               <div className="flex flex-col grow items-start w-full lg:w-auto">
@@ -218,15 +221,25 @@ export default function HomePage() {
                 >
                   <CarouselContent>
                     {displayProducts.map((product) => (
-                      <CarouselItem key={product.id} className="lg:basis-[29%]">
-                        <div className="bg-white border border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-55 md:w-full">
-                          <div className="flex h-[200px] items-center justify-center w-full">
-                            <div className="h-40 relative w-[126px]">
-                              <Image
-                                alt=""
-                                className="absolute inset-0 max-w-none object-cover object-[50%_50%] pointer-events-none size-full"
-                                src={productImage}
-                              />
+                      <CarouselItem key={product.id}>
+                        <div className="bg-white border-2 border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-[280px] hover:border-[var(--color-Text-Strong)] ">
+                          <div className="flex h-[200px] items-center justify-center w-full p-4">
+                            <div className="h-40 relative w-full">
+                              {product.mainImage ? (
+                                <Image
+                                  alt={product.name}
+                                  className="object-contain"
+                                  src={product.mainImage}
+                                  fill
+                                  sizes="(max-width: 768px) 100vw, 200px"
+                                />
+                              ) : (
+                                <Image
+                                  alt=""
+                                  className="absolute inset-0 max-w-none object-cover object-[50%_50%] pointer-events-none size-full"
+                                  src={productImage}
+                                />
+                              )}
                             </div>
                           </div>
                           <div className="border-t border-[var(--color-button-gray-outlined-border-default)] flex flex-col gap-1 items-start p-5 w-full">

@@ -1070,7 +1070,7 @@
         "slug": "wide-range-temp",
         "description": "넓은 온도 범위 센서",
         "tags": ["고온 센서", "넓은 온도 범위"],
-        "isNew": true,
+        "isNew": false,
         "mainImage": "/images/products/hightemp/고온센서_범위용_원주형_M12.png",
         "detailDescriptionKo": [
           "-40°C ~ 100°C 넓은 온도 범위 대응",
@@ -1153,7 +1153,7 @@
         "slug": "microwave-level",
         "description": "마이크로파 레벨 센서",
         "tags": ["레벨 센서", "마이크로파"],
-        "isNew": true,
+        "isNew": false,
         "mainImage": "/images/products/level/레벨센서_마이크로파.png",
         "detailDescriptionKo": [
           "마이크로파 기술로 정밀한 레벨 측정",
@@ -1210,7 +1210,7 @@
         "slug": "compact-ultrasonic-level",
         "description": "소형 초음파 레벨 센서",
         "tags": ["레벨 센서", "초음파"],
-        "isNew": true,
+        "isNew": false,
         "mainImage": "/images/products/level/레벨센서_소형_초음파.png",
         "detailDescriptionKo": [
           "소형 설계로 제한된 공간에 설치 가능",

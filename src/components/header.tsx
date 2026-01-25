@@ -188,15 +188,17 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden h-10 w-10"
+            className={`lg:hidden h-10 w-10 ${isTransparent ? 'text-white hover:bg-white/10' : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="메뉴 열기"
           >
             {isMobileMenuOpen ? (
-              <X className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`} />
+              <X
+                className={`h-6 w-6 ${isTransparent ? 'text-white hover:bg-white/10' : ''}`}
+              />
             ) : (
               <Menu
-                className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`}
+                className={`h-6 w-6 ${isTransparent ? 'text-white hover:bg-white/10' : ''}`}
               />
             )}
           </Button>

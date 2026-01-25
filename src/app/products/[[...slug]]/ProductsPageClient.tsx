@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { notFound, usePathname } from 'next/navigation';
+import { notFound, usePathname, useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { FadeIn } from '@/components/animations';
@@ -186,7 +186,15 @@ function ProductListView({
   pathname: string;
   category: Category | null;
 }) {
+  const router = useRouter();
   const categories = productsData as Category[];
+
+  // /products 경로로 접근 시 첫 번째 카테고리로 리다이렉트
+  React.useEffect(() => {
+    if (!category && categories.length > 0) {
+      router.replace(`/products/${categories[0].slug}/`);
+    }
+  }, [category, categories, router]);
 
   // 선택된 카테고리 (기본값: 첫 번째 카테고리)
   const selectedCategory = category || categories[0];

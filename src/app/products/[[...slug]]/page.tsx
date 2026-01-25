@@ -156,6 +156,9 @@ export async function generateStaticParams() {
   // 모든 카테고리와 제품 조합 생성
   const params: { slug: string[] }[] = [];
 
+  // /products 경로 추가 (빈 slug)
+  params.push({ slug: [] });
+
   // 카테고리 페이지들
   categories.forEach((category) => {
     params.push({ slug: [category.slug] });

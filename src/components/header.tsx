@@ -146,6 +146,7 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
               <NavigationMenuTrigger
                 selected={isContactActive}
                 isTransparent={isTransparent}
+                isArrow={false}
               >
                 고객센터
               </NavigationMenuTrigger>
@@ -192,7 +193,9 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             {isMobileMenuOpen ? (
               <X className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`} />
             ) : (
-              <Menu className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`} />
+              <Menu
+                className={`h-6 w-6 ${isTransparent ? 'text-white' : ''}`}
+              />
             )}
           </Button>
         </div>

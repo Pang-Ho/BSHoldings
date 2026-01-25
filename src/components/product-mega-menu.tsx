@@ -65,7 +65,7 @@ export function ProductMegaMenu({
                   <Link
                     href={`/products/${category.slug}`}
                     onClick={onItemClick}
-                    className="text-lg font-semibold leading-[1.5] text-[var(--color-text-strong)] hover:text-[var(--color-primary-500)] transition-colors"
+                    className="text-lg font-semibold leading-[1.5] text-[var(--color-text-strong)] hover:text-[var(--color-primary)] transition-colors"
                   >
                     {category.name}
                   </Link>
@@ -78,7 +78,7 @@ export function ProductMegaMenu({
                           key={product.id}
                           href={`/products/${category.slug}/${product.slug}`}
                           onClick={onItemClick}
-                          className="text-[15px] font-normal leading-[1.5] text-[var(--color-grey-750)] hover:text-[var(--color-primary-500)] transition-colors"
+                          className="text-[15px] font-normal leading-[1.5] text-[var(--color-grey-750)] hover:text-[var(--color-primary)] transition-colors"
                         >
                           {product.name}
                         </Link>

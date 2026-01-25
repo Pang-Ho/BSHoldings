@@ -97,7 +97,7 @@ export default function HomePage() {
             muted
             playsInline
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/60" />
           {/* <div className="absolute bg-black/25 inset-0" /> */}
         </div>
         <div className="relative flex flex-col grow items-center justify-between pb-12 md:pb-16 lg:pb-20 pt-20 md:pt-40 lg:pt-[280px] px-4 w-full max-w-[1200px] z-10">
@@ -222,7 +222,7 @@ export default function HomePage() {
                   <CarouselContent>
                     {displayProducts.map((product) => (
                       <CarouselItem key={product.id}>
-                        <div className="bg-white border-2 border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-[280px] hover:border-[var(--color-Text-Strong)] ">
+                        <div className="bg-white border-1 border-[var(--color-button-gray-outlined-border-default)] flex flex-col items-center overflow-clip relative rounded-2xl w-[280px] hover:border-[var(--color-Text-Strong)] ">
                           <div className="flex h-[200px] items-center justify-center w-full p-4">
                             <div className="h-40 relative w-full">
                               {product.mainImage ? (
@@ -299,8 +299,14 @@ export default function HomePage() {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="flex -left-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
-                  <CarouselNext className="flex -right-4 bg-white border-[var(--color-button-gray-outlined-border-default)]" />
+                  <CarouselPrevious
+                    size={'lg'}
+                    className="flex -left-4 bg-white border-[var(--color-button-gray-outlined-border-default)]"
+                  />
+                  <CarouselNext
+                    size={'lg'}
+                    className="flex -right-4 bg-white border-[var(--color-button-gray-outlined-border-default)]"
+                  />
                 </Carousel>
               </div>
             </FadeIn>

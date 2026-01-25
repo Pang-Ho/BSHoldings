@@ -45,8 +45,9 @@ function NavigationMenuList({
   );
 }
 
-interface NavigationMenuItemProps
-  extends React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Item> {
+interface NavigationMenuItemProps extends React.ComponentPropsWithoutRef<
+  typeof NavigationMenuPrimitive.Item
+> {
   state?: 'default' | 'selected'; // 커스텀 state 프롭 추가
 }
 
@@ -80,10 +81,12 @@ const navigationMenuTriggerStyle = cva(
   },
 );
 
-interface NavigationMenuTriggerProps
-  extends React.ComponentProps<typeof NavigationMenuPrimitive.Trigger> {
+interface NavigationMenuTriggerProps extends React.ComponentProps<
+  typeof NavigationMenuPrimitive.Trigger
+> {
   selected?: boolean;
   isTransparent?: boolean;
+  isArrow?: boolean;
 }
 
 function NavigationMenuTrigger({
@@ -91,6 +94,7 @@ function NavigationMenuTrigger({
   children,
   selected = false,
   isTransparent = false,
+  isArrow = true,
   ...props
 }: NavigationMenuTriggerProps) {
   return (
@@ -107,15 +111,17 @@ function NavigationMenuTrigger({
       {...props}
     >
       {children}{' '}
-      <ChevronDownIcon
-        className={cn(
-          'relative top-[1px] ml-1 size-5 transition duration-300 group-data-open/navigation-menu-trigger:rotate-180 group-data-popup-open/navigation-menu-trigger:rotate-180',
-          isTransparent
-            ? 'text-white ' //group-data-open/navigation-menu-trigger:text-[var(--color-primary-800)]
-            : 'text-[var(--color-text-strong)]',
-        )}
-        aria-hidden="true"
-      />
+      {isArrow && (
+        <ChevronDownIcon
+          className={cn(
+            'relative top-[1px] ml-1 size-5 transition duration-300 group-data-open/navigation-menu-trigger:rotate-180 group-data-popup-open/navigation-menu-trigger:rotate-180',
+            isTransparent
+              ? 'text-white ' //group-data-open/navigation-menu-trigger:text-[var(--color-primary-800)]
+              : 'text-[var(--color-text-strong)]',
+          )}
+          aria-hidden="true"
+        />
+      )}
     </NavigationMenuPrimitive.Trigger>
   );
 }

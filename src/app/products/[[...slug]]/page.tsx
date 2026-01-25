@@ -285,7 +285,7 @@ function ProductListView({
               {displayProducts.map((prod) => (
                 <div
                   key={prod.id}
-                  className="group bg-white border-2 flex flex-col items-center overflow-clip relative rounded-2xl w-[282px] border-[var(--color-button-gray-outlined-border-default)] hover:border-[var(--color-Text-Strong)] transition-colors duration-200"
+                  className="group bg-white border-1 flex flex-col items-center overflow-clip relative rounded-2xl w-[282px] border-[var(--color-button-gray-outlined-border-default)] hover:border-[var(--color-Text-Strong)] transition-colors duration-200"
                 >
                   <div className="flex h-[200px] items-center justify-center p-5 w-full">
                     <div className="w-full h-full relative">
@@ -600,8 +600,8 @@ function ProductDetailView({
                       </CarouselContent>
                       {product.models.filter((m) => m.image).length > 1 && (
                         <>
-                          <CarouselPrevious className="left-2" />
-                          <CarouselNext className="right-2" />
+                          <CarouselPrevious size={'lg'} className="left-2" />
+                          <CarouselNext size={'lg'} className="right-2" />
                         </>
                       )}
                     </Carousel>

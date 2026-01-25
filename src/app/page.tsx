@@ -1,6 +1,6 @@
+import { OrganizationStructuredData } from '@/components/structured-data';
 import { Metadata } from 'next';
 import HomePageClient from './HomePageClient';
-import { OrganizationStructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = {
   title: 'BS홀딩스 | 산업용 센서 전문 기업',
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     title: 'BS홀딩스 | 산업용 센서 전문 기업',
     description:
       '시작부터 완성까지 모든 자동화 과정에 함께하는 파트너. 근접센서, 광전센서 등 산업용 센서 전문 기업 BS홀딩스',
-    url: 'http://bestsens.co.kr',
+    url: 'https://bestsensor.kr',
     type: 'website',
   },
 };
 
 export default function HomePage() {
-  const baseUrl = 'http://bestsens.co.kr';
+  const baseUrl = 'https://bestsensor.kr';
 
   return (
     <>

@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/test-mega-menu'],
       },
     ],
-    sitemap: 'http://bestsens.co.kr/sitemap.xml',
+    sitemap: 'https://bestsensor.kr/sitemap.xml',
   };
 }

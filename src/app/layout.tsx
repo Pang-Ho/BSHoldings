@@ -10,7 +10,7 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://bestsens.co.kr'),
+  metadataBase: new URL('https://bestsensor.kr'),
   title: {
     default: 'BS홀딩스 | 산업용 센서 전문 기업',
     template: '%s | BS홀딩스',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
-    url: 'http://bestsens.co.kr',
+    url: 'https://bestsensor.kr',
     title: 'BS홀딩스 | 산업용 센서 전문 기업',
     description:
       '근접센서, 광전센서, 정전용량센서 등 산업용 센서와 자동화 솔루션 전문 기업',
@@ -73,10 +73,11 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'nqG_V6Yyl67-kTI6l36J5sxfcnGHzADvRfjlSQi--0s',
+    google: '_fTI02knIcYUo1E8M29TwVluaOXYE3ULsg6dE5MvoQM',
+    //google-site-verification=_fTI02knIcYUo1E8M29TwVluaOXYE3ULsg6dE5MvoQM
   },
   other: {
-    'naver-site-verification': '5e08eb3e4e456a94f1d62cb709686e700f7d6af7',
+    'naver-site-verification': '92e8da485e9799658a4e1d9119c1be1c82b8e9f4',
     'Content-Security-Policy': 'upgrade-insecure-requests',
   },
 };

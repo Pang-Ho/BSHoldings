@@ -378,7 +378,7 @@ function ProductDetailView({
 }) {
   const [activeTab, setActiveTab] = React.useState('상세설명');
 
-  const baseUrl = 'http://bestsens.co.kr';
+  const baseUrl = 'https://bestsensor.kr';
 
   return (
     <div className="flex flex-col items-center relative size-full min-h-screen">

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: '회사소개 | BS홀딩스',
     description:
       '산업현장에 필요한 자동화 제품과 레이저 제품으로 현장의 어려움 해소에 앞장서는 BS홀딩스',
-    url: 'http://bestsens.co.kr/company',
+    url: 'https://bestsensor.kr/company',
     type: 'website',
   },
 };

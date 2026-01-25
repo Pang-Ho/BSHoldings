@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
-import ProductsPageClient from './ProductsPageClient';
 import productsData from '@/lib/data/products.json';
+import ProductsPageClient from './ProductsPageClient';
 
 // 타입 정의
 interface Product {
@@ -49,7 +49,7 @@ export async function generateMetadata({
   const categorySlug = slug[0];
   const productSlug = slug[1];
 
-  const baseUrl = 'http://bestsens.co.kr';
+  const baseUrl = 'https://bestsensor.kr';
 
   // 제품 상세 페이지
   if (categorySlug && productSlug) {

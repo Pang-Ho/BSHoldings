@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: '오시는길 | BS홀딩스',
     description:
       'BS홀딩스 찾아오시는 길. 경기도 안산시 단원구 원포공원 1로 59, B동 201호',
-    url: 'http://bestsens.co.kr/location',
+    url: 'https://bestsensor.kr/location',
     type: 'website',
   },
 };

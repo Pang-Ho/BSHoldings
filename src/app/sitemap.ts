@@ -18,7 +18,7 @@ interface Category {
 const categories = productsData as Category[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'http://bestsens.co.kr';
+  const baseUrl = 'https://bestsensor.kr';
 
   // 정적 페이지들
   const staticPages: MetadataRoute.Sitemap = [

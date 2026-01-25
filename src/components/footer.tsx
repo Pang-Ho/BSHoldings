@@ -61,7 +61,7 @@ export function Footer() {
               </div>
             </div>
             <p className="font-normal leading-6 text-xs md:text-sm text-[var(--color-grey-400)] break-words md:whitespace-nowrap">
-              Copyright © 2025 BS Holdings All Rights Reserved.
+              Copyright © 2026 BS Holdings All Rights Reserved.
             </p>
           </div>
         </div>

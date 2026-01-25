@@ -1625,7 +1625,7 @@
     "id": 10,
     "name": "주문제작용 센서 (OEM)",
     "slug": "oem-custom-sensors",
-    "mainImage": "",
+    "mainImage": "/images/oem.png",
     "products": [
       {
         "id": "oem-003",
@@ -1634,7 +1634,7 @@
         "description": "주문제작 기타 센서",
         "tags": ["OEM", "맞춤제작", "특수센서"],
         "isNew": true,
-        "mainImage": "",
+        "mainImage": "/images/oem.png",
         "detailDescriptionKo": [
           "정전용량, 특수 센서, 레벨 센서 등 맞춤 제작",
           "특수 산업 요구사항에 맞춘 설계",

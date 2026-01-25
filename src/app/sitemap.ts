@@ -1,6 +1,7 @@
-import { MetadataRoute } from 'next';
 import productsData from '@/lib/data/products.json';
+import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
 interface Product {
   id: string;
   slug: string;

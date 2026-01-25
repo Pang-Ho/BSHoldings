@@ -289,7 +289,8 @@ export default function HomePageClient() {
                               asChild
                             >
                               <Link
-                                href={`/products/${selectedCategory.slug}/${product.slug}`}
+                                href={`/products/${selectedCategory.slug}/${product.slug}/`}
+                                prefetch={false}
                               >
                                 자세히보기
                               </Link>
@@ -340,7 +341,7 @@ export default function HomePageClient() {
           <div className="flex flex-col md:flex-row items-stretch md:items-start justify-end w-full gap-4 md:gap-0">
             <FadeIn delay={0.2} duration={0.8}>
               <Link
-                href="/location"
+                href="/location/"
                 className="bg-[rgba(1,16,37,0.6)] flex flex-col gap-3 min-h-[200px] md:h-[320px] items-start justify-end p-6 md:p-10 w-full md:w-[340px] transition-all hover:bg-[rgba(1,16,37,0.8)]"
               >
                 <div className="flex gap-1 items-center">

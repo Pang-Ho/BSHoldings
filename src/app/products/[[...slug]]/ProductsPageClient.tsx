@@ -32,11 +32,11 @@ import {
 import Image from 'next/image';
 import separatorIcon from '../../../../public/icons/separatorIcon.svg';
 
-import productsData from '@/lib/data/products.json';
 import {
-  ProductStructuredData,
   BreadcrumbStructuredData,
+  ProductStructuredData,
 } from '@/components/structured-data';
+import productsData from '@/lib/data/products.json';
 
 // 타입 정의
 interface DownloadModel {
@@ -197,19 +197,13 @@ function ProductListView({
   // 페이지 타이틀
   const pageTitle = selectedCategory.name;
 
-  // 카테고리 탭 변경 시 FadeIn 애니메이션 비활성화
-  // 첫 마운트 시에만 애니메이션 적용, 이후 카테고리 변경 시에는 비활성화
-  const isInitialMount = React.useRef(true);
-  const [disableTabAnimation, setDisableTabAnimation] = React.useState(false);
+  // 첫 렌더링 여부 추적
+  const [isFirstRender, setIsFirstRender] = React.useState(true);
 
   React.useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else {
-      // 카테고리가 변경되면 애니메이션 비활성화
-      setDisableTabAnimation(true);
-    }
-  }, [selectedCategory.slug]);
+    // 첫 렌더링 후 false로 설정
+    setIsFirstRender(false);
+  }, []);
 
   return (
     <div className="flex flex-col items-center relative size-full min-h-screen">
@@ -225,7 +219,7 @@ function ProductListView({
           <div className="h-3 w-full" />
 
           {/* 1레벨 탭 */}
-          <FadeIn delay={0.2} className="w-full" disabled={disableTabAnimation}>
+          <FadeIn delay={0.2} className="w-full" disabled={!isFirstRender}>
             <div className="flex gap-2 w-full overflow-x-auto overflow-y-hidden h-12 items-start">
               <CustomTabs
                 value={selectedCategory.slug}
@@ -237,7 +231,11 @@ function ProductListView({
                   className="gap-0 flex-nowrap"
                 >
                   {categories.map((cat) => (
-                    <Link key={cat.id} href={`/products/${cat.slug}`}>
+                    <Link
+                      key={cat.id}
+                      href={`/products/${cat.slug}/`}
+                      prefetch={false}
+                    >
                       <CustomTabsTrigger
                         value={cat.slug}
                         variant="horizontal"
@@ -349,7 +347,8 @@ function ProductListView({
                       asChild
                     >
                       <Link
-                        href={`/products/${selectedCategory.slug}/${prod.slug}`}
+                        href={`/products/${selectedCategory.slug}/${prod.slug}/`}
+                        prefetch={false}
                       >
                         자세히보기
                       </Link>
@@ -416,17 +415,22 @@ function ProductDetailView({
                 {product.name}
               </p>
               <p className="font-normal leading-6 text-xs md:text-sm lg:text-[13px] text-[var(--color-text-basic)]">
-                <Link href="/" className="hover:underline">
+                <Link href="/" className="hover:underline" prefetch={false}>
                   Home
                 </Link>
                 {' > '}
-                <Link href="/products" className="hover:underline">
+                <Link
+                  href="/products/"
+                  className="hover:underline"
+                  prefetch={false}
+                >
                   제품소개
                 </Link>
                 {' > '}
                 <Link
-                  href={`/products/${category.slug}`}
+                  href={`/products/${category.slug}/`}
                   className="hover:underline"
+                  prefetch={false}
                 >
                   {category.name}
                 </Link>

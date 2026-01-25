@@ -53,7 +53,7 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <div className="flex h-16 w-40 items-center justify-start">
-          <Link href="/" className="relative h-8 w-40">
+          <Link href="/" className="relative h-8 w-40" prefetch={false}>
             <Image
               alt="BS Holdings Logo"
               className={cn(
@@ -99,7 +99,8 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             >
               <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
-                  href="/company"
+                  href="/company/"
+                  prefetch={false}
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isTransparent
@@ -122,7 +123,8 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
             >
               <NavigationMenuLink isTransparent={isTransparent} asChild>
                 <Link
-                  href="/location"
+                  href="/location/"
+                  prefetch={false}
                   className={cn(
                     'inline-flex h-16 w-max items-center justify-center px-5 py-5 text-base font-semibold leading-6 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
                     isTransparent
@@ -206,23 +208,26 @@ export function Header({ currentPath, isTransparent = false }: HeaderProps) {
         <div className="lg:hidden border-t border-(--color-grey-300) bg-white w-full">
           <div className="flex flex-col px-4 py-4 space-y-2">
             <Link
-              href="/products"
+              href="/products/"
               className={getMobileMenuItemClasses(isProductsActive)}
               onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
             >
               제품소개
             </Link>
             <Link
-              href="/company"
+              href="/company/"
               className={getMobileMenuItemClasses(isCompanyActive)}
               onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
             >
               회사소개
             </Link>
             <Link
-              href="/location"
+              href="/location/"
               className={getMobileMenuItemClasses(isLocationActive)}
               onClick={() => setIsMobileMenuOpen(false)}
+              prefetch={false}
             >
               오시는길
             </Link>
